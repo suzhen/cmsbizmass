@@ -32,6 +32,7 @@ setCity=(city)->
 
 
 setGroup=(city)->
+    city=encodeURI(city)
     $.ajax '/enter_groups_by_city?city='+city,
     type: 'GET'
     dataType: 'html'
@@ -48,6 +49,7 @@ setGroup=(city)->
 
 
 addMarkerByEnt=(city,ent,obj)->
+    ent=encodeURI(ent)
     clearEntGroupActive()
     $(obj).addClass("active")
     @MAPOBJ.removeAllOverlays()
@@ -63,6 +65,7 @@ addMarkerByEnt=(city,ent,obj)->
 
 
 addMarkerByKind=(city,kind,obj)->
+    kind=encodeURI(kind)
     clearEntGroupActive()
     $(obj).addClass("active")
     @MAPOBJ.removeAllOverlays()

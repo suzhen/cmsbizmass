@@ -8,7 +8,6 @@ gem 'mysql2'
 gem 'execjs'
 gem 'therubyracer', :platforms => :ruby
 
-gem 'system_timer'
 gem 'haml'
 gem 'simple_form'
 gem 'cells'
