@@ -1,4 +1,6 @@
 CcsmCmsbizmass::Application.routes.draw do
+  devise_for :users
+
   scope "/manage" do
     resources :enterprises
   end

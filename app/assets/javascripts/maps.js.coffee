@@ -41,8 +41,10 @@ setGroup=(city)->
       $("#mapContainer .well").html(data)
       $("#enterpriseNames a").click ->
         addMarkerByEnt(city,$(this).text(),this)
+        false
       $("#enterpriseKinds a").click ->
         addMarkerByKind(city,$(this).text(),this)
+        false
 
 
 addMarkerByEnt=(city,ent,obj)->
@@ -57,7 +59,7 @@ addMarkerByEnt=(city,ent,obj)->
     success: (data, textStatus, jqXHR) ->
       $.each data["ents"],(index, value)-> 
         addMarker(makePoint(value["id"],value["name"],value["address"],value["tel"],value["coordinate"],value["kind"]))	
-  
+    false 
 
 
 addMarkerByKind=(city,kind,obj)->
@@ -72,7 +74,7 @@ addMarkerByKind=(city,kind,obj)->
     success: (data, textStatus, jqXHR) ->
       $.each data["ents"],(index, value)-> 
         addMarker(makePoint(value["id"],value["name"],value["address"],value["tel"],value["coordinate"],value["kind"]))	
-  
+    false
 
 
 

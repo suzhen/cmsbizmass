@@ -69,8 +69,8 @@ class Enterprise < ActiveRecord::Base
     #获取城市里企业名称和企业类别
     def get_enterprise_name_by_city(city_name)
      ents = Enterprise.enterprises_by_city(city_name).has_coordinates 
-     ent_names= ents.select("name").uniq.collect{|ent|{:name=>ent.name,:count=>ents.where(["name=?",ent.name]).length}}
-     ent_kinds= ents.has_kind.select("kind").uniq.collect{|ent| {:kind=>ent.kind,:count=>ents.where(["kind=?",ent.kind]).length}}
+     ent_names= ents.select("name").uniq.collect{|ent|{:name=>ent.name,:count=>ents.where(["name=?",ent.name]).count}}
+     ent_kinds= ents.has_kind.select("kind").uniq.collect{|ent| {:kind=>ent.kind,:count=>ents.where(["kind=?",ent.kind]).count}}
      {:names=>ent_names,:kinds=>ent_kinds}
     end
 
