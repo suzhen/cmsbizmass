@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @enterprise.name %>
+</p>
+
+<p>
+  <b>Province:</b>
+  <%= @enterprise.province %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @enterprise.city %>
+</p>
+
+<p>
+  <b>Store name:</b>
+  <%= @enterprise.store_name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @enterprise.address %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @enterprise.longitude %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @enterprise.latitude %>
+</p>
+
+<p>
+  <b>Tel:</b>
+  <%= @enterprise.tel %>
+</p>
+
+<p>
+  <b>Kind:</b>
+  <%= @enterprise.kind %>
+</p>
+
+<p>
+  <b>Remark:</b>
+  <%= @enterprise.remark %>
+</p>
+
+
+<%= link_to 'Edit', edit_enterprise_path(@enterprise) %> |
+<%= link_to 'Back', enterprises_path %>

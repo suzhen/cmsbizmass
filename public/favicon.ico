@@ -1,0 +1,116 @@
+0034:robots.txt:0000000cc:1:14=4faa8afe:16=4faa8afe:# See http://www.robotstxt.org/wc/norobots.html for documentation on how to use the robots.txt file
+#
+# To ban all spiders from the entire site uncomment the next two lines:
+# User-Agent: *
+# Disallow: /
+002b:.:000000000:3:14=4faf2f56:16=4faf2f56:0030:script:000000000:2:14=4faa8afe:16=4faa8afe:002f:rails:000000127:1:14=4faa8afe:16=4faa8afe:#!/usr/bin/env ruby
+# This command will automatically be run when you run "rails" with Rails 3 gems installed from the root of your application.
+
+APP_PATH = File.expand_path('../../config/application',  __FILE__)
+require File.expand_path('../../config/boot',  __FILE__)
+require 'rails/commands'
+002b:.:000000000:3:14=4faa8afe:16=4faa8afe:002e:test:000000000:2:14=4faea35d:16=4faea35d:002f:cells:000000000:2:14=4fafe66d:16=4fafe66d:003d:banner_cell_test.rb:000000089:1:14=4fafd9a0:16=4fafd9a0:require 'test_helper'
+
+class BannerCellTest < Cell::TestCase
+  test "display" do
+    invoke :display
+    assert_select "p"
+  end
+  
+
+end
+003d:footer_cell_test.rb:000000089:1:14=4fafe66d:16=4fafe66d:require 'test_helper'
+
+class FooterCellTest < Cell::TestCase
+  test "display" do
+    invoke :display
+    assert_select "p"
+  end
+  
+
+end
+003b:menu_cell_test.rb:000000087:1:14=4faea425:16=4faea425:require 'test_helper'
+
+class MenuCellTest < Cell::TestCase
+  test "display" do
+    invoke :display
+    assert_select "p"
+  end
+  
+
+end
+002b:.:000000000:3:14=4fafe66d:16=4fafe66d:0032:fixtures:000000000:2:14=4fae6b77:16=4fae6b77:0039:enterprises.yml:0000001cd:1:14=4fae6b77:16=4fae6b77:# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  province: MyString
+  city: MyString
+  store_name: MyString
+  address: MyString
+  longitude: 1.5
+  latitude: 1.5
+  tel: MyString
+  kind: MyString
+  remark: MyText
+
+two:
+  name: MyString
+  province: MyString
+  city: MyString
+  store_name: MyString
+  address: MyString
+  longitude: 1.5
+  latitude: 1.5
+  tel: MyString
+  kind: MyString
+  remark: MyText
+002b:.:000000000:3:14=4fae6b77:16=4fae6b77:0034:functional:000000000:2:14=4fae6b77:16=4fae6b77:0048:enterprises_controller_test.rb:000000457:1:14=4fae6b77:16=4fae6b77:require 'test_helper'
+
+class EnterprisesControllerTest < ActionController::TestCase
+  setup do
+    @enterprise = enterprises(:one)
+  end
+
+  test "should get index" do
+    get :index
+    assert_response :success
+    assert_not_nil assigns(:enterprises)
+  end
+
+  test "should get new" do
+    get :new
+    assert_response :success
+  end
+
+  test "should create enterprise" do
+    assert_difference('Enterprise.count') do
+      post :create, enterprise: @enterprise.attributes
+    end
+
+    assert_redirected_to enterprise_path(assigns(:enterprise))
+  end
+
+  test "should show enterprise" do
+    get :show, id: @enterprise
+    assert_response :success
+  end
+
+  test "should get edit" do
+    get :edit, id: @enterprise
+    assert_response :success
+  end
+
+  test "should update enterprise" do
+    put :update, id: @enterprise, enterprise: @enterprise.attributes
+    assert_redirected_to enterprise_path(assigns(:enterprise))
+  end
+
+  test "should destroy enterprise" do
+    assert_difference('Enterprise.count', -1) do
+      delete :destroy, id: @enterprise
+    end
+
+    assert_redirected_to enterprises_path
+  end
+end
+002b:.:000000000:3:14=4fae6b77:16=4fae6b77:0035:integration:000000000:2:14=4faa8afe:16=4faa8afe:002b:.:000000000:3:14=4faa8afe:16=4faa8afe:0035:performance:000000000:2:14=4faa8afe:16=

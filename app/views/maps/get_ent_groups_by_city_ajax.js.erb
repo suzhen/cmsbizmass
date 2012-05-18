@@ -1,0 +1,14 @@
+<h4><%=params[:city]%></h4>
+<span>企业名称：</span>
+<ul id="enterpriseNames">
+<% @entgroups[:names].each do |name| %>
+<li><%=link_to name[:name],"#"%>(<%=name[:count]%>)</li>
+<%end %>
+</ul>
+<span>企业分类：</span>
+<ul id="enterpriseKinds">
+<% @entgroups[:kinds].each do |kind| %>
+<li><%=link_to kind[:kind],"#"%>(<%=kind[:count]%>)</li>
+<%end %>
+</ul>
+

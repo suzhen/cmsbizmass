@@ -1,0 +1,34 @@
+.span4
+  #mapTab
+    %ul.nav.nav-tabs#chooseTab
+      %li.active
+        %a{:href=>"#tab1","data-toggle"=>"tab"} 按拼音检索城市
+      %li 
+        %a{:href=>"#tab2","data-toggle"=>"tab"} 按省份检索城市
+    .tab-content
+      .tab-pane.active#tab1
+        %ul
+          - @cities_char.each do |char|
+            %li
+              =raw "<abbr title='以#{char}拼音开头的城市'>#{char}</abbr>&nbsp;"
+              - @cities1[char].each do |city| 
+                =link_to(city,"#")+" "
+      .tab-pane#tab2
+        %ul
+          - @cities2.each do |key,value|
+            %li
+              =raw "<abbr title='#{key}的城市'>#{key}</abbr>"
+              - value.each do |city|
+                =link_to(city,"#tab2")+" "
+.span8
+  #mapContainer
+    .well
+    #mapObj.view{:style=>"height:800px"}
+
+
+
+
+
+
+
+%script{:type=>"text/javascript",:src=>"http://app.mapabc.com/apis?&t=ajaxmap&v=2.1.2&key=033542ad5983b460db01424956126d1383f2d664d8e68145ff994c1083ed081ccf1c07b4620bfe54"}
