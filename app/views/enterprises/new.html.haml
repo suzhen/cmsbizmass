@@ -1,0 +1,13 @@
+.row-fluid
+  .span2
+    %ul.nav.nav-list
+      %li.nav-header
+        %h4 地图管理
+      %li
+        =link_to "企业列表",enterprises_path
+      %li.active
+        =link_to '新增企业', new_enterprise_path 
+  .span10
+    %h2 新增企业
+    = render 'form'
+

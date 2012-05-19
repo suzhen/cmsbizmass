@@ -1,8 +1,9 @@
 class EnterprisesController < ApplicationController
+  before_filter :authenticate_user!  
   # GET /enterprises
   # GET /enterprises.json
   def index
-    @enterprises = Enterprise.all
+    @enterprises = Enterprise.limit(20)
 
     respond_to do |format|
       format.html # index.html.erb
