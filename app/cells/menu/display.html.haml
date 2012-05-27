@@ -1,11 +1,32 @@
 .menu
   %ul
     %li= link_to "首页","/index"
-    %li= link_to "资讯中心","/news" 
-    %li= link_to "零售世界","/magazines" 
-    %li= link_to "主题活动","/actions" 
-    %li= link_to "商业地产","/business" 
-    %li= link_to "人才服务","/service" 
-    %li= link_to "零售地图","/maps",:class=>"active" 
+    - if @controller_name=="news"
+      %li= link_to "资讯中心","/news",:class=>"active" 
+    - else
+      %li= link_to "资讯中心","/news" 
+    - if @controller_name=="magazines"
+      %li= link_to "零售世界","/magazines",:class=>"active" 
+    - else
+      %li= link_to "零售世界","/magazines" 
+    - if @controller_name=="actions"
+      %li= link_to "主题活动","/actions",:class=>"active" 
+    - else
+      %li= link_to "主题活动","/actions" 
+    - if @controller_name=="business"
+      %li= link_to "商业地产","/business",:class=>"active" 
+    - else
+      %li= link_to "商业地产","/business" 
+    - if @controller_name=="service"
+      %li= link_to "人才服务","/service" 
+    - else
+      %li= link_to "人才服务","/service" 
+    - if @controller_name=="maps"
+      %li= link_to "零售地图","/maps",:class=>"active" 
+    - else
+      %li= link_to "零售地图","/maps" 
     %li= link_to "理事单位","/members"
-    %li.last= link_to "联系我们","/contact"
+    - if @controller_name=="contact"
+      %li.last= link_to "联系我们","/contact",:class=>"active"
+    - else
+      %li.last= link_to "联系我们","/contact"

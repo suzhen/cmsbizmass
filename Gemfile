@@ -8,7 +8,7 @@ gem 'mysql2'
 gem 'execjs'
 gem 'therubyracer', :platforms => :ruby
 
-gem 'haml'
+gem 'haml-rails'
 gem 'simple_form'
 gem 'cells'
 

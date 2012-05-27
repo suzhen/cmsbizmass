@@ -15,7 +15,7 @@
           = render_cell :banner,:display 
       .row
         .span12
-          = render_cell :menu,:display
+          = render_cell :menu,:display,:controller_name=>controller_name
       .row
         = yield 
       .row

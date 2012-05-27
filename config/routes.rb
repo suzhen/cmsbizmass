@@ -1,25 +1,32 @@
 CcsmCmsbizmass::Application.routes.draw do
+
   devise_for :users
 
   scope "/manage" do
     resources :enterprises
+    resources :records 
+    get "/contact"=>"records#contact_show"   
+    get "/editcontact"=>"records#contact_edit"   
+    put "/updatecontact"=>"contacts#update" 
   end
 
-  get "/index"=>"maps#show"
-  get "/news"=>"maps#show"
-  get "/maps"=>"maps#show"
-  get "/magazines"=>"maps#show"
-  get "/actions"=>"maps#show"
-  get "/business"=>"maps#show"
-  get "/service"=>"maps#show"
-  get "/members"=>"maps#show"
-  get "/contact"=>"maps#show"
+  
+   get "/index"=>"common/maps#show"
+   get "/news"=>"common/maps#show"
+   get "/maps"=>"common/maps#show"
+   get "/magazines"=>"common/maps#show"
+   get "/actions"=>"common/maps#show"
+   get "/business"=>"common/maps#show"
+   get "/service"=>"common/maps#show"
+   get "/members"=>"common/maps#show"
+   get "/contact"=>"common/contact#show"
+  
 
   #map下的ajax
-  get "/enterprises_by_city"=>"maps#get_ents_by_city_ajax"
-  get "/enter_groups_by_city"=>"maps#get_ent_groups_by_city_ajax"
-  get "/stores_by_ent_in_city"=>"maps#get_stores_by_ent_ajax"
-  get "/ents_by_kind_in_city"=>"maps#get_ents_by_kind_ajax"
+  get "/enterprises_by_city"=>"common/maps#get_ents_by_city_ajax"
+  get "/enter_groups_by_city"=>"common/maps#get_ent_groups_by_city_ajax"
+  get "/stores_by_ent_in_city"=>"common/maps#get_stores_by_ent_ajax"
+  get "/ents_by_kind_in_city"=>"common/maps#get_ents_by_kind_ajax"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -69,7 +76,7 @@ CcsmCmsbizmass::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'maps#show'
+   root :to => 'common/maps#show'
 
   # See how all your routes lay out with "rake routes"
 

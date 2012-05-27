@@ -1,43 +1,32 @@
-.row-fluid
-  .span2
-    %ul.nav.nav-list
-      %li.nav-header
-        %h4 地图管理
-      %li.active
-        =link_to "企业列表",enterprises_path
-      %li
-        =link_to '新增企业', new_enterprise_path 
-  .span10
-    .well
-
-    %table.table.table-striped
-      %thead
+.well
+%table.table.table-striped
+  %thead
+    %tr
+      %th 企业名称 
+      %th 省份
+      %th 城市
+      %th 店名
+      %th 地址
+      %th 经度
+      %th 纬度
+      %th 电话
+      %th 分类
+      %th
+      %th
+      %th
+    %tbody
+      - @enterprises.each do |enterprise|
         %tr
-          %th 企业名称 
-          %th 省份
-          %th 城市
-          %th 店名
-          %th 地址
-          %th 经度
-          %th 纬度
-          %th 电话
-          %th 分类
-          %th
-          %th
-          %th
-      %tbody
-        - @enterprises.each do |enterprise|
-          %tr
-            %td= enterprise.name
-            %td= enterprise.province 
-            %td= enterprise.city 
-            %td= enterprise.store_name 
-            %td= enterprise.address 
-            %td= enterprise.longitude 
-            %td= enterprise.latitude
-            %td= enterprise.tel 
-            %td= enterprise.kind 
-            %td= link_to '显示', enterprise 
-            %td= link_to '编辑', edit_enterprise_path(enterprise) 
-            %td= link_to '删除', enterprise, :confirm=> '确定删除吗?', :method=> :delete 
+          %td= enterprise.name
+          %td= enterprise.province 
+          %td= enterprise.city 
+          %td= enterprise.store_name 
+          %td= enterprise.address 
+          %td= enterprise.longitude 
+          %td= enterprise.latitude
+          %td= enterprise.tel 
+          %td= enterprise.kind 
+          %td= link_to '显示', enterprise 
+          %td= link_to '编辑', edit_enterprise_path(enterprise) 
+          %td= link_to '删除', enterprise, :confirm=> '确定删除吗?', :method=> :delete 
 

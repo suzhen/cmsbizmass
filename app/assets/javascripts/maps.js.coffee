@@ -45,7 +45,6 @@ setGroup=(city)->
         false
       $("#enterpriseKinds a").click ->
         addMarkerByKind(city,$(this).text(),this)
-        false
 
 
 addMarkerByEnt=(city,ent,obj)->

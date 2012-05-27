@@ -1,0 +1,9 @@
+= simple_form_for(@record) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :body,:label=>false,:input_html=>{:rows=>14,:class=>"span8"}
+    = f.input :category,:as=>"hidden",:value=>"contact"
+
+  .form-actions
+    = f.button :submit

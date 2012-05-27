@@ -6,12 +6,12 @@ class ApplicationController < ActionController::Base
   
   def layout_by_resource       
      return "welcome" if controller_name=="sessions"
-     return "application" if controller_name=="maps"
+     return "application" if ["maps","contact"].include?(controller_name)
      "admin"
   end
 
   def after_sign_out_path_for(resource_or_scope)
-   "/admins/sign_in"           
+   "/users/sign_in"           
   end
   
   def after_sign_in_path_for(resource)

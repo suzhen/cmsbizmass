@@ -1,0 +1,2 @@
+module Common::ContactHelper
+end

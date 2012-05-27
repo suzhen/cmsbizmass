@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Body:
+  = @record.body
+%p
+  %b Formatted html:
+  = @record.formatted_html
+%p
+  %b Field:
+  = @record.field
+
+= link_to 'Edit', edit_record_path(@record)
+\|
+= link_to 'Back', records_path

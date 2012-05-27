@@ -1,46 +1,34 @@
-.row-fluid
-  .span2
-    %ul.nav.nav-list
-      %li.nav-header
-        %h4 地图管理
-      %li
-        =link_to "企业列表",enterprises_path
-      %li
-        =link_to '新增企业', new_enterprise_path 
-      %li.active
-        =link_to '查看企业','#'
-  .span10
-    %h2 查看企业详细信息
-    %p#notice
-      = notice
-    %p
-      %strong 企业名称:
-      = @enterprise.name
-    %p
-      %strong 省份:
-      = @enterprise.province
-    %p
-      %strong 城市:
-      = @enterprise.city
-    %p
-      %strong 店名:
-      = @enterprise.store_name
-    %p
-      %strong 地址:
-      = @enterprise.address
-    %p
-      %strong 经度:
-      = @enterprise.longitude
-    %p
-      %strong 纬度:
-      = @enterprise.latitude
-    %p
-      %strong 电话:
-      = @enterprise.tel 
-    %p
-      %strong 分类:
-      = @enterprise.kind
-    %p
-      %strong 备注:
-      =  @enterprise.remark
-    = link_to '编辑', edit_enterprise_path(@enterprise) 
+%h2 查看企业详细信息
+%p#notice
+  = notice
+%p
+  %strong 企业名称:
+  = @enterprise.name
+%p
+  %strong 省份:
+  = @enterprise.province
+%p
+  %strong 城市:
+  = @enterprise.city
+%p
+  %strong 店名:
+  = @enterprise.store_name
+%p
+  %strong 地址:
+  = @enterprise.address
+%p
+  %strong 经度:
+  = @enterprise.longitude
+%p
+  %strong 纬度:
+  = @enterprise.latitude
+%p
+  %strong 电话:
+  = @enterprise.tel 
+%p
+  %strong 分类:
+  = @enterprise.kind
+%p
+  %strong 备注:
+  =  @enterprise.remark
+= link_to '编辑', edit_enterprise_path(@enterprise) 

@@ -16,16 +16,28 @@
           %a.brand CMSS     
           .nav-collapse.collapse          
             %ul.nav
-              - if controller_name=="maps"   
+              - if controller_name=="enterprises"   
                 %li.active     
                   %a{:href=>"/manage/enterprises"} 企业地图        
               - else           
                 %li            
                   %a{:href=>"/manage/enterprises"} 企业地图
+              - if controller_name=="records"
+                %li.active
+                  %a{:href=>"/manage/contact"} 系统管理
+              - else
+                %li
+                  %a{:href=>"/manage/contact"} 系统管理
             %ul.nav.pull-right 
               %li.divider-vertical            
               %li
                 = link_to("退出",destroy_user_session_path,:method=>"DELETE")
     .container-fluid 
-      = yield
+      .row-fluid
+        .span2
+          = render_cell :menu,:show,:controller_name=>controller_name,:action_name=>action_name
+
+        .span10
+ 
+          = yield
  
