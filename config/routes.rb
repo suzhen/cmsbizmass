@@ -1,5 +1,7 @@
 CcsmCmsbizmass::Application.routes.draw do
 
+  resources :categories
+
   devise_for :users
 
   scope "/manage" do

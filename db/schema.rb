@@ -11,7 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120523162034) do
+ActiveRecord::Schema.define(:version => 20120710155342) do
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.string   "symbol"
+    t.string   "ctype"
+    t.integer  "parent_id",   :default => 0
+    t.string   "description"
+    t.integer  "listorder",   :default => 0
+    t.string   "arrparentid"
+    t.string   "arrchildid"
+    t.integer  "hits"
+    t.string   "style"
+    t.string   "path"
+    t.string   "image"
+    t.string   "setting"
+    t.string   "status"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+  end
 
   create_table "enterprises", :force => true do |t|
     t.string   "name"
@@ -32,7 +51,6 @@ ActiveRecord::Schema.define(:version => 20120523162034) do
     t.text     "body"
     t.text     "formatted_html"
     t.string   "category"
-    t.string   "content"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
   end
