@@ -2,6 +2,7 @@
 require 'import_excel'
 
 class Enterprise < ActiveRecord::Base
+  paginates_per 20 
   extend Import_excel
   scope :enterprises_by_city, lambda { |city| where("city = ?", city) }
   scope :has_coordinates,where('longitude!=0 and latitude!=0')

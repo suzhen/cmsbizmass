@@ -1,9 +1,10 @@
+#coding: utf-8 
 class EnterprisesController < ApplicationController
   before_filter :authenticate_user!  
   # GET /enterprises
   # GET /enterprises.json
   def index
-    @enterprises = Enterprise.limit(20)
+    @enterprises = Enterprise.page params[:page]
 
     respond_to do |format|
       format.html # index.html.erb

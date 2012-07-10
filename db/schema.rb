@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(:version => 20120523162034) do
     t.text     "body"
     t.text     "formatted_html"
     t.string   "category"
+    t.string   "content"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
   end
