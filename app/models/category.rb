@@ -1,6 +1,7 @@
 #coding: utf-8
 require 'tree'
 class Category < ActiveRecord::Base
+  has_many :articles
   include Tree
   validates :name,:presence=>true 
   validates :ctype,:presence=>true
