@@ -14,7 +14,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1.json
   def show
     @category = Category.find(params[:id])
-
+       
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @category }
@@ -41,6 +41,7 @@ class CategoriesController < ApplicationController
   # POST /categories.json
   def create
     @category = Category.new(params[:category])
+    @category.ctype = "news"
 
     respond_to do |format|
       if @category.save

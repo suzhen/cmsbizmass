@@ -1,9 +1,13 @@
 %p#notice= notice
 
 %p
-  %b Name:
+  %b 分类名称:
   = @category.name
+%p
+  %b 下一级分类:
+  = @category.get_children_nodes.collect{|node| node[1] }.join(",")
+%p
+  %b 所有父分类:
+  = Category.get_node_names(@category.arrparentid).gsub(/,/,'/') 
 
-= link_to 'Edit', edit_category_path(@category)
-\|
-= link_to 'Back', categories_path
+= link_to '编辑新闻分类', edit_category_path(@category)

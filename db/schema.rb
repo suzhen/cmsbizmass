@@ -11,7 +11,37 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120710155342) do
+ActiveRecord::Schema.define(:version => 20120712102125) do
+
+  create_table "article_bodies", :force => true do |t|
+    t.string   "caption"
+    t.string   "short_caption"
+    t.text     "body"
+    t.text     "formatted_html"
+    t.integer  "article_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  create_table "articles", :force => true do |t|
+    t.string   "title"
+    t.string   "short_title"
+    t.string   "introduction"
+    t.string   "author"
+    t.string   "eidtor_id"
+    t.string   "eidtor_name"
+    t.string   "source"
+    t.datetime "source_date"
+    t.boolean  "published",    :default => true
+    t.datetime "pubdate"
+    t.boolean  "top"
+    t.integer  "hits",         :default => 1
+    t.string   "status",       :default => "normal"
+    t.integer  "listorder"
+    t.integer  "category_id"
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
+  end
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -20,8 +50,8 @@ ActiveRecord::Schema.define(:version => 20120710155342) do
     t.integer  "parent_id",   :default => 0
     t.string   "description"
     t.integer  "listorder",   :default => 0
-    t.string   "arrparentid"
-    t.string   "arrchildid"
+    t.text     "arrparentid"
+    t.text     "arrchildid"
     t.integer  "hits"
     t.string   "style"
     t.string   "path"
@@ -51,6 +81,7 @@ ActiveRecord::Schema.define(:version => 20120710155342) do
     t.text     "body"
     t.text     "formatted_html"
     t.string   "category"
+    t.string   "content"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
   end

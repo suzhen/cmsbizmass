@@ -28,6 +28,14 @@
               - else
                 %li
                   %a{:href=>"/manage/contact"} 系统管理
+              - if controller_name=="categories"
+                %li.active
+                  %a{:href=>"/manage/categories"} 新闻发布        
+              - else
+                %li
+                  %a{:href=>"/manage/categories"} 新闻发布        
+  
+
             %ul.nav.pull-right 
               %li.divider-vertical            
               %li

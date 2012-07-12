@@ -7,8 +7,8 @@ class CreateCategories < ActiveRecord::Migration
       t.integer :parent_id,:default=>0
       t.string :description
       t.integer :listorder,:default=>0
-      t.string :arrparentid
-      t.string :arrchildid,:default=>nil
+      t.text :arrparentid
+      t.text :arrchildid,:default=>nil
       t.integer :hits
       t.string :style
       t.string :path

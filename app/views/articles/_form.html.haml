@@ -1,0 +1,15 @@
+= simple_form_for(@article,:html=>{:class=>'form-horizontal'}) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :title
+    = f.input :short_title
+    = f.input :introduction
+    = f.input :author
+    = f.input :eidtor_name
+    = f.input :source
+    = f.input :source_date
+    = f.input :published
+    = f.input :top
+  .form-actions
+    = f.button :submit

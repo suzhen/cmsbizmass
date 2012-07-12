@@ -1,12 +1,15 @@
 CcsmCmsbizmass::Application.routes.draw do
 
-  resources :categories
+  
+  resources :articles
 
   devise_for :users
 
   scope "/manage" do
     resources :enterprises
-    resources :records 
+    resources :records
+    resources :categories
+   
     get "/contact"=>"records#contact_show"   
     get "/editcontact"=>"records#contact_edit"   
     put "/updatecontact"=>"contacts#update" 

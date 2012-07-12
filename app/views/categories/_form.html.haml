@@ -1,8 +1,11 @@
-= simple_form_for(@category) do |f|
+= simple_form_for(@category,:html=>{:class=>'form-horizontal'}) do |f|
   = f.error_notification
-
   .form-inputs
     = f.input :name
-
+    .control-group.select      
+      %label.select.control-label 父部门
+      .controls
+        =raw category_selects(@category.id,'categoryUL0')
+    =f.input :parent_id,:as=>"hidden"
   .form-actions
     = f.button :submit

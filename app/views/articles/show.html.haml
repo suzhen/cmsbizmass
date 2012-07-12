@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @article.title
+%p
+  %b Short title:
+  = @article.short_title
+%p
+  %b Introduction:
+  = @article.introduction
+%p
+  %b Author:
+  = @article.author
+%p
+  %b Eidtor name:
+  = @article.eidtor_name
+%p
+  %b Source:
+  = @article.source
+%p
+  %b :
+  = @article.
+
+= link_to 'Edit', edit_article_path(@article)
+\|
+= link_to 'Back', articles_path

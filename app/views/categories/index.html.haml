@@ -1,19 +1,22 @@
-%h1 Listing categories
 
-%table
-  %tr
-    %th Name
-    %th
-    %th
-    %th
-
-  - @categories.each do |category|
+%table.table.table-striped
+  %thead
     %tr
-      %td= category.name
-      %td= link_to 'Show', category
-      %td= link_to 'Edit', edit_category_path(category)
-      %td= link_to 'Destroy', category, :confirm => 'Are you sure?', :method => :delete
+      %th 分类名称
+      %th 下一级分类
+      %th 所有父分类
+      %th
+      %th
+      %th
+  %tbody
+    - @categories.each do |category|
+      %tr
+        %td= category.name
+        %td= category.get_children_nodes.collect{|node| node[1] }.join(",")
+        %td= Category.get_node_names(category.arrparentid).gsub(/,/,'/')
+        %td= link_to '显示', category
+        %td= link_to '编辑', edit_category_path(category)
+        %td= link_to '删除', category, :confirm => '确定删除该分类(属于该分类的所有新闻也被删除)?', :method => :delete
 
-%br
 
-= link_to 'New Category', new_category_path
+
