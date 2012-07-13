@@ -25,7 +25,8 @@ class ArticlesController < ApplicationController
   # GET /articles/new.json
   def new
     @article = Article.new
-
+    @article.category = Category.new
+    @article.article_body = ArticleBody.new
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @article }
@@ -41,7 +42,7 @@ class ArticlesController < ApplicationController
   # POST /articles.json
   def create
     @article = Article.new(params[:article])
-
+    @article.category_id=params[:category_id].to_i
     respond_to do |format|
       if @article.save
         format.html { redirect_to @article, notice: 'Article was successfully created.' }

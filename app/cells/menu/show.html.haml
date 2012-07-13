@@ -29,7 +29,7 @@
     - else
       %li
         =link_to "联系方式","/manage/contact"
-  - if @controller_name=="categories"
+  - if @controller_name=="categories"||@controller_name=="articles"
     %li.nav-header
       %h4 新闻发布
       = hidden_field_tag :category_tree,@ztree_data
@@ -51,5 +51,22 @@
     -if @controller_name=="categories"&& @action_name=="edit"
       %li.active
         =link_to "编辑新闻分类","#"
-
+    -if @controller_name=="articles"&& @action_name=="index"
+      %li.active
+        =link_to "新闻列表","#"
+    - else
+      %li
+        =link_to "新闻列表","/manage/articles"
+    -if @controller_name=="articles"&& (@action_name=="new"||@action_name=="create")
+      %li.active
+        =link_to "创建新闻","#"
+    - else
+      %li
+        =link_to "创建新闻",new_article_path
+    -if @controller_name=="articles"&& @action_name=="show"
+      %li.active
+        =link_to "查看新闻","#"
+    -if @controller_name=="articles"&& @action_name=="edit"
+      %li.active
+        =link_to "编辑新闻","#"
 

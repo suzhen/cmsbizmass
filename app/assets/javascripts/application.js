@@ -15,6 +15,7 @@
 //= require wmd/wmd 
 //= require wmd/showdown 
 //= require_tree .
+//= require kindeditor
 
 // Include all twitter's javascripts
 //= require bootstrap

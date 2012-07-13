@@ -1,31 +1,31 @@
-%h1 Listing articles
 
-%table
-  %tr
-    %th Title
-    %th Short title
-    %th Introduction
-    %th Author
-    %th Eidtor name
-    %th Source
-    %th 
-    %th
-    %th
-    %th
-
-  - @articles.each do |article|
+%table.table.table-striped
+  %thead
     %tr
-      %td= article.title
-      %td= article.short_title
-      %td= article.introduction
-      %td= article.author
-      %td= article.eidtor_name
-      %td= article.source
-      %td= article.
-      %td= link_to 'Show', article
-      %td= link_to 'Edit', edit_article_path(article)
-      %td= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete
+      %th 新闻分类
+      %th 列表标题
+      %th 作者
+      %th 来源
+      %th 编辑
+      %th 是否置顶
+      %th 点击次数
+      %th 创建时间
+      %th
+      %th
+      %th
+  %tbody
+    - @articles.each do |article|
+      %tr
+        %td= article.category.name
+        %td= article.short_title
+        %td= article.author
+        %td= article.source
+        %td= article.eidtor_name
+        %td= article.top ? "置顶" : ""
+        %td= article.hits.to_s
+        %td= article.created_at.to_s(:db)
+        %td= link_to '显示', article
+        %td= link_to '编辑', edit_article_path(article)
+        %td= link_to '删除', article, :confirm => '确定删除文章?', :method => :delete
 
-%br
 
-= link_to 'New Article', new_article_path

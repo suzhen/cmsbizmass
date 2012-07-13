@@ -5,6 +5,9 @@ gem 'rails', '3.2.2'
 gem 'mysql2'
 gem "kaminari"
 
+gem "carrierwave", "~> 0.6.2"
+gem 'rails_kindeditor', '~> 0.3.0'
+
 
 gem 'execjs'
 gem 'therubyracer', :platforms => :ruby

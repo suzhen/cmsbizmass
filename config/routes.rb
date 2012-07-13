@@ -1,7 +1,6 @@
 CcsmCmsbizmass::Application.routes.draw do
 
   
-  resources :articles
 
   devise_for :users
 
@@ -9,7 +8,8 @@ CcsmCmsbizmass::Application.routes.draw do
     resources :enterprises
     resources :records
     resources :categories
-   
+    resources :articles
+  
     get "/contact"=>"records#contact_show"   
     get "/editcontact"=>"records#contact_edit"   
     put "/updatecontact"=>"contacts#update" 

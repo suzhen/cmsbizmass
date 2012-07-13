@@ -1,15 +1,21 @@
 = simple_form_for(@article,:html=>{:class=>'form-horizontal'}) do |f|
   = f.error_notification
-
   .form-inputs
     = f.input :title
+    .control-group.select      
+      %label.select.control-label 新闻分类
+      .controls
+        =raw category_selects(@article.category.id,'categoryUL0')
+    = hidden_field_tag :category_parent_id,@article.category.id,:name=>"category_id"
+
     = f.input :short_title
     = f.input :introduction
     = f.input :author
-    = f.input :eidtor_name
     = f.input :source
-    = f.input :source_date
     = f.input :published
     = f.input :top
+    = f.simple_fields_for :article_body do |body_fields|
+      = body_fields.input :body,:as => :kindeditor #,:input_html=>{:rows=>10,:class=>'span8'} 
+
   .form-actions
     = f.button :submit

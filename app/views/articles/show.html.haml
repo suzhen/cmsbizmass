@@ -19,9 +19,6 @@
   %b Source:
   = @article.source
 %p
-  %b :
-  = @article.
-
-= link_to 'Edit', edit_article_path(@article)
-\|
-= link_to 'Back', articles_path
+  %b 内容:
+  = @article.body
+= link_to '编辑新闻', edit_article_path(@article)
