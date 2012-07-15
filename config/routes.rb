@@ -16,8 +16,8 @@ CcsmCmsbizmass::Application.routes.draw do
   end
 
   
-   get "/index"=>"common/maps#show"
-   get "/news"=>"common/maps#show"
+   get "/index"=>"common/homepages#home"
+   get "/news"=>"common/homepages#news"
    get "/maps"=>"common/maps#show"
    get "/magazines"=>"common/maps#show"
    get "/actions"=>"common/maps#show"
@@ -81,7 +81,8 @@ CcsmCmsbizmass::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'common/maps#show'
+   #root :to => 'common/maps#show'
+   root :to=>"common/homepages#home"
 
   # See how all your routes lay out with "rake routes"
 

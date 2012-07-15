@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   
   def layout_by_resource       
      return "welcome" if controller_name=="sessions"
-     return "application" if ["maps","contact"].include?(controller_name)
+     return "application" if ["maps","contact","homepages"].include?(controller_name)
      "admin"
   end
 

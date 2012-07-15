@@ -20,5 +20,5 @@
   = @article.source
 %p
   %b 内容:
-  = @article.body
+  = raw @article.body
 = link_to '编辑新闻', edit_article_path(@article)

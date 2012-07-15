@@ -16,7 +16,7 @@
   %tbody
     - @articles.each do |article|
       %tr
-        %td= article.category.name
+        %td= article.category.name if article.category.present?
         %td= article.short_title
         %td= article.author
         %td= article.source

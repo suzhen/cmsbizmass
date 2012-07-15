@@ -1,6 +1,9 @@
 .menu
   %ul
-    %li= link_to "首页","/index"
+    - if @controller_name=="homepages"&&@action_name=="home"
+      %li= link_to "首页","/index",:class=>"active"
+    - else
+      %li= link_to "首页","/index"
     - if @controller_name=="news"
       %li= link_to "资讯中心","/news",:class=>"active" 
     - else

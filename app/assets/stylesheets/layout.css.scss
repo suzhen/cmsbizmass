@@ -1,5 +1,7 @@
 @import "compass/utilities/lists";
 @import "compass/typography/links";
+/***后台样式***/
+
 #login {
   color: #fff;                 
   background: #222 url('/assets/bg-login.gif');
@@ -23,6 +25,22 @@
         }
   }
 }
+/*controls*/                   
+ .controlsUL{                  
+         @include horizontal-list-container;
+         li{                   
+            @include horizontal-list-item;
+        }
+ }
+
+/*treeUL*/
+.treeUL{
+         @include horizontal-list-container;
+         li{
+            @include horizontal-list-item("11px");                          
+        }
+       }             
+/***网站样式***/
 .menu{
   height:35px;
   background-image:url(menu_bg_line.gif); 
@@ -130,20 +148,15 @@
   }
 }
 
-/*controls*/                   
- .controlsUL{                  
-         @include horizontal-list-container;
-         li{                   
-            @include horizontal-list-item;
-        }
- }
-
-/*treeUL*/
-.treeUL{
-         @include horizontal-list-container;
-         li{
-            @include horizontal-list-item("11px");                          
-        }
-       }               
-
-
+/*news*/
+.bord01 {
+  border-top: 1px solid #CCC;
+}  
+.blank2 {
+  /*width: 432px;*/
+  background: white;
+}
+.news {
+margin: 0 3px;
+background: white;
+}
