@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120712102125) do
+ActiveRecord::Schema.define(:version => 20120716074946) do
 
   create_table "article_bodies", :force => true do |t|
     t.string   "caption"
@@ -50,8 +50,8 @@ ActiveRecord::Schema.define(:version => 20120712102125) do
     t.integer  "parent_id",   :default => 0
     t.string   "description"
     t.integer  "listorder",   :default => 0
-    t.string   "arrparentid"
-    t.string   "arrchildid"
+    t.text     "arrparentid"
+    t.text     "arrchildid"
     t.integer  "hits"
     t.string   "style"
     t.string   "path"
@@ -77,10 +77,24 @@ ActiveRecord::Schema.define(:version => 20120712102125) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "magazines", :force => true do |t|
+    t.string   "title"
+    t.date     "public_date"
+    t.string   "user_name"
+    t.integer  "download"
+    t.text     "remark"
+    t.string   "elecpdf"
+    t.string   "cover"
+    t.integer  "comment_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "records", :force => true do |t|
     t.text     "body"
     t.text     "formatted_html"
     t.string   "category"
+    t.string   "content"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
   end

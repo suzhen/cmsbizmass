@@ -34,7 +34,13 @@
               - else
                 %li
                   %a{:href=>"/manage/categories"} 新闻发布        
-  
+              - if controller_name=="magazines"
+                %li.active
+                  %a{:href=>"/manage/magazines"} 杂志管理        
+              - else
+                %li
+                  %a{:href=>"/manage/magazines"} 杂志管理        
+
 
             %ul.nav.pull-right 
               %li.divider-vertical            
