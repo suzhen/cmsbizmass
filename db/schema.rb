@@ -50,8 +50,8 @@ ActiveRecord::Schema.define(:version => 20120716074946) do
     t.integer  "parent_id",   :default => 0
     t.string   "description"
     t.integer  "listorder",   :default => 0
-    t.text     "arrparentid"
-    t.text     "arrchildid"
+    t.string   "arrparentid"
+    t.string   "arrchildid"
     t.integer  "hits"
     t.string   "style"
     t.string   "path"
@@ -94,7 +94,6 @@ ActiveRecord::Schema.define(:version => 20120716074946) do
     t.text     "body"
     t.text     "formatted_html"
     t.string   "category"
-    t.string   "content"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
   end

@@ -12,6 +12,7 @@
   %tbody
     - @magazines.each do |magazine|
       %tr
+        %td= image_tag magazine.cover.url(:thumb)
         %td= magazine.title
         %td= magazine.public_date
         %td= magazine.user_name

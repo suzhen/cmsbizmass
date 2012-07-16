@@ -4,3 +4,4 @@ config/database.yml
 db/schema.rb
 *.swp
 public/system/*.*
+public/uploads/

@@ -1,3 +1,4 @@
+#coding: utf-8
 class MagazinesController < ApplicationController
   # GET /magazines
   # GET /magazines.json
@@ -44,7 +45,7 @@ class MagazinesController < ApplicationController
     #@magazine.user_name=current.name
     respond_to do |format|
       if @magazine.save
-        format.html { redirect_to @magazine, notice: 'Magazine was successfully created.' }
+        format.html { redirect_to @magazine, notice: '杂志创建成功。' }
         format.json { render json: @magazine, status: :created, location: @magazine }
       else
         format.html { render action: "new" }
