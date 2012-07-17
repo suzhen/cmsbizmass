@@ -149,14 +149,19 @@
   }
 }
 
-/*news*/
 .bord01 {
   border-top: 1px solid #CCC;
-}  
+}
+.bord02{
+  border-top: 1px solid #c2d0df;
+}
+  
 .blank2 {
-  /*width: 432px;*/
   background: white;
 }
+
+
+/*news容器*/
 
 .news_container{
   .news_title{
@@ -165,7 +170,7 @@
     border-left:1px solid #ccc;
     border-right:1px solid #ccc;  
     position: relative; 
-    span{
+    .linkspan{
         color:red;
         display: block;
         position:absolute;
@@ -181,7 +186,8 @@
       width:134px;
       height:28px;
       background-image:url(title_left.jpg);
-      strong{
+    }
+    .brow_text_white{
         color:white;
         display: block;
         position:absolute;
@@ -191,8 +197,154 @@
           @include unstyled-link;
           cursor: pointer;
         }
-      }
-    }
+     }
+     .brow_text_red{
+        color:#bb0016;
+        display: block;
+        float:left;
+        position:relative;
+        top:5px;
+        left:15px;
+        a{
+          @include unstyled-link;
+          cursor: pointer;
+        }
+     }
+     .brow_text_gray{
+        color:#797979;
+        display: block;
+        float:left;
+        top:5px;
+        left:35px;
+        position:relative; 
+     }
+ }
+  .news_content {
+    border-top:1px solid #ccc;
+    border-left:1px solid #ccc;
+    border-right:1px solid #ccc;   
+    background:white;
+  }
+}
+
+
+/*notice容器*/
+.notice_container{
+   .notice_title{
+     height:28px;
+     background:url(title_brow_3.jpg) repeat-x bottom left;
+     position: relative;
+     .linkspan{
+        color:red;
+        display: block;
+        position:relative;
+        float:left;
+        top:3px;
+        left:25px;
+        a{
+         @include link-colors(red,#bb0214,#bb0214,#bb0214,#bb0214); 
+        }
+     }      
+
+     .out{
+        background:url(title_brow_1.jpg) repeat-x bottom left;
+        height:28px;
+        width:250px;
+        float:left;
+     }
+     .over{
+        background:url(title_brow_2.jpg) no-repeat bottom left;
+        height:28px;
+        width:3px;
+        float:left;
+     }
+     .brow_text_red{
+        color:#bb0016;
+        display: block;
+        float:left;
+        position:relative;
+        letter-spacing:3px;
+        top:3px;
+        left:15px;
+        a{
+          @include unstyled-link;
+          cursor: pointer;
+        }
+     }
+     .brow_text_gray{
+        color:#797979;
+        display: block;
+        float:left;
+        top:3px;
+        left:35px;
+        position:relative; 
+     }
+   }
+   .notice_content{
+     background:white;
+   }
+}
+
+
+/*top容器*/
+.top_container{
+ border-left:1px solid #c2d0df;
+ border-right:1px solid #c2d0df;   
+ padding: 0 1px;
+ .top_content{
+      height:452px;  
+      background:white url(topbg.jpg) repeat-x top left;
+ }
+}
+
+
+/*news_tab容器*/
+.news_tab_container{
+  .news_title{
+    height:28px;
+    background-image:url(bgtab.jpg);
+    border-left:1px solid #ccc;
+    border-right:1px solid #ccc;  
+    position: relative; 
+    .brow_tab{
+       background:url(newstab.jpg) no-repeat bottom left;
+       width:181px;
+       height:24px;
+       position: relative; 
+       top:5px;
+       left:20px;
+       .linkspan{
+          color:red;
+          display: block;
+          position:absolute;
+          float:right;
+          top:5px;
+          right:15px;
+          a{
+          @include link-colors(red,#bb0214,#bb0214,#bb0214,#bb0214); 
+          }
+       }        
+       .brow_text_red{
+          color:#bb0016;
+          display: block;
+          float:left;
+          position:relative;
+          top:5px;
+          left:15px;
+          a{
+            @include unstyled-link;
+            cursor: pointer;
+          }
+       }
+       .brow_text_gray{
+          color:#797979;
+          display: block;
+          float:left;
+          top:5px;
+          left:25px;
+          position:relative; 
+       }
+     }
   }
   .news_content {
     border-top:1px solid #ccc;
@@ -202,3 +354,36 @@
   }
 }
 
+/*sound容器*/
+.sound_container{
+  background:white url(jianbian.jpg) repeat-x top left;
+  height:100px;
+  .sound_title{
+    height:30px;
+    .sound{
+       background-image:url(sound.jpg);
+       width:52px;
+       height:20px;
+       top:0.18cm;
+       left:0.18cm;
+       position:relative;
+       strong{
+        color:white;
+        letter-spacing:3px;
+        top:2px;
+        left:4px;
+        position:relative;
+       } 
+    }
+  }
+  .sound_content{
+
+  }
+}
+
+
+
+
+
+
+ 

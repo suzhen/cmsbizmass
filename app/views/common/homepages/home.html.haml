@@ -7,9 +7,9 @@
     -#标题
     .news_title
       .title_brow
-        %strong 
+        %strong.brow_text_white 
           %a{href:"#"} 零售世界
-      %span
+      %span.linkspan
         %a{href:"/contact"} >>more
     -#内容
     .news_content
@@ -25,12 +25,78 @@
     .bord01
     -#标题
     .news_title
-      %span
+      %strong.brow_text_red
+        公司公告
+      %span.brow_text_gray
+        Announcement 
+      %span.linkspan
         %a{href:"/contact"} >>more
     -#内容
     .news_content
       内容
     .bord01
+
+  -#留白
+  %br
+  %br
+
+  .notice_container
+    .notice_title
+      .out
+        %strong.brow_text_red
+          %a{href:"#"} 数据统计
+        %span.brow_text_gray
+          Statistics 
+        %span.linkspan
+          %a{href:"/contact"} >>more
+      .over
+    .notice_content
+      内容
+
+  -#留白
+  %br
+  %br
+  .bord02
+  .top_container
+    .top_content
+      .top_title
+      内容
+  .bord02
+
+  -#留白
+  %br
+  %br
+
+  -#新闻容器
+  .news_tab_container
+    .bord01
+    -#标题
+    .news_title
+      .brow_tab
+        %strong.brow_text_red
+          热点排行
+        %span.brow_text_gray
+          Hot 
+        %span.linkspan
+          %a{href:"/contact"} >>more
+    -#内容
+    .news_content
+      内容
+    .bord01
+
+  -#留白
+  %br
+  %br
+
+  -#声音区域
+  .sound_container
+    .sound_title
+      .sound
+        %strong 声音 
+    .sound_content     
+      内容
+
+
 
   -#留白
   %br
