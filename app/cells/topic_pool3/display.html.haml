@@ -1,0 +1,17 @@
+.notice_container
+  .notice_title
+    .out
+      %strong.brow_text_red
+        %a{href: @link} 
+          = @name 
+      %span.brow_text_gray
+        = @ename 
+      %span.linkspan
+        %a{href: @link} >>more
+    .over
+  .notice_content
+    %ul.topic_list
+      - @topics.each do |topic|
+        %li
+          =link_to topic.short_title,"#" 
+

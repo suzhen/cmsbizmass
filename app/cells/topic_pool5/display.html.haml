@@ -1,0 +1,21 @@
+-#新闻容器
+.news_tab_container
+  .bord01
+  -#标题
+  .news_title
+    .brow_tab
+      %strong.brow_text_red
+        热点排行
+      %span.brow_text_gray
+        Hot 
+      %span.linkspan
+        %a{href:"/contact"} >>more
+  -#内容
+  .news_content
+    %ul.topic_list
+      - @topics.each do |topic|
+        %li
+          =link_to topic.short_title,"#" 
+  .bord01
+
+

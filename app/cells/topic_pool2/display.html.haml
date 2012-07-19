@@ -1,0 +1,19 @@
+-#新闻容器
+.news_container
+  .bord01
+  -#标题
+  .news_title
+    %strong.brow_text_red
+      = @name
+    %span.brow_text_gray
+      = @ename 
+    %span.linkspan
+      %a{href: @link} >>more
+  -#内容
+  .news_content
+    %ul.topic_list
+      - @topics.each do |topic|
+        %li
+          =link_to topic.short_title,"#" 
+  .bord01
+

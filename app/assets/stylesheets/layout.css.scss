@@ -292,7 +292,7 @@
  border-right:1px solid #c2d0df;   
  padding: 0 1px;
  .top_content{
-      height:452px;  
+      height:448px;  
       background:white url(topbg.jpg) repeat-x top left;
  }
 }
@@ -381,8 +381,44 @@
   }
 }
 
+/*新闻列表*/
+.topic_list{
+  li{
+    list-style-type : square;
+  }
+  a{
+    @include link-colors(black,#bb0214,black,black,black); 
+   line-height:26px;
+  }
+}
 
+/*杂志列表*/
+.magazine_list{
+ @include horizontal-list-container;
+ li{
+  @include horizontal-list-item(18px);
+  &:first-child, &.first{
+    padding-left:35px;
+  }
+ }
+ a{
+    @include link-colors(black,#bb0214,black,black,black); 
+  }
+}
 
+/*下载*/
+.mgimgtxt{
+  margin:10px 0;
+  overflow:hidden;
+  height:172px;
+  text-align:center;
+  .mgimg{
+    display:block;
+  }
+  .mgtxt{
+    display:block;
+  }
+}
 
 
 

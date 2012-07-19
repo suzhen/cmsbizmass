@@ -1,0 +1,9 @@
+%ul.magazine_list
+  - @magazines.each do |magazine|
+    %li
+      %div.mgimgtxt
+        %a{href: magazine.elecpdf.url} 
+          %span.mgimg
+            = image_tag magazine.cover.url(:normal),:border => 0, :size => "116x154"
+          %span.mgtxt
+            = magazine.title
