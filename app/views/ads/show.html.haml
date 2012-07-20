@@ -1,0 +1,33 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @ad.name
+%p
+  %b Type:
+  = @ad.type
+%p
+  %b Setting:
+  = @ad.setting
+%p
+  %b Startdate:
+  = @ad.startdate
+%p
+  %b Enddate:
+  = @ad.enddate
+%p
+  %b Hits:
+  = @ad.hits
+%p
+  %b Clicks:
+  = @ad.clicks
+%p
+  %b Listorder:
+  = @ad.listorder
+%p
+  %b Disabled:
+  = @ad.disabled
+
+= link_to 'Edit', edit_ad_path(@ad)
+\|
+= link_to 'Back', ads_path

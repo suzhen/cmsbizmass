@@ -1,0 +1,16 @@
+= simple_form_for(@ad) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :type
+    = f.input :setting
+    = f.input :startdate
+    = f.input :enddate
+    = f.input :hits
+    = f.input :clicks
+    = f.input :listorder
+    = f.input :disabled
+
+  .form-actions
+    = f.button :submit

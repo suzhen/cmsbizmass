@@ -1,0 +1,33 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @ad_space.name
+%p
+  %b Type:
+  = @ad_space.type
+%p
+  %b Path:
+  = @ad_space.path
+%p
+  %b Width:
+  = @ad_space.width
+%p
+  %b Height:
+  = @ad_space.height
+%p
+  %b Setting:
+  = @ad_space.setting
+%p
+  %b Description:
+  = @ad_space.description
+%p
+  %b Items:
+  = @ad_space.items
+%p
+  %b Disabled:
+  = @ad_space.disabled
+
+= link_to 'Edit', edit_ad_space_path(@ad_space)
+\|
+= link_to 'Back', ad_spaces_path

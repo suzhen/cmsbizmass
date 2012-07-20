@@ -1,0 +1,25 @@
+%table.table.table-striped
+  %thead
+    %tr
+      %th 顺序
+      %th 友情链接名称
+      %th 链接地址
+      %th Logo
+      %th 上传人
+      %th 是否启用
+      %th
+      %th
+      %th
+  %tbody
+    - @links.each do |link|
+      %tr
+        %td= link.listorder
+        %td= link.name
+        %td= link.url
+        %td= image_tag link.logo.url(:thumb),:alt=>link.name
+        %td= link.user_name
+        %td= if link.disabled==false then "启用" else "禁止" end
+        %td= link_to '显示', link
+        %td= link_to '编辑', edit_link_path(link)
+        %td= link_to '删除', link, :confirm => '确定删除吗?', :method => :delete
+

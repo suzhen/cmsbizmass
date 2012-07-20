@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  url: MyString
+  logo: MyString
+  description: MyString
+  user_name: MyString
+  listorder: 1
+  disabled: false
+
+two:
+  name: MyString
+  url: MyString
+  logo: MyString
+  description: MyString
+  user_name: MyString
+  listorder: 1
+  disabled: false

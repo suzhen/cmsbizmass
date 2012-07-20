@@ -1,0 +1,35 @@
+%h1 Listing ad_spaces
+
+%table
+  %tr
+    %th Name
+    %th Type
+    %th Path
+    %th Width
+    %th Height
+    %th Setting
+    %th Description
+    %th Items
+    %th Disabled
+    %th
+    %th
+    %th
+
+  - @ad_spaces.each do |ad_space|
+    %tr
+      %td= ad_space.name
+      %td= ad_space.type
+      %td= ad_space.path
+      %td= ad_space.width
+      %td= ad_space.height
+      %td= ad_space.setting
+      %td= ad_space.description
+      %td= ad_space.items
+      %td= ad_space.disabled
+      %td= link_to 'Show', ad_space
+      %td= link_to 'Edit', edit_ad_space_path(ad_space)
+      %td= link_to 'Destroy', ad_space, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Ad space', new_ad_space_path

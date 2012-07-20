@@ -40,6 +40,18 @@
               - else
                 %li
                   %a{:href=>"/manage/magazines"} 杂志管理        
+              - if controller_name=="ad_spaces"||controller_name=="ads"
+                %li.active
+                  %a{:href=>"/manage/ad_spaces"} 广告管理        
+              - else
+                %li
+                  %a{:href=>"/manage/ad_spaces"} 广告管理        
+              - if controller_name=="links"
+                %li.active
+                  %a{:href=>"/manage/links"} 友情链接管理        
+              - else
+                %li
+                  %a{:href=>"/manage/links"} 友情链接管理        
 
 
             %ul.nav.pull-right 

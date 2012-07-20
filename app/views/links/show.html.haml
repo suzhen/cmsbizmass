@@ -1,0 +1,25 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @link.name
+%p
+  %b Url:
+  = @link.url
+%p
+  %b Logo:
+  = image_tag @link.logo.url(:normal),:alt=>@link.name
+%p
+  %b Description:
+  = @link.description
+%p
+  %b User name:
+  = @link.user_name
+%p
+  %b Listorder:
+  = @link.listorder
+%p
+  %b Disabled:
+  = @link.disabled
+
+= link_to '编辑', edit_link_path(@link)

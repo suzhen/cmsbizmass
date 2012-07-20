@@ -11,7 +11,36 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120716074946) do
+ActiveRecord::Schema.define(:version => 20120720073020) do
+
+  create_table "ad_spaces", :force => true do |t|
+    t.string   "name"
+    t.string   "symbol"
+    t.string   "type"
+    t.string   "path"
+    t.integer  "width"
+    t.integer  "height"
+    t.string   "setting"
+    t.string   "description"
+    t.integer  "items"
+    t.boolean  "disabled",    :default => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
+  end
+
+  create_table "ads", :force => true do |t|
+    t.string   "name"
+    t.string   "type"
+    t.string   "setting"
+    t.date     "startdate"
+    t.date     "enddate"
+    t.integer  "hits"
+    t.integer  "clicks"
+    t.integer  "listorder"
+    t.boolean  "disabled"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "article_bodies", :force => true do |t|
     t.string   "caption"
@@ -50,8 +79,8 @@ ActiveRecord::Schema.define(:version => 20120716074946) do
     t.integer  "parent_id",   :default => 0
     t.string   "description"
     t.integer  "listorder",   :default => 0
-    t.string   "arrparentid"
-    t.string   "arrchildid"
+    t.text     "arrparentid"
+    t.text     "arrchildid"
     t.integer  "hits"
     t.string   "style"
     t.string   "path"
@@ -77,6 +106,18 @@ ActiveRecord::Schema.define(:version => 20120716074946) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "links", :force => true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.string   "logo"
+    t.string   "description"
+    t.string   "user_name"
+    t.integer  "listorder"
+    t.boolean  "disabled"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "magazines", :force => true do |t|
     t.string   "title"
     t.date     "public_date"
@@ -94,6 +135,7 @@ ActiveRecord::Schema.define(:version => 20120716074946) do
     t.text     "body"
     t.text     "formatted_html"
     t.string   "category"
+    t.string   "content"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
   end

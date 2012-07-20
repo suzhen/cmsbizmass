@@ -1,0 +1,16 @@
+= simple_form_for(@ad_space) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :type
+    = f.input :path
+    = f.input :width
+    = f.input :height
+    = f.input :setting
+    = f.input :description
+    = f.input :items
+    = f.input :disabled
+
+  .form-actions
+    = f.button :submit

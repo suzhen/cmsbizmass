@@ -59,8 +59,13 @@
       = render_cell :topic_pool3,:display,:name=>"零售八卦",:ename=>"Gossip ",:link=>"#",:topics=>Category.find(1).articles
     .span4
       = render_cell :topic_pool2,:display,:name=>"合作商机",:ename=>"Business",:link=>"#",:topics=>Category.find(1).articles
-
-
+  -#广告
+  .row
+    .span12
 
   -#友情链接
-  
+  .row
+    .span12
+      = render_cell :topic_pool7,:display,:name=>"友情链接",:rendercell=>"magazines",:display=>"display" 
+
+

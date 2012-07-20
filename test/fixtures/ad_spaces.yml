@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  type: 
+  path: MyString
+  width: 1
+  height: 1
+  setting: MyString
+  description: MyString
+  items: 1
+  disabled: MyString
+
+two:
+  name: MyString
+  type: 
+  path: MyString
+  width: 1
+  height: 1
+  setting: MyString
+  description: MyString
+  items: 1
+  disabled: MyString
