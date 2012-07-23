@@ -1,9 +1,9 @@
-= simple_form_for(@ad) do |f|
+= simple_form_for(@ad,:html=>{:class=>'form-horizontal'}) do |f|
   = f.error_notification
 
   .form-inputs
     = f.input :name
-    = f.input :type
+    = f.input :kind
     = f.input :setting
     = f.input :startdate
     = f.input :enddate
@@ -11,6 +11,6 @@
     = f.input :clicks
     = f.input :listorder
     = f.input :disabled
-
+    = f.input :poster,:as=>"file"
   .form-actions
     = f.button :submit

@@ -4,8 +4,11 @@
   %b Name:
   = @ad_space.name
 %p
-  %b Type:
-  = @ad_space.type
+  %b Kind:
+  = @ad_space.kind
+%p
+  %b Symbol:
+  = @ad_space.symbol
 %p
   %b Path:
   = @ad_space.path
@@ -28,6 +31,4 @@
   %b Disabled:
   = @ad_space.disabled
 
-= link_to 'Edit', edit_ad_space_path(@ad_space)
-\|
-= link_to 'Back', ad_spaces_path
+= link_to '编辑', edit_ad_space_path(@ad_space)

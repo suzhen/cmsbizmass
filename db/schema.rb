@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(:version => 20120720073020) do
   create_table "ad_spaces", :force => true do |t|
     t.string   "name"
     t.string   "symbol"
-    t.string   "type"
+    t.string   "kind"
     t.string   "path"
     t.integer  "width"
     t.integer  "height"
@@ -30,16 +30,18 @@ ActiveRecord::Schema.define(:version => 20120720073020) do
 
   create_table "ads", :force => true do |t|
     t.string   "name"
-    t.string   "type"
+    t.string   "kind"
     t.string   "setting"
-    t.date     "startdate"
+    t.date     "startdate",   :default => '2012-07-23'
     t.date     "enddate"
     t.integer  "hits"
-    t.integer  "clicks"
-    t.integer  "listorder"
+    t.integer  "clicks",      :default => 0
+    t.integer  "listorder",   :default => 0
     t.boolean  "disabled"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "poster"
+    t.integer  "ad_space_id"
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
   end
 
   create_table "article_bodies", :force => true do |t|

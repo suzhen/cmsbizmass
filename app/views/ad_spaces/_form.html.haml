@@ -1,9 +1,10 @@
-= simple_form_for(@ad_space) do |f|
+= simple_form_for(@ad_space,:html=>{:class=>'form-horizontal'}) do |f|
   = f.error_notification
 
   .form-inputs
     = f.input :name
-    = f.input :type
+    = f.input :symbol
+    = f.input :kind
     = f.input :path
     = f.input :width
     = f.input :height

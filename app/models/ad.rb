@@ -1,3 +1,3 @@
 class Ad < ActiveRecord::Base
- # mount_uploader :cover, CoverUploader
+  mount_uploader :poster, PosterUploader
 end

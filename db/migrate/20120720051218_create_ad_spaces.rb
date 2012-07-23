@@ -3,7 +3,7 @@ class CreateAdSpaces < ActiveRecord::Migration
     create_table :ad_spaces do |t|
       t.string :name
       t.string :symbol
-      t.string :type
+      t.string :kind
       t.string :path
       t.integer :width
       t.integer :height

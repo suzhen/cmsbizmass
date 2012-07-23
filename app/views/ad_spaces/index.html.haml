@@ -1,35 +1,32 @@
-%h1 Listing ad_spaces
 
-%table
-  %tr
-    %th Name
-    %th Type
-    %th Path
-    %th Width
-    %th Height
-    %th Setting
-    %th Description
-    %th Items
-    %th Disabled
-    %th
-    %th
-    %th
-
-  - @ad_spaces.each do |ad_space|
+%table.table.table-striped
+  %thead
     %tr
-      %td= ad_space.name
-      %td= ad_space.type
-      %td= ad_space.path
-      %td= ad_space.width
-      %td= ad_space.height
-      %td= ad_space.setting
-      %td= ad_space.description
-      %td= ad_space.items
-      %td= ad_space.disabled
-      %td= link_to 'Show', ad_space
-      %td= link_to 'Edit', edit_ad_space_path(ad_space)
-      %td= link_to 'Destroy', ad_space, :confirm => 'Are you sure?', :method => :delete
+      %th 广告位名称
+      %th 广告位类型
+      %th JS路径
+      %th 宽度
+      %th 高度
+      %th 设置
+      %th 描述
+      %th 显示个数
+      %th 是否启用
+      %th
+      %th
+      %th
+  %tbody
+    - @ad_spaces.each do |ad_space|
+      %tr
+        %td= ad_space.name
+        %td= ad_space.kind
+        %td= ad_space.path
+        %td= ad_space.width
+        %td= ad_space.height
+        %td= ad_space.setting
+        %td= ad_space.description
+        %td= ad_space.items
+        %td= ad_space.disabled
+        %td= link_to '显示', ad_space
+        %td= link_to '编辑', edit_ad_space_path(ad_space)
+        %td= link_to '删除', ad_space, :confirm => '确定删除?', :method => :delete
 
-%br
-
-= link_to 'New Ad space', new_ad_space_path

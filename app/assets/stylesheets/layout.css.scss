@@ -419,7 +419,7 @@
   }
 }
 
-/*下载*/
+/*杂志下载*/
 .mgimgtxt{
   margin:10px 0;
   overflow:hidden;
@@ -433,6 +433,18 @@
   }
 }
 
+/*杂志列表*/
+.link_list{
+ @include horizontal-list-container;
+ li{
+  @include horizontal-list-item(6px);
+  &:first-child, &.first{
+    padding-left:5px;
+  }
+  overflow:hidden;
+ }
+}
 
+ 
 
  
