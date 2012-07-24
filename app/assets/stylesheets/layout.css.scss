@@ -468,7 +468,7 @@
   }
 }
 
-/*杂志列表*/
+/*链接列表*/
 .link_list{
  @include horizontal-list-container;
  li{
@@ -481,5 +481,23 @@
 }
 
  
+/*图片轮转*/
+.picture_container{
+ border-left:1px solid #afd0df;
+ border-right:1px solid #afd0df;   
+ padding: 0 1px;
+ .picture_content{
+      height:300px;  
+      background:white url(picturepool.jpg) repeat-x top left;
+      overflow: hidden;
+     
+ }
+
+
+}
+
+
+
+
 
  
