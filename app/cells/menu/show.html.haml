@@ -72,6 +72,12 @@
     - else
       %li
         =link_to "联系方式","/manage/contact"
+    - if @action_name.include? "sound"
+      %li.active
+        =link_to "首页声音","/manage/sound"
+    - else
+      %li
+        =link_to "首页声音","/manage/sound"
   -# 杂志管理
   - if @controller_name=="magazines"
     %li.nav-header

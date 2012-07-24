@@ -1,6 +1,7 @@
 class TopicPool4Cell < Cell::Rails
 
-  def display
+  def display(params)
+    @topics=params[:topics]
     render
   end
 

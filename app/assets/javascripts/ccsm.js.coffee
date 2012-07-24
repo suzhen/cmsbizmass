@@ -8,8 +8,10 @@ $ ->
       preview: "wmd-preview"
       helpLink: "http://daringfireball.net/projects/markdown/syntax"
 
-
-
+#图片转换
+$ ->
+  if $('div.imgbox').length > 0
+    $('div.imgbox').imgbox()
 
 
 

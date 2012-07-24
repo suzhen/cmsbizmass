@@ -11,5 +11,5 @@
       %a{href: @link} >>more
   -#内容
   .news_content
-    = render_cell @rendercell,@display
+    = render_cell @rendercell,@display unless @rendercell.nil?
 

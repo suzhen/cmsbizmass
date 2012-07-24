@@ -109,6 +109,15 @@
    background-image:url(footer_line.gif);
 }
 
+/**图片轮转**/
+.imgbox {
+  width:300px;
+  height:250px;
+  border:1px #DDD solid;
+  margin:20px auto;
+  .list { display:none;}
+}
+
 #footer{
   text-align:center;
   ul {
@@ -165,6 +174,7 @@
 
 .news_container{
   .news_title{
+    overflow: hidden;
     height:28px;
     background-image:url(bg1.jpg);
     border-left:1px solid #ccc;
@@ -234,7 +244,7 @@
     border-left:1px solid #ccc;
     border-right:1px solid #ccc;  
     border-bottom:1px solid #ccc;   
- 
+    overflow: hidden;
     background:white;
   }
 }
@@ -246,6 +256,7 @@
      height:28px;
      background:url(title_brow_3.jpg) repeat-x bottom left;
      position: relative;
+     overflow: hidden;
      .linkspan{
         color:red;
         display: block;
@@ -306,6 +317,29 @@
  .top_content{
       height:448px;  
       background:white url(topbg.jpg) repeat-x top left;
+      overflow: hidden;
+   .top_title{
+     font-weight:bold;
+     font-size:13pt;
+     color:#bb0214;
+     line-height:40px;
+     text-align:center;
+   }
+   .top_introduction{
+     line-heigt:100px;
+     padding:10px;
+   }
+   .top_line{
+     background:white url(line.jpg) no-repeat top left; 
+     height:1px;
+     width:300px;
+     margin-left:10px;
+   }
+   .top_list{
+
+   }
+
+
  }
 }
 
@@ -390,7 +424,8 @@
     }
   }
   .sound_content{
-
+    padding:5px 10px;
+    color:blue;
   }
 }
 

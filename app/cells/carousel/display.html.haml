@@ -1,0 +1,10 @@
+.imgbox
+  .list
+    - @magazines.each do |magazine|
+      = link_to (image_tag magazine.cover.url(:normal),:border=>0),"#",:title=>magazine.title
+
+
+
+
+
+

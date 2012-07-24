@@ -65,12 +65,21 @@ class RecordsController < ApplicationController
           format.html { redirect_to "/manage/contact", notice: '联系方式更新成功。' }
           format.json { head :no_content }
         end
+        if params[:record][:category]=="sound"
+          format.html { redirect_to "/manage/sound", notice: '首页声音更新成功。' }
+          format.json { head :no_content }
+        end
+
       else  
         if params[:record][:category]=="contact"
            format.html { render action: "contact_edit" }
            format.json { render json: @record.errors, status: :unprocessable_entity }
- 
         end
+        if params[:record][:category]=="sound"
+           format.html { render action: "sound_edit" }
+           format.json { render json: @record.errors, status: :unprocessable_entity }
+        end
+
       end
     end
   end
@@ -99,6 +108,22 @@ class RecordsController < ApplicationController
   #新增和修改联系我们
   def contact_edit
     @record= Record.find_by_category("contact") || Record.create({:category=>"contact"})
+
+  end
+  #显示首页声音
+  def sound_show
+    @record = Record.find_by_category("sound")|| Record.create({:category=>"sound"})
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @record }
+    end
+  end
+
+  #新增和修改声音
+  def sound_edit
+    @record= Record.find_by_category("sound") || Record.create({:category=>"sound"})
+    #redirect_to "/manage/sound", notice: '首页声音功能编辑。' 
 
   end
 

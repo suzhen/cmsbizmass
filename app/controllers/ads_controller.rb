@@ -25,7 +25,6 @@ class AdsController < ApplicationController
   # GET /ads/new.json
   def new
     @ad = Ad.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @ad }
@@ -41,7 +40,7 @@ class AdsController < ApplicationController
   # POST /ads.json
   def create
     @ad = Ad.new(params[:ad])
-
+   
     respond_to do |format|
       if @ad.save
         format.html { redirect_to @ad, notice: 'Ad was successfully created.' }

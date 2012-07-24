@@ -12,9 +12,13 @@ CcsmCmsbizmass::Application.routes.draw do
     resources :ad_spaces
     resources :links
 
-    get "/contact"=>"records#contact_show"   
+    get "/contact"=>"records#contact_show"  
+    get "/sound"=>"records#sound_show"
+ 
     get "/editcontact"=>"records#contact_edit"   
-    put "/updatecontact"=>"contacts#update" 
+    
+    get "/editsound"=>"records#sound_edit"   
+     
   end
 
   
