@@ -509,31 +509,56 @@
   border:1px solid #ccc; 
   background:white url(btnbg.jpg) repeat-x top left;
   height:53px;
+  text-align:center;
 }
-  
-.srbtn1{
+ 
+.srbtn{
   background:white url(sbtnbg.jpg) repeat-x top left;
   height:53px;
-  width:96px;
+  width:110px;
+  position:relative;
+  span{
+       top:20px;
+       left:19px;
+       position:absolute;
+  }
+  .tail{
+    height:53px; 
+    width:20px;
+    float:right;
+    background:white url(sbtnbg.jpg) repeat-x top right;
+  }
   float:left;
+}
+
+ 
+.srbtn1{
+ .tail{
+   background-position:20px 0;
+  }
 }
 .srbtn2{
-  background:white url(sbtnbg.jpg) repeat-x top left;
-  height:53px;
-  width:96px;
-  float:left;
+  background-position:-137px 0;
+  .tail{
+   background-position:20px 0;
+  }
 }
 .srbtn3{
-  background:white url(sbtnbg.jpg) repeat-x top left;
-  height:53px;
-  width:96px;
-  float:left;
+  background-position:0 -52px;
+  .tail{
+   background-position:20px -2px;
+  }
+  span{
+       top:20px;
+       left:17px;
+}
+
 }
 .srbtn4{
-  background:white url(sbtnbg.jpg) repeat-x top left;
-  height:53px;
-  width:96px;
-  float:left;
+  background-position:-137px -52px;
+  .tail{
+   background-position:20px -2px;
+  }
 }
 
 
