@@ -109,15 +109,6 @@
    background-image:url(footer_line.gif);
 }
 
-/**图片轮转**/
-.imgbox {
-  width:300px;
-  height:250px;
-  border:1px #DDD solid;
-  margin:20px auto;
-  .list { display:none;}
-}
-
 #footer{
   text-align:center;
   ul {
@@ -164,9 +155,16 @@
 .bord02{
   border-top: 1px solid #c2d0df;
 }
-  
-.blank2 {
+.bord03{
+  border-top: 1px solid #afd0df;
+}
+.blank3{
   background: white;
+  height:3px;
+}  
+.blank5 {
+  background: white;
+  height:5px;
 }
 
 
@@ -425,7 +423,8 @@
   }
   .sound_content{
     padding:5px 10px;
-    color:blue;
+    color:#2267ad;
+    overflow: hidden; 
   }
 }
 
@@ -480,24 +479,62 @@
  }
 }
 
- 
+/**图片轮转**/
+.imgbox {
+  width:280px;
+  height:220px;
+  border:1px #DDD solid;
+  margin:10px auto;
+  .list { display:none;}
+}
+
+
 /*图片轮转*/
 .picture_container{
  border-left:1px solid #afd0df;
- border-right:1px solid #afd0df;   
+ border-right:1px solid #afd0df;  
+ border-bottom:1px solid #afd0df;   
+
  padding: 0 1px;
  .picture_content{
-      height:300px;  
+      height:242px;  
       background:white url(picturepool.jpg) repeat-x top left;
       overflow: hidden;
      
  }
-
-
 }
 
-
-
+/**QQ,WEIBO,等按钮**/
+.rbtn{
+  border:1px solid #ccc; 
+  background:white url(btnbg.jpg) repeat-x top left;
+  height:53px;
+}
+  
+.srbtn1{
+  background:white url(sbtnbg.jpg) repeat-x top left;
+  height:53px;
+  width:96px;
+  float:left;
+}
+.srbtn2{
+  background:white url(sbtnbg.jpg) repeat-x top left;
+  height:53px;
+  width:96px;
+  float:left;
+}
+.srbtn3{
+  background:white url(sbtnbg.jpg) repeat-x top left;
+  height:53px;
+  width:96px;
+  float:left;
+}
+.srbtn4{
+  background:white url(sbtnbg.jpg) repeat-x top left;
+  height:53px;
+  width:96px;
+  float:left;
+}
 
 
  
