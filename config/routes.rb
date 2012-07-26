@@ -31,7 +31,7 @@ CcsmCmsbizmass::Application.routes.draw do
    get "/service"=>"common/maps#show"
    get "/members"=>"common/maps#show"
    get "/contact"=>"common/contact#show"
-  
+   get "/detail/:year/:month/:day/:id"=>"common/homepages#detail"  
 
   #map下的ajax
   get "/enterprises_by_city"=>"common/maps#get_ents_by_city_ajax"

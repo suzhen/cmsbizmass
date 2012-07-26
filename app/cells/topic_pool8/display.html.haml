@@ -1,0 +1,12 @@
+-#新闻详细内容容器
+.news_container
+  .bord01
+  -#标题
+  .news_title
+    .arrow_brow
+    您所在的位置：
+    = raw @article.category_chain
+  -#内容
+  .news_content
+    = raw @article.body
+%br 

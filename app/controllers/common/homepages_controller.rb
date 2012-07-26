@@ -4,7 +4,13 @@ class Common::HomepagesController < ApplicationController
     @ad=Ad.last
     respond_to do |format|
       format.html 
-    #  format.json { render json: @record }
+    end
+  end
+  
+  def detail
+    @ad=Ad.last
+    respond_to do |format|
+      format.html 
     end
   end
 

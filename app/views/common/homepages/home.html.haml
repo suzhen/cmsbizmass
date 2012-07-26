@@ -1,9 +1,9 @@
-%br
+.blank5
 .span12
   -#顶栏广告
   .row 
     .span12
-      =image_tag @ad.poster.url      
+      =image_tag @ad.poster.url  if @ad.present?
   .blank5
   -#第一屏新闻
   .row
@@ -28,7 +28,7 @@
   -#中间栏广告
   .row 
     .span12
-      =image_tag @ad.poster.url
+      =image_tag @ad.poster.url if @ad.present?
   .blank5
   -#第二屏新闻
   .row
@@ -55,7 +55,7 @@
   -#广告
   .row
     .span12
-      =image_tag @ad.poster.url
+      =image_tag @ad.poster.url if @ad.present?
 
   .blank5 
   -#第四屏新闻
@@ -81,8 +81,7 @@
   -#广告
   .row
     .span12
-      =image_tag @ad.poster.url
-
+      =image_tag @ad.poster.url if @ad.present?
   .blank5 
   -#友情链接
   .row

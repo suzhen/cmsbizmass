@@ -14,4 +14,14 @@ class Article < ActiveRecord::Base
     "#{created_at.year}/#{created_at.month.to_s.rjust(2, '0')}/#{created_at.day.to_s.rjust(2, '0')}/#{id}-#{Pinyin.t(title, '')}"
   end
 
+  def category_chain
+    categories=""
+    arr_cat=category.arrparentid.split(",")
+    arr_cat<<category.id.to_s
+    arr_cat.each do |id|
+       categories+="<a href='/news/#{id}'>#{Category.find(id).name}</a>"+" — >" unless id=="0" 
+    end 
+    categories[0..-4]
+  end
+
 end
