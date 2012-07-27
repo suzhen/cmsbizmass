@@ -4,9 +4,19 @@
   -#标题
   .news_title
     .arrow_brow
-    您所在的位置：
-    = raw @article.category_chain
+    .detail_title
+      您所在的位置：
+      = raw @article.category_chain
   -#内容
-  .news_content
+  .detail_content
+    .artibodyTitle
+      = @article.title
+    .artiInfo
+      = link_to "www.ccsm.com","http://www.ccsm.com"
+      = "来源：#{@article.source}" if @article.source.present?
+      = "作者：#{@article.author}" if @article.author.present?
+      = @article.created_at.to_s(:db) 
+    .artibody  
+    %br
     = raw @article.body
 %br 

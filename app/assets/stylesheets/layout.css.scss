@@ -236,6 +236,12 @@
         left:35px;
         position:relative; 
      }
+     .detail_title{
+        float:left;
+        top:6px;
+        left:35px;
+        position:relative; 
+     }
  }
   .news_content {
     border-top:1px solid #ccc;
@@ -245,6 +251,43 @@
     overflow: hidden;
     background:white;
   }
+  .detail_content{
+    border-top:1px solid #ccc;
+    border-left:1px solid #ccc;
+    border-right:1px solid #ccc;  
+    border-bottom:1px solid #ccc;   
+    overflow: hidden;
+    background:white;
+    padding:20px;
+    
+    .artibodyTitle{
+       color: #03005C;
+       font-family: "黑体";
+       font-size: 20px;
+       font-weight: normal;
+       height: 35px;
+       line-height: 35px;
+       overflow: hidden;
+       text-align: center;
+    }
+    .artiInfo{
+       width:600px;
+       border-top:1px solid #ccc;
+       text-align: center;
+       margin:5px auto;
+       padding:10px 0;
+    }
+    .artibody{
+
+
+    }
+
+
+  }
+
+
+
+
 }
 
 

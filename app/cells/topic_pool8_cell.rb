@@ -1,8 +1,7 @@
 class TopicPool8Cell < Cell::Rails
 
   def display(params)
-    #@title=params[:title]
-    @article=Article.first
+    @article=Article.find params[:id]
     render
   end
 

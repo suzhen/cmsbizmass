@@ -4,7 +4,7 @@
       %li= link_to "首页","/index",:class=>"active"
     - else
       %li= link_to "首页","/index"
-    - if @controller_name=="news"
+    - if @controller_name=="homepages"&&@action_name=="detail"
       %li= link_to "资讯中心","/news",:class=>"active" 
     - else
       %li= link_to "资讯中心","/news" 
