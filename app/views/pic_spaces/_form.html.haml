@@ -1,0 +1,10 @@
+= simple_form_for(@pic_space) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :symbol
+    = f.input :maxnum
+
+  .form-actions
+    = f.button :submit

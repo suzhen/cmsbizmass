@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @pic_space.name
+%p
+  %b Symbol:
+  = @pic_space.symbol
+%p
+  %b Maxnum:
+  = @pic_space.maxnum
+
+= link_to 'Edit', edit_pic_space_path(@pic_space)
+\|
+= link_to 'Back', pic_spaces_path

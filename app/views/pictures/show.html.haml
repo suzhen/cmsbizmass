@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @picture.title
+%p
+  %b Style:
+  = @picture.style
+%p
+  %b Description:
+  = @picture.description
+%p
+  %b Listorder:
+  = @picture.listorder
+%p
+  %b Status:
+  = @picture.status
+%p
+  %b User name:
+  = @picture.user_name
+%p
+  %b Url:
+  = @picture.url
+
+= link_to 'Edit', edit_picture_path(@picture)
+\|
+= link_to 'Back', pictures_path

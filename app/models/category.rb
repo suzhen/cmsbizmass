@@ -2,6 +2,7 @@
 require 'tree'
 class Category < ActiveRecord::Base
   has_many :articles
+  has_many :pictures
   include Tree
   validates :name,:presence=>true 
   validates :ctype,:presence=>true

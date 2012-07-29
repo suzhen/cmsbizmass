@@ -1,0 +1,14 @@
+= simple_form_for(@picture) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :title
+    = f.input :style
+    = f.input :description
+    = f.input :listorder
+    = f.input :status
+    = f.input :user_name
+    = f.input :url
+
+  .form-actions
+    = f.button :submit

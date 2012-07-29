@@ -1,5 +1,9 @@
 CcsmCmsbizmass::Application.routes.draw do
 
+  resources :pic_spaces
+
+  resources :pictures
+
   devise_for :users
 
   scope "/manage" do

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  style: MyString
+  description: MyText
+  listorder: 1
+  status: MyString
+  user_name: MyString
+  url: MyString
+
+two:
+  title: MyString
+  style: MyString
+  description: MyText
+  listorder: 1
+  status: MyString
+  user_name: MyString
+  url: MyString
