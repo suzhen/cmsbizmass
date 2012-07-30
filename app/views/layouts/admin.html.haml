@@ -52,6 +52,12 @@
               - else
                 %li
                   %a{:href=>"/manage/links"} 友情链接管理        
+              - if controller_name=="pic_spaces"||controller_name=="pictures"
+                %li.active
+                  %a{:href=>"/manage/pic_spaces"} 图库管理        
+              - else
+                %li
+                  %a{:href=>"/manage/pic_spaces"} 图库管理        
 
 
             %ul.nav.pull-right 

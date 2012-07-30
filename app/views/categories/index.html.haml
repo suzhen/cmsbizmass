@@ -3,6 +3,7 @@
   %thead
     %tr
       %th 分类名称
+      %th 分类标识
       %th 下一级分类
       %th 所有父分类
       %th
@@ -12,6 +13,7 @@
     - @categories.each do |category|
       %tr
         %td= category.name
+        %td= category.symbol
         %td= category.get_children_nodes.collect{|node| node[1] }.join(",")
         %td= Category.get_node_names(category.arrparentid).gsub(/,/,'/')
         %td= link_to '显示', category

@@ -3,6 +3,7 @@
   %thead
     %tr
       %th 广告位名称
+      %th 广告位标识
       %th 广告位类型
       %th JS路径
       %th 宽度
@@ -18,6 +19,7 @@
     - @ad_spaces.each do |ad_space|
       %tr
         %td= ad_space.name
+        %td= ad_space.symbol
         %td= ad_space.kind
         %td= ad_space.path
         %td= ad_space.width

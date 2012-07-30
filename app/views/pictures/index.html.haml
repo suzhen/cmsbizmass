@@ -1,31 +1,26 @@
-%h1 Listing pictures
-
-%table
-  %tr
-    %th Title
-    %th Style
-    %th Description
-    %th Listorder
-    %th Status
-    %th User name
-    %th Url
-    %th
-    %th
-    %th
-
-  - @pictures.each do |picture|
+%table.table.table-striped
+  %thead
     %tr
-      %td= picture.title
-      %td= picture.style
-      %td= picture.description
-      %td= picture.listorder
-      %td= picture.status
-      %td= picture.user_name
-      %td= picture.url
-      %td= link_to 'Show', picture
-      %td= link_to 'Edit', edit_picture_path(picture)
-      %td= link_to 'Destroy', picture, :confirm => 'Are you sure?', :method => :delete
+      %th 图片名称
+      %th 图片描述
+      %th 顺序
+      %th 状况
+      %th 上传人
+      %th 链接地址
+      %th
+      %th
+      %th
+  %tbody
+    - @pictures.each do |picture|
+      %tr
+        %td= picture.title
+        %td= picture.description
+        %td= picture.listorder
+        %td= picture.status
+        %td= picture.user_name
+        %td= picture.url
+        %td= link_to '显示', picture
+        %td= link_to '编辑', edit_picture_path(picture)
+        %td= link_to '删除', picture, :confirm => '确定删除吗？', :method => :delete
 
-%br
 
-= link_to 'New Picture', new_picture_path

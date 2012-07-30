@@ -1,8 +1,5 @@
 CcsmCmsbizmass::Application.routes.draw do
 
-  resources :pic_spaces
-
-  resources :pictures
 
   devise_for :users
 
@@ -15,6 +12,8 @@ CcsmCmsbizmass::Application.routes.draw do
     resources :ads
     resources :ad_spaces
     resources :links
+    resources :pic_spaces
+    resources :pictures
 
     get "/contact"=>"records#contact_show"  
     get "/sound"=>"records#sound_show"

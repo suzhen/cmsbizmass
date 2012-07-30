@@ -1,23 +1,20 @@
-%h1 Listing pic_spaces
-
-%table
-  %tr
-    %th Name
-    %th Symbol
-    %th Maxnum
-    %th
-    %th
-    %th
-
-  - @pic_spaces.each do |pic_space|
+%table.table.table-striped
+  %thead
     %tr
-      %td= pic_space.name
-      %td= pic_space.symbol
-      %td= pic_space.maxnum
-      %td= link_to 'Show', pic_space
-      %td= link_to 'Edit', edit_pic_space_path(pic_space)
-      %td= link_to 'Destroy', pic_space, :confirm => 'Are you sure?', :method => :delete
+      %th 图片位名称
+      %th 图片位标识
+      %th 最多显示个数
+      %th
+      %th
+      %th
+  %tbody
+    - @pic_spaces.each do |pic_space|
+      %tr
+        %td= pic_space.name
+        %td= pic_space.symbol
+        %td= pic_space.maxnum
+        %td= link_to '显示', pic_space
+        %td= link_to '编辑', edit_pic_space_path(pic_space)
+        %td= link_to '删除', pic_space, :confirm => '确定删除吗？', :method => :delete
 
-%br
 
-= link_to 'New Pic space', new_pic_space_path

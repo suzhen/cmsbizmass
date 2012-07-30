@@ -11,6 +11,7 @@ class CreatePictures < ActiveRecord::Migration
       t.references :article
       t.references :category
       t.references :pic_space
+      t.string :picture
       t.timestamps
     end
   end

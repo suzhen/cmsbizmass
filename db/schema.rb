@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120720073020) do
+ActiveRecord::Schema.define(:version => 20120729160235) do
 
   create_table "ad_spaces", :force => true do |t|
     t.string   "name"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(:version => 20120720073020) do
     t.string   "name"
     t.string   "kind"
     t.string   "setting"
-    t.date     "startdate",   :default => '2012-07-25'
+    t.date     "startdate",   :default => '2012-07-23'
     t.date     "enddate"
     t.integer  "hits"
     t.integer  "clicks",      :default => 0
@@ -81,8 +81,8 @@ ActiveRecord::Schema.define(:version => 20120720073020) do
     t.integer  "parent_id",   :default => 0
     t.string   "description"
     t.integer  "listorder",   :default => 0
-    t.string   "arrparentid"
-    t.string   "arrchildid"
+    t.text     "arrparentid"
+    t.text     "arrchildid"
     t.integer  "hits"
     t.string   "style"
     t.string   "path"
@@ -133,10 +133,35 @@ ActiveRecord::Schema.define(:version => 20120720073020) do
     t.datetime "updated_at",  :null => false
   end
 
+  create_table "pic_spaces", :force => true do |t|
+    t.string   "name"
+    t.string   "symbol"
+    t.integer  "maxnum"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "pictures", :force => true do |t|
+    t.string   "title"
+    t.string   "style"
+    t.text     "description"
+    t.integer  "listorder"
+    t.string   "status"
+    t.string   "user_name"
+    t.string   "url"
+    t.integer  "article_id"
+    t.integer  "category_id"
+    t.integer  "pic_space_id"
+    t.string   "picture"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
   create_table "records", :force => true do |t|
     t.text     "body"
     t.text     "formatted_html"
     t.string   "category"
+    t.string   "content"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
   end
