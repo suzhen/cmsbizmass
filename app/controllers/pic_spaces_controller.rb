@@ -1,3 +1,4 @@
+#coding: utf-8 
 class PicSpacesController < ApplicationController
   # GET /pic_spaces
   # GET /pic_spaces.json

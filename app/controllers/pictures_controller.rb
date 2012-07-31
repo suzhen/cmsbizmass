@@ -1,3 +1,4 @@
+#coding: utf-8 
 class PicturesController < ApplicationController
   # GET /pictures
   # GET /pictures.json
@@ -25,7 +26,7 @@ class PicturesController < ApplicationController
   # GET /pictures/new.json
   def new
     @picture = Picture.new
-
+    @picture.category=Category.new
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @picture }

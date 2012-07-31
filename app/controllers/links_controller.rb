@@ -1,3 +1,4 @@
+#coding: utf-8 
 class LinksController < ApplicationController
   # GET /links
   # GET /links.json

@@ -1,3 +1,4 @@
+#coding: utf-8 
 class AdSpacesController < ApplicationController
   # GET /ad_spaces
   # GET /ad_spaces.json

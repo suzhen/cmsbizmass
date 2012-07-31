@@ -9,6 +9,12 @@
     = f.input :status
     = f.input :url
     = f.association :pic_space
+    .control-group.select      
+      %label.select.control-label 图片分类
+      .controls
+        =raw category_selects(@picture.category.id,'categoryUL0')
+    = hidden_field_tag :category_parent_id,@picture.category.id,:name=>"category_id"
+
     = f.input :picture,:as=>"file"
   .form-actions
     = f.button :submit

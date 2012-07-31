@@ -166,6 +166,7 @@
   - if @controller_name=="pictures"||@controller_name=="pic_spaces"
     %li.nav-header
       %h4 图库管理
+      = hidden_field_tag :category_tree,@ztree_data
     -if @controller_name=="pic_spaces"&& @action_name=="index"
       %li.active
         =link_to "图片位列表","#"
