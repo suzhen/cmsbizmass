@@ -1,10 +1,12 @@
 class TopicPool3Cell < Cell::Rails
 
   def display(params)
-    @name=params[:name]
+    @symbol=params[:symbol]
+    @category=Category.find_by_symbol($pageconfig["home_page"][@symbol])
+    @name=@category.name
     @link=params[:link]
-    @ename=params[:ename]
-    @topics=params[:topics]
+    @ename=@category.ename
+    @topics=@category.articles
     render
   end
 

@@ -1,7 +1,8 @@
 class TopicPool5Cell < Cell::Rails
 
-  def display(params)
-    @topics=params[:topics]
+  def display()
+    @category=Category.find_by_symbol($pageconfig["home_page"]["tpE"])
+    @topics=@category.articles
     render
   end
 

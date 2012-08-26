@@ -10,12 +10,12 @@
     .span4
       = render_cell :carousel,:display
       .blank5
-      = render_cell :topic_pool5,:display,:topics=>Category.find(1).articles
+      = render_cell :topic_pool5,:display
     .span5
-      = render_cell :topic_pool4,:display,:topics=>Category.find(1).articles
+      = render_cell :topic_pool4,:display,:symbol=>"tpI"
     .span3
       = render_cell :topic_pool6,:display
-      = render_cell :topic_pool2,:display,:name=>"公司公告",:ename=>"Announcements",:link=>"#",:topics=>Category.find(1).articles
+      = render_cell :topic_pool2,:display,:symbol=>"tpJ",:link=>"#"
       .blank5
       = render_cell :retailbutton,:display
 
@@ -35,16 +35,16 @@
     .span8
       = render_cell :topic_pool1,:display,:name=>"零售专题",:link=>"/magazines" 
     .span4
-      = render_cell :topic_pool3,:display,:name=>"零售访谈",:ename=>"Retail interview",:link=>"#",:topics=>Category.find(1).articles
+      = render_cell :topic_pool3,:display,:symbol=>"tpA"
   .blank5 
   -#第三屏新闻
   .row
     .span4
-      = render_cell :topic_pool3,:display,:name=>"数据统计",:ename=>"Statistics",:link=>"#",:topics=>Category.find(1).articles
+      = render_cell :topic_pool3,:display,:symbol=>"tpB"
     .span4
-      = render_cell :topic_pool3,:display,:name=>"政策法规",:ename=>"Policy",:link=>"#",:topics=>Category.find(1).articles
+      = render_cell :topic_pool3,:display,:symbol=>"tpC"
     .span4
-      = render_cell :topic_pool2,:display,:name=>"视频中心",:ename=>"Videos",:link=>"#",:topics=>Category.find(1).articles
+      = render_cell :topic_pool2,:display,:link=>"#",:symbol=>"tpK"
   .blank5 
   -#图库
   .row
@@ -61,22 +61,21 @@
   -#第四屏新闻
   .row
     .span4
-      = render_cell :topic_pool3,:display,:name=>"人才服务",:ename=>"Talent service",:link=>"#",:topics=>Category.find(1).articles
+      = render_cell :topic_pool3,:display,:symbol=>"tpD"
     .span4
-      = render_cell :topic_pool3,:display,:name=>"商业地产",:ename=>"Real estate",:link=>"#",:topics=>Category.find(1).articles
+      = render_cell :topic_pool3,:display,:symbol=>"tpE"
     .span4
-      = render_cell :topic_pool2,:display,:name=>"网站地图",:ename=>"Maps",:link=>"/maps",:topics=>Category.find(1).articles
+      = render_cell :topic_pool2,:display,:link=>"/maps",:symbol=>"tpM"
 
   .blank5 
   -#第五屏新闻
   .row
     .span4
-      = render_cell :topic_pool3,:display,:name=>"理事单位",:ename=>"Members",:link=>"/members",:topics=>Category.find(1).articles
+      = render_cell :topic_pool3,:display,:symbol=>"tpF"
     .span4
-      = render_cell :topic_pool3,:display,:name=>"零售八卦",:ename=>"Gossip ",:link=>"#",:topics=>Category.find(1).articles
+      = render_cell :topic_pool3,:display,:symbol=>"tpG"
     .span4
-      = render_cell :topic_pool2,:display,:name=>"合作商机",:ename=>"Business",:link=>"#",:topics=>Category.find(1).articles
-  
+      = render_cell :topic_pool2,:display,:link=>"#",:symbol=>"tpL"
   .blank5 
   -#广告
   .row
