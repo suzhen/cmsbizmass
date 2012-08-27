@@ -1,7 +1,7 @@
 @import "compass/utilities/lists";
 @import "compass/typography/links";
 /***后台样式***/
-
+            
 #login {
   color: #fff;                 
   background: #222 url('/assets/bg-login.gif');
@@ -41,6 +41,7 @@
         }
        }             
 /***网站样式***/
+.clr{clear:both}
 .menu{
   height:35px;
   background-image:url(menu_bg_line.gif); 
@@ -377,7 +378,10 @@
      margin-left:10px;
    }
    .top_list{
-
+       padding-right:12px;
+       @include no-bullets; 
+      .tltitle{float:left;}
+      .tldate{float:right;}
    }
 
 
@@ -510,6 +514,37 @@
   }
 }
 
+/*图片画廊*/
+.gallery_list{
+ @include horizontal-list-container;
+ li{
+  @include horizontal-list-item(5px);
+  &:first-child, &.first{
+    padding-left:15px;
+  }
+ }
+ a{
+    @include link-colors(black,#bb0214,black,black,black); 
+  }
+}
+
+.galleryimgtxt{
+  margin:10px 0;
+  overflow:hidden;
+  #height:1i72px;
+  text-align:center;
+  .img{
+    display:block;
+  }
+  .txt{
+    display:block;
+  }
+}
+
+
+
+
+
 /*链接列表*/
 .link_list{
  @include horizontal-list-container;
@@ -521,6 +556,8 @@
   overflow:hidden;
  }
 }
+
+
 
 /**图片轮转**/
 .imgbox {

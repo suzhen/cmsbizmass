@@ -27,9 +27,11 @@ class PicturesController < ApplicationController
   def new
     @picture = Picture.new
     @picture.category=Category.new
+    @articles=Article.page(params[:page])
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @picture }
+      format.js #{render :new } 
+ #     format.json { render json: @picture }
     end
   end
 
@@ -42,10 +44,10 @@ class PicturesController < ApplicationController
   # POST /pictures.json
   def create
     @picture = Picture.new(params[:picture])
-
+    @picture.category_id=params[:category_id]
     respond_to do |format|
       if @picture.save
-        format.html { redirect_to @picture, notice: 'Picture was successfully created.' }
+        format.html { redirect_to @picture, notice: '新图片创建成功。' }
         format.json { render json: @picture, status: :created, location: @picture }
       else
         format.html { render action: "new" }

@@ -6,5 +6,5 @@ class Picture < ActiveRecord::Base
   validates :title,:presence=>true
   validates :description,:presence=>true
   validates :category,:presence=>true
-
+  mount_uploader :picture,PictureUploader
 end

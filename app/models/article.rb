@@ -4,6 +4,7 @@ class Article < ActiveRecord::Base
   belongs_to :category
   has_one :article_body
   has_many :pictures
+  paginates_per 2 
 
   validates :title,:presence=>true
   validates :category_id,:presence=>true

@@ -2,6 +2,8 @@
   %thead
     %tr
       %th 图片名称
+      %th 图片
+      %th 图片位置
       %th 图片描述
       %th 顺序
       %th 状况
@@ -14,6 +16,8 @@
     - @pictures.each do |picture|
       %tr
         %td= picture.title
+        %td= image_tag picture.picture.url(:thumb)
+        %td= picture.pic_space.name
         %td= picture.description
         %td= picture.listorder
         %td= picture.status

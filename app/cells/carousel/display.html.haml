@@ -3,8 +3,8 @@
   .picture_content
     .imgbox
       .list
-        - @magazines.each do |magazine|
-          = link_to (image_tag magazine.cover.url(:normal),:border=>0),"#",:title=>magazine.title
+        - @pictures.each do |pic|
+          = link_to (image_tag pic.picture.url(:size1),:border=>0),"#",:title=>pic.title
 
 
 

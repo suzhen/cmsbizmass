@@ -8,7 +8,7 @@
   -#第一屏新闻
   .row
     .span4
-      = render_cell :carousel,:display
+      = render_cell :carousel,:display,:symbol=>"carousel"
       .blank5
       = render_cell :topic_pool5,:display
     .span5
@@ -49,8 +49,7 @@
   -#图库
   .row
     .span12
-      = render_cell :topic_pool1,:display,:name=>"图库",:link=>"#",:rendercell=>"magazines",:display=>"display" 
-  
+      = render_cell :topic_pool1,:display,:name=>"图库",:link=>"#",:rendercell=>"gallery",:display=>"display",:symbol=>"gallery" 
   .blank5 
   -#广告
   .row

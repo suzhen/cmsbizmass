@@ -8,6 +8,16 @@ $ ->
       preview: "wmd-preview"
       helpLink: "http://daringfireball.net/projects/markdown/syntax"
 
+
+  $("#chsArtBtn").click ->
+    $('#QueryArticle').modal {
+      keyboard: false
+    }
+    $('#QueryArticle').modal('show')
+    false
+      
+
+
 #图片转换
 $ ->
   if $('div.imgbox').length > 0

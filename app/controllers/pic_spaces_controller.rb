@@ -42,7 +42,6 @@ class PicSpacesController < ApplicationController
   # POST /pic_spaces.json
   def create
     @pic_space = PicSpace.new(params[:pic_space])
-
     respond_to do |format|
       if @pic_space.save
         format.html { redirect_to @pic_space, notice: 'Pic space was successfully created.' }

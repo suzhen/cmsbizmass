@@ -11,5 +11,8 @@
       %a{href: @link} >>more
   -#内容
   .news_content
-    = render_cell @rendercell,@display unless @rendercell.nil?
+    - if @symbol.nil?
+      = render_cell @rendercell,@display unless @rendercell.nil?
+    - else
+      = render_cell @rendercell,@display,:symbol=>@symbol unless @rendercell.nil?
 

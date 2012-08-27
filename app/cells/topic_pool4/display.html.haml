@@ -10,8 +10,11 @@
       %ul.topic_list
         - @topics.each do |topic|
           %li
-            =link_to topic.short_title,"/detail/#{topic.to_page_param}" 
-
+            .tltitle
+              =link_to topic.short_title,"/detail/#{topic.to_page_param}" 
+            .tldate
+              =topic.created_at.strftime("%m-%d").to_s
+            .clr 
 .bord02
 
 

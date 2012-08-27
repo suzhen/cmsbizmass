@@ -7,7 +7,7 @@
     = f.input :description,:input_html => {:rows=>7,:class=>'span6'} 
     = f.input :listorder
     =# f.input :status
-    = f.input :url
+    = f.input :url,:hint => '<a href="#" id="chsArtBtn">选择关联文章</a>' 
     = f.association :pic_space
     .control-group.select      
       %label.select.control-label 图片分类
@@ -18,3 +18,37 @@
     = f.input :picture,:as=>"file"
   .form-actions
     = f.button :submit
+
+
+.modal.hide#QueryArticle
+  .modal-header
+    %button{:type=>"button",:class=>"close","data-dismiss"=>"modal"}×           
+    %h3 选择相关联的文章
+  .modal-body
+    %table
+      %tr
+        %td
+          新闻分类：
+        %td
+          = raw category_selects(nil,'newsCategoryUL0')
+          = hidden_field_tag :news_category_id
+      %tr
+        %td
+          新闻列表标题：
+        %td
+          %input{:type=>"text",:id=>"lcpsd"} 
+          &nbsp;&nbsp;
+          %a.btn.btn-primary#queryABtn{:href=>"#"}查询
+    %table.table.table-striped
+      %thead
+        %tr
+          %th 新闻分类
+          %th 列表标题
+          %th 创建时间
+      %tbody#resultArticles
+        = render :partial => 'article', :collection => @articles          
+    #paginator
+      =paginate @articles,:remote=>true
+  .modal-footer
+    %a.btn{:href=>"#","data-dismiss"=>"modal"} 取消
+

@@ -1,25 +1,33 @@
 %p#notice= notice
 
 %p
-  %b Title:
+  %b 图片标题:
   = @picture.title
 %p
-  %b Style:
-  = @picture.style
-%p
-  %b Description:
+  %b 图片描述:
   = @picture.description
 %p
-  %b Listorder:
+  %b 显示顺序:
   = @picture.listorder
 %p
-  %b Status:
+  %b 状况:
   = @picture.status
 %p
-  %b User name:
+  %b 上传人:
   = @picture.user_name
 %p
-  %b Url:
+  %b 链接地址:
   = @picture.url
+%p
+  %b 图片位置
+  = @picture.pic_space.name
+%p
+  %b 图片分类
+  = @picture.category.name
+%p
+  %b 图片
+  =image_tag @picture.picture.url
+
+
 
 = link_to '编辑', edit_picture_path(@picture)

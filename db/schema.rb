@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(:version => 20120826143621) do
     t.string   "name"
     t.string   "kind"
     t.string   "setting"
-    t.date     "startdate",   :default => '2012-07-25'
+    t.date     "startdate",   :default => '2012-07-23'
     t.date     "enddate"
     t.integer  "hits"
     t.integer  "clicks",      :default => 0
@@ -81,8 +81,8 @@ ActiveRecord::Schema.define(:version => 20120826143621) do
     t.integer  "parent_id",   :default => 0
     t.string   "description"
     t.integer  "listorder",   :default => 0
-    t.string   "arrparentid"
-    t.string   "arrchildid"
+    t.text     "arrparentid"
+    t.text     "arrchildid"
     t.integer  "hits"
     t.string   "style"
     t.string   "path"
@@ -92,23 +92,6 @@ ActiveRecord::Schema.define(:version => 20120826143621) do
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
     t.string   "ename"
-  end
-
-  create_table "cooperation_ibmorders", :force => true do |t|
-    t.string   "name"
-    t.string   "position"
-    t.string   "tel"
-    t.string   "email"
-    t.string   "companyname"
-    t.string   "companysize"
-    t.string   "trade"
-    t.string   "address"
-    t.string   "zipcode"
-    t.string   "purchase"
-    t.string   "histroy"
-    t.string   "interest"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
   end
 
   create_table "enterprises", :force => true do |t|
@@ -179,6 +162,7 @@ ActiveRecord::Schema.define(:version => 20120826143621) do
     t.text     "body"
     t.text     "formatted_html"
     t.string   "category"
+    t.string   "content"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
   end

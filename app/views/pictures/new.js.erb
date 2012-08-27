@@ -1,0 +1,4 @@
+$('#resultArticles').html('<%= escape_javascript render(:partial => 'article', :collection => @articles) %>');
+$('#paginator').html('<%= escape_javascript(paginate(@articles, :remote => true).to_s) %>');
+
+
