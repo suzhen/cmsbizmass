@@ -67,7 +67,22 @@ en:
            user_name: '上传人'
            listorder: '显示顺序'
            disabled: '是否启用'
-
+       pic_space:
+            name: '图片位置名称'
+            symbol: '位置唯一标识'
+            maxnum: '最大显示数目'
+       picture:
+            title: '图片标题'
+            description: '图片描述'
+            listorder: '显示顺序'
+            status: '状态'
+            user_name: '上传人'
+            url: '链接地址'
+            article: '相关文章'
+            category: '分类'
+            pic_space: '图片位置'
+            picture: '上传图片'
+ 
     # hints:
     #   defaults:
     #     username: 'User name to sign in.'

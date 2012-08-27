@@ -172,6 +172,8 @@ en:
       category: "分类"
       article: "文章"
       link: "友情链接" 
+      pic_space: "图片位置"
+      picture: '图片'
   activemodel:
     errors:
       template:
