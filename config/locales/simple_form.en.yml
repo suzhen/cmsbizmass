@@ -41,6 +41,7 @@ en:
            cover: '杂志封面'
        category:
            name: '分类名称'
+           ename: '英文名称'
            symbol: '分类唯一标识'
        article:
            title: '新闻标题'
