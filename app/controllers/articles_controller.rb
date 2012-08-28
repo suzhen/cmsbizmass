@@ -82,4 +82,22 @@ class ArticlesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def query
+   key=params[:key]
+   cat=params[:cat]
+   @articles=Article
+   if key.present?&&key!=""
+     @articles=@articles.where("title like '%#{key}%'")
+   end  
+   if cat.present?&&cat!=""&&cat!="0"
+     @articles=@articles.where(["category_id=?",cat])
+   end
+   @articles=@articles.page(params[:page])
+   respond_to do |format|
+      format.html# { render :layout => false}
+      format.js
+    end
+  end
+
 end

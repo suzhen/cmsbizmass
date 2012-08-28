@@ -15,7 +15,12 @@
 //= require kindeditor
 //= require wmd/wmd 
 //= require wmd/showdown 
-//= require_tree .
+//= require categories
+//= require ccsm
+//= require maps
+//= require imagebox
+//= require jquery.ztree.core-3.1.min
+//= require iframe-auto-height.plugin.1.7.1.min
 
 // Include all twitter's javascripts
 //= require bootstrap

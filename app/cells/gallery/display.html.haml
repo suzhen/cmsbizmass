@@ -2,8 +2,8 @@
   - @pictures.each do |pic|
     %li
       %div.galleryimgtxt
-        %a{href: pic.url} 
+        %a{href: (pic.url.nil? ? "#" : pic.url)} 
           %span.img
-            = image_tag pic.picture.url(:size2),:border => 0, :size => "144x122"
+            = image_tag pic.picture.url(:size2),:border => 0, :size => "144x122",:title=>pic.description
           %span.txt
             = pic.title

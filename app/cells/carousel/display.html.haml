@@ -4,7 +4,7 @@
     .imgbox
       .list
         - @pictures.each do |pic|
-          = link_to (image_tag pic.picture.url(:size1),:border=>0),"#",:title=>pic.title
+          = link_to (image_tag pic.picture.url(:size1),:border=>0),(pic.url.nil? ? "#" : pic.url),:title=>pic.title
 
 
 

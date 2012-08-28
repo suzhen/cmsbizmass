@@ -27,11 +27,9 @@ class PicturesController < ApplicationController
   def new
     @picture = Picture.new
     @picture.category=Category.new
-    @articles=Article.page(params[:page])
     respond_to do |format|
       format.html # new.html.erb
-      format.js #{render :new } 
- #     format.json { render json: @picture }
+      format.json { render json: @picture }
     end
   end
 

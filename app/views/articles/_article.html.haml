@@ -1,0 +1,6 @@
+%tr
+  %td= article.category.name if article.category.present?
+  %td= article.short_title
+  %td= article.created_at.to_s(:db)
+  %td= link_to "选择","#",:onclick=>"parent.link_article('#{article.to_page_simple_param}','#{article.title}')"
+ 

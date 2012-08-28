@@ -9,8 +9,10 @@
     =# f.input :status
     = f.input :url,:hint => '<a href="#" id="chsArtBtn">选择关联文章</a>' 
     = f.association :pic_space
-    .control-group.select      
-      %label.select.control-label 图片分类
+    .control-group.select.required      
+      %label.select.control-label.required 
+        %abbr{:title=>"必填"} *
+        图片分类
       .controls
         =raw category_selects(@picture.category.id,'categoryUL0')
     = hidden_field_tag :category_parent_id,@picture.category.id,:name=>"category_id"
@@ -39,16 +41,7 @@
           %input{:type=>"text",:id=>"lcpsd"} 
           &nbsp;&nbsp;
           %a.btn.btn-primary#queryABtn{:href=>"#"}查询
-    %table.table.table-striped
-      %thead
-        %tr
-          %th 新闻分类
-          %th 列表标题
-          %th 创建时间
-      %tbody#resultArticles
-        = render :partial => 'article', :collection => @articles          
-    #paginator
-      =paginate @articles,:remote=>true
+    %iframe{:id=>"rstIfm",:width=>"100%",:height=>"400px",:frameborder=>0,:src=>"/queryarticles" }
   .modal-footer
     %a.btn{:href=>"#","data-dismiss"=>"modal"} 取消
 

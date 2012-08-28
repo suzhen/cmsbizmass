@@ -20,8 +20,10 @@ CcsmCmsbizmass::Application.routes.draw do
     get "/editcontact"=>"records#contact_edit"   
     
     get "/editsound"=>"records#sound_edit"   
-     
   end
+
+
+   get "/queryarticles"=>"articles#query" 
 
   
    get "/index"=>"common/homepages#home"

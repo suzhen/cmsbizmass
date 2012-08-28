@@ -2,8 +2,10 @@
   = f.error_notification
   .form-inputs
     = f.input :title
-    .control-group.select      
-      %label.select.control-label 新闻分类
+    .control-group.select.required      
+      %label.select.control-label.required     
+        %abbr{:title=>"必填"} *
+        新闻分类
       .controls
         =raw category_selects(@article.category.id,'categoryUL0')
     = hidden_field_tag :category_parent_id,@article.category.id,:name=>"category_id"

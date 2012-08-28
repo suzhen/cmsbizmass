@@ -1,0 +1,12 @@
+%table.table.table-striped{:style=>"width:500px;"}
+  %thead
+    %tr
+      %th 新闻分类
+      %th 列表标题
+      %th 创建时间
+      %th 操作 
+  %tbody#resultArticles
+    = render :partial => 'article', :collection => @articles  
+#paginator
+  =paginate @articles,:remote=>true
+ 
