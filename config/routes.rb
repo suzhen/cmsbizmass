@@ -27,14 +27,15 @@ CcsmCmsbizmass::Application.routes.draw do
 
   
    get "/index"=>"common/homepages#home"
-   get "/news"=>"common/homepages#news"
+   get "/news"=>"common/infopages#primary"
    get "/maps"=>"common/maps#show"
-   get "/magazines"=>"common/maps#show"
-   get "/actions"=>"common/maps#show"
-   get "/business"=>"common/maps#show"
-   get "/service"=>"common/maps#show"
-   get "/members"=>"common/maps#show"
+   get "/magazines"=>"common/magazinepages#primary"
+   get "/actions"=>"common/actionpages#primary"
+   get "/business"=>"common/landpages#primary"
+   get "/service"=>"common/hrpages#primary"
+   get "/members"=>"common/memberpages#primary"
    get "/contact"=>"common/contact#show"
+
    get "/detail/:year/:month/:day/:id"=>"common/homepages#detail"  
 
   #map下的ajax

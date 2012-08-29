@@ -1,0 +1,2 @@
+module Common::LandpagesHelper
+end

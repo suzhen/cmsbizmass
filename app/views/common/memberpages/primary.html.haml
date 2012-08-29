@@ -1,0 +1,21 @@
+.blank5
+.span12
+  -#顶栏广告
+  .row 
+    .span12
+      =image_tag @ad.poster.url  if @ad.present?
+  .blank5
+  -#公告
+  .row
+    .span3
+      = render_cell :topic_pool3,:display,:symbol=>"tpJ"
+    .span9
+      = render_cell :topic_pool2,:display,:symbol=>"tpA",:link=>"#"
+  .blank5
+  -#章程
+  .row
+    .span3
+      = render_cell :topic_pool3,:display,:symbol=>"tpJ"
+    .span9
+      = render_cell :topic_pool2,:display,:symbol=>"tpA",:link=>"#"
+

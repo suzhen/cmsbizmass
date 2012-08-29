@@ -1,0 +1,36 @@
+.blank5
+.span12
+  -#顶栏广告
+  .row 
+    .span12
+      =image_tag @ad.poster.url  if @ad.present?
+  .blank5
+  -#热点
+  .row
+    .span3
+      = render_cell :topic_pool2,:display,:symbol=>"tpJ",:link=>"#"
+    .span6
+      = render_cell :topic_pool10,:display
+    .span3
+      = render_cell :topic_pool3,:display,:symbol=>"tpA"
+  .blank5
+  -#零售专题
+  .row
+    .span3
+      = render_cell :topic_pool3,:display,:symbol=>"tpA"
+      .blank5
+      = render_cell :topic_pool3,:display,:symbol=>"tpA"
+      .blank5
+      = render_cell :topic_pool3,:display,:symbol=>"tpA"
+    .span6
+      = render_cell :topic_pool2,:display,:symbol=>"tpJ",:link=>"#"
+      .blank5
+      = render_cell :topic_pool2,:display,:symbol=>"tpJ",:link=>"#"
+    .span3
+      = render_cell :topic_pool2,:display,:symbol=>"tpJ",:link=>"#"
+      .blank5
+      = render_cell :topic_pool3,:display,:symbol=>"tpA"
+      .blank5
+      = render_cell :topic_pool3,:display,:symbol=>"tpA"
+
+

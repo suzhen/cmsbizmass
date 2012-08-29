@@ -1,0 +1,2 @@
+module Common::ActionpagesHelper
+end
