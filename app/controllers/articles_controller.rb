@@ -46,7 +46,7 @@ class ArticlesController < ApplicationController
     @article.category_id=params[:category_id].to_i
     respond_to do |format|
       if @article.save
-        format.html { redirect_to @article, notice: 'Article was successfully created.' }
+        format.html { redirect_to @article, notice: '新闻创建成功。' }
         format.json { render json: @article, status: :created, location: @article }
       else
         format.html { render action: "new" }

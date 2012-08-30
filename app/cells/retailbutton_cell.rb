@@ -1,4 +1,4 @@
-class RetailbuttonCell < Cell::Rails
+class RetailbuttonCell < CommonCell
 
   def display
     render

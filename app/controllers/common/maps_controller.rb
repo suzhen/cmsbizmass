@@ -1,5 +1,5 @@
 #coding: utf-8
-class Common::MapsController < ApplicationController
+class Common::MapsController < CommonController
   def show
     @cities1=Enterprise.get_city_by_pinyin
     @cities_char=@cities1.keys.sort 

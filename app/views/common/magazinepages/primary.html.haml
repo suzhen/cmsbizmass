@@ -8,20 +8,21 @@
   -#在线阅读
   .row
     .span9
-      = render_cell :topic_pool2,:display,:symbol=>"tpJ",:link=>"#"
+      = render_cell :topic_pool2,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"homepages:tpA",:link=>"#"
     .span3
-      = render_cell :topic_pool3,:display,:symbol=>"tpA"
+      = render_cell :topic_pool3,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"homepages:tpA",:link=>"#"
   .blank5
   -#往期杂志
   .row
     .span3
-      = render_cell :topic_pool3,:display,:symbol=>"tpA"
+      = render_cell :topic_pool3,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"homepages:tpA",:link=>"#"
       .blank5
-      = render_cell :topic_pool2,:display,:symbol=>"tpJ",:link=>"#"
+      = render_cell :topic_pool2,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"homepages:tpA",:link=>"#"
     .span6
       = render_cell :topic_pool9,:display
     .span3
       = render_cell :retailbutton,:display
       .blank5
-      = render_cell :topic_pool3,:display,:symbol=>"tpA"
+      = render_cell :topic_pool3,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"homepages:tpA",:link=>"#"
+
 

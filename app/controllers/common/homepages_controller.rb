@@ -1,8 +1,5 @@
 #coding: utf-8
-require "yaml"
-class Common::HomepagesController < ApplicationController
-  $pageconfig = File.open('webconfig/page.yml') { |is|  YAML::load(is) }
-
+class Common::HomepagesController < CommonController
   def home
     @ad=Ad.last
     respond_to do |format|

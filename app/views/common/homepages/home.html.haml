@@ -8,22 +8,22 @@
   -#第一屏新闻
   .row
     .span4
-      = render_cell :carousel,:display,:symbol=>"carousel"
+      = render_cell :carousel,:display,:symbol=>"homepages:carousel"
       .blank5
       = render_cell :topic_pool5,:display
     .span5
-      = render_cell :topic_pool4,:display,:symbol=>"tpI"
+      = render_cell :topic_pool4,:display,:rendercell=>"article_summary_list",:display=>"display",:symbol=>"homepages:tpJ"
     .span3
       = render_cell :topic_pool6,:display
-      = render_cell :topic_pool2,:display,:symbol=>"tpJ",:link=>"#"
+      .blank5
+      = render_cell :topic_pool2,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"homepages:tpJ",:link=>"#"
       .blank5
       = render_cell :retailbutton,:display
-
   .blank5
   -#杂志 
   .row
     .span12
-      = render_cell :topic_pool1,:display,:name=>"零售世界",:link=>"/magazines",:rendercell=>"magazines",:display=>"display" 
+      = render_cell :topic_pool1,:display,:link=>"/magazines",:rendercell=>"magazines",:display=>"display",:shownum=>6 
   .blank5
   -#中间栏广告
   .row 
@@ -35,46 +35,44 @@
     .span8
       = render_cell :topic_pool1,:display,:name=>"零售专题",:link=>"/magazines" 
     .span4
-      = render_cell :topic_pool3,:display,:symbol=>"tpA"
+      = render_cell :topic_pool3,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"homepages:tpA",:link=>"#"
   .blank5 
   -#第三屏新闻
   .row
     .span4
-      = render_cell :topic_pool3,:display,:symbol=>"tpB"
+      = render_cell :topic_pool3,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"homepages:tpB",:link=>"#"
     .span4
-      = render_cell :topic_pool3,:display,:symbol=>"tpC"
+      = render_cell :topic_pool3,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"homepages:tpC",:link=>"#"
     .span4
-      = render_cell :topic_pool2,:display,:link=>"#",:symbol=>"tpK"
+      = render_cell :topic_pool2,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"homepages:tpD",:link=>"#"
   .blank5 
   -#图库
   .row
     .span12
-      = render_cell :topic_pool1,:display,:name=>"图库",:link=>"#",:rendercell=>"gallery",:display=>"display",:symbol=>"gallery" 
+      = render_cell :topic_pool1,:display,:name=>"图库",:link=>"#",:rendercell=>"gallery",:display=>"display",:symbol=>"homepages:gallery" 
   .blank5 
   -#广告
   .row
     .span12
       =image_tag @ad.poster.url if @ad.present?
-
   .blank5 
   -#第四屏新闻
   .row
     .span4
-      = render_cell :topic_pool3,:display,:symbol=>"tpD"
+      = render_cell :topic_pool3,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"homepages:tpD",:link=>"#"
     .span4
-      = render_cell :topic_pool3,:display,:symbol=>"tpE"
+      = render_cell :topic_pool3,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"homepages:tpE",:link=>"#"
     .span4
-      = render_cell :topic_pool2,:display,:link=>"/maps",:symbol=>"tpM"
-
+      = render_cell :topic_pool2,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"homepages:tpK",:link=>"#"
   .blank5 
   -#第五屏新闻
   .row
     .span4
-      = render_cell :topic_pool3,:display,:symbol=>"tpF"
+      = render_cell :topic_pool3,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"homepages:tpF",:link=>"#"
     .span4
-      = render_cell :topic_pool3,:display,:symbol=>"tpG"
+      = render_cell :topic_pool3,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"homepages:tpG",:link=>"#"
     .span4
-      = render_cell :topic_pool2,:display,:link=>"#",:symbol=>"tpL"
+      = render_cell :topic_pool2,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"homepages:tpL",:link=>"#"
   .blank5 
   -#广告
   .row

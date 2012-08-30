@@ -1,4 +1,4 @@
-class BannerCell < Cell::Rails
+class BannerCell < CommonCell
 
   def display
     render

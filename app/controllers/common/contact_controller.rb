@@ -1,5 +1,5 @@
 #coding: utf-8
-class Common::ContactController < ApplicationController
+class Common::ContactController < CommonController
   def show
     @record = Record.find_by_category("contact")
 

@@ -1,4 +1,4 @@
-class LinksCell < Cell::Rails
+class LinksCell < CommonCell
 
   def display
     @links=Link.all

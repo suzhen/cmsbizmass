@@ -183,41 +183,17 @@
 }
 
 
-/*top容器*/
-.top_container{
- border-left:1px solid #c2d0df;
- border-right:1px solid #c2d0df;   
- padding: 0 1px;
- .top_content{
-      height:448px;  
-      background:white url(topbg.jpg) repeat-x top left;
-      overflow: hidden;
-   .top_title{
-     font-weight:bold;
-     font-size:13pt;
-     color:#bb0214;
-     line-height:40px;
-     text-align:center;
-   }
-   .top_introduction{
-     line-heigt:100px;
-     padding:10px;
-   }
-   .top_line{
-     background:white url(line.jpg) no-repeat top left; 
-     height:1px;
-     width:300px;
-     margin-left:10px;
-   }
-   .top_list{
-       padding-right:12px;
-       @include no-bullets; 
-      .tltitle{float:left;}
-      .tldate{float:right;}
-   }
+
+/**pool4容器**/
+.poolblue_container{
+ border:1px solid #c2d0df;
+ .content_outer{
+  border:1px solid white;
+  background:white url(topbg.jpg) repeat-x top left;
+  padding:6px; 
+ }  
 
 
- }
 }
 
 

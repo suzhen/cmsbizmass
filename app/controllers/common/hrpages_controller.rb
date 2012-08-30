@@ -1,6 +1,5 @@
 #coding: utf-8
-require "yaml"
-class Common::HrpagesController < ApplicationController
+class Common::HrpagesController < CommonController
   def primary
 
 

@@ -1,4 +1,4 @@
-#coding: utf-8 
+#coding: utf-8
 class ApplicationController < ActionController::Base
   layout :layout_by_resource
 

@@ -1,7 +1,8 @@
-class MagazinesCell < Cell::Rails
+class MagazinesCell < CommonCell
 
-  def display
-    @magazines=Magazine.limit(6)
+  def display(params)
+    shownum = params[:shownum].to_i
+    @magazines=Magazine.order("public_date").limit(shownum)
     render
   end
 

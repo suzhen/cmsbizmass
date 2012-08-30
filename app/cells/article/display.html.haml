@@ -1,0 +1,3 @@
+.art_content
+  = raw("&nbsp;&nbsp;&nbsp;&nbsp;"+strip_tags(@article.body)[0..@character.to_i]+"...&nbsp;&nbsp;<a href='/detail/#{@article.to_page_param}'><详细></a>") unless @article.nil?
+

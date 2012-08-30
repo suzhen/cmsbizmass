@@ -278,6 +278,41 @@
  }
 }
 
+/**主题新闻列表**/
+ .top_content{
+     overflow: hidden;
+   .top_title{
+     font-weight:bold;
+     font-size:13pt;
+     color:#bb0214;
+     line-height:40px;
+     text-align:center;
+   }
+   .top_introduction{
+     line-heigt:100px;
+     padding:10px;
+   }
+   .top_line{
+     background:white url(line.jpg) no-repeat top left; 
+     height:1px;
+     width:90%;
+     margin-left:10px;
+   }
+   .top_list{
+       padding-right:12px;
+       @include no-bullets; 
+      .tltitle{float:left;}
+      .tldate{float:right;}
+   }
+
+
+ }
+/**新闻内容**/
+.art_content{
+  padding:5px;
+  a{color:red}
+}
+
 /**QQ,WEIBO,等按钮**/
 .rbtn{
   border:1px solid #ccc; 

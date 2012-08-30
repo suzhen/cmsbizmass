@@ -1,10 +1,10 @@
-class TopicPool4Cell < Cell::Rails
+class TopicPool4Cell < CommonCell
 
   def display(params)
     @symbol=params[:symbol]
-    @category=Category.find_by_symbol($pageconfig["home_page"][@symbol])
-    @topics=@category.articles
-
+    @rendercell=params[:rendercell]
+    @display=params[:display]
+ 
     render
   end
 

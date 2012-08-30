@@ -11,8 +11,5 @@
       %a{href: @link} >>more
   -#内容
   .news_content
-    %ul.topic_list
-      - @topics.each do |topic|
-        %li
-          =link_to topic.short_title,"/detail/#{topic.to_page_param}" 
+    = render_cell @rendercell,@display,:symbol=>@symbol
 

@@ -1,4 +1,4 @@
-class TopicPool9Cell < Cell::Rails
+class TopicPool9Cell < CommonCell
 
   def display
     render

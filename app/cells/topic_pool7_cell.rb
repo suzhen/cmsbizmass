@@ -1,4 +1,4 @@
-class TopicPool7Cell < Cell::Rails
+class TopicPool7Cell < CommonCell
   def display(params)
     @name=params[:name]
     @link=params[:link]

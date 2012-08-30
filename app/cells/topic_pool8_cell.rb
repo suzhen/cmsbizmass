@@ -1,4 +1,4 @@
-class TopicPool8Cell < Cell::Rails
+class TopicPool8Cell < CommonCell
 
   def display(params)
     @article=Article.find params[:id]

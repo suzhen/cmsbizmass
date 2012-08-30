@@ -1,0 +1,5 @@
+%ul.topic_list
+  - @topics.each do |topic|
+    %li
+      =link_to topic.short_title,"/detail/#{topic.to_page_param}" 
+

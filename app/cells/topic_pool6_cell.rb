@@ -1,4 +1,4 @@
-class TopicPool6Cell < Cell::Rails
+class TopicPool6Cell < CommonCell
 
   def display
    @sound=Record.find_by_category("sound")

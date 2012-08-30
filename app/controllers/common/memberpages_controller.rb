@@ -1,5 +1,5 @@
 #coding: utf-8
-class Common::MemberpagesController < ApplicationController
+class Common::MemberpagesController < CommonController
   def primary
 
 

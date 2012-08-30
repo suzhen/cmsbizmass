@@ -1,6 +1,10 @@
-class TopicPool10Cell < Cell::Rails
+class TopicPool10Cell < CommonCell
 
-  def display
+  def display(params)
+    @symbol=params[:symbol]
+    @rendercell=params[:rendercell]
+    @display=params[:display]
+ 
     render
   end
 

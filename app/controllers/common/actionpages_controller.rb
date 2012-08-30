@@ -1,6 +1,5 @@
 #coding: utf-8
-require "yaml"
-class Common::ActionpagesController < ApplicationController
+class Common::ActionpagesController < CommonController
   def primary
 
 
