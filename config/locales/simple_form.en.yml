@@ -39,6 +39,8 @@ en:
            remark: '备注'
            elecpdf: '电子版PDF'
            cover: '杂志封面'
+           body_title: '导读标题'
+           body: '导读内容'
        category:
            name: '分类名称'
            ename: '英文名称'

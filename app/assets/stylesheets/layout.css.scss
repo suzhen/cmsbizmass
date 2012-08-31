@@ -208,6 +208,26 @@
   }
 }
 
+/*杂志导读*/
+.magazine_guidance_list{
+  @include no-bullets; 
+  overflow:hidden;
+   .mgzTitle{
+     font-style:italic;
+   }
+   .gudTitle{
+     color:#bb0214;
+     text-align:center;
+   }
+   .gudContent{
+      a{color:red}
+   }
+}
+
+
+
+
+
 /*图片画廊*/
 .gallery_list{
  @include horizontal-list-container;

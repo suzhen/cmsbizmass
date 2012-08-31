@@ -8,21 +8,21 @@
   -#在线阅读
   .row
     .span9
-      = render_cell :topic_pool2,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"homepages:tpA",:link=>"#"
+      = render_cell :topic_pool2,:display,:name=>"杂志下载",:link=>"/magazines",:rendercell=>"magazines",:display=>"display",:shownum=>4 
     .span3
       = render_cell :topic_pool3,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"homepages:tpA",:link=>"#"
   .blank5
   -#往期杂志
   .row
     .span3
-      = render_cell :topic_pool3,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"homepages:tpA",:link=>"#"
+      = render_cell :topic_pool3,:display,:rendercell=>"article",:display=>"display",:symbol=>"memberpages:tpA",:link=>"#"
       .blank5
       = render_cell :topic_pool2,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"homepages:tpA",:link=>"#"
     .span6
-      = render_cell :topic_pool9,:display
+      = render_cell :topic_pool9,:display,:rendercell=>"magazines",:display=>"guidance",:shownum=>4,:name=>"往期杂志"
     .span3
       = render_cell :retailbutton,:display
       .blank5
-      = render_cell :topic_pool3,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"homepages:tpA",:link=>"#"
+      = render_cell :topic_pool3,:display,:rendercell=>"article",:display=>"display",:symbol=>"memberpages:tpA",:link=>"#"
 
 

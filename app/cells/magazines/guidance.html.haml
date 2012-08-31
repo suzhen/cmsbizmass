@@ -1,0 +1,12 @@
+%ul.magazine_guidance_list
+  - @magazines.each do |magazine|
+    %li
+      .mgzTitle
+        = magazine.title 
+      .gudTitle
+        %h3
+          = magazine.body_title
+      .gudContent
+        = raw("&nbsp;&nbsp;&nbsp;&nbsp;"+strip_tags(magazine.body)[0..200]+"...&nbsp;&nbsp;<a href='/detail/'><详细></a>") unless magazine.body.nil?
+      %hr
+      %br

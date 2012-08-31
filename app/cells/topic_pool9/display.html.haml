@@ -4,5 +4,8 @@
   -#标题
   .title_block
     .title
+      %strong 
+        =@name
   -#内容
   .content_block
+    = render_cell @rendercell,@display,@arg

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120826143621) do
+ActiveRecord::Schema.define(:version => 20120831074120) do
 
   create_table "ad_spaces", :force => true do |t|
     t.string   "name"
@@ -132,6 +132,8 @@ ActiveRecord::Schema.define(:version => 20120826143621) do
     t.integer  "comment_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "body_title"
+    t.text     "body"
   end
 
   create_table "pic_spaces", :force => true do |t|
