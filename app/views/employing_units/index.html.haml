@@ -1,0 +1,29 @@
+%h1 Listing employing_units
+
+%table
+  %tr
+    %th Name
+    %th Introduction
+    %th Address
+    %th Tel
+    %th Linkman
+    %th Email
+    %th
+    %th
+    %th
+
+  - @employing_units.each do |employing_unit|
+    %tr
+      %td= employing_unit.name
+      %td= employing_unit.introduction
+      %td= employing_unit.address
+      %td= employing_unit.tel
+      %td= employing_unit.linkman
+      %td= employing_unit.email
+      %td= link_to 'Show', employing_unit
+      %td= link_to 'Edit', edit_employing_unit_path(employing_unit)
+      %td= link_to 'Destroy', employing_unit, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Employing unit', new_employing_unit_path

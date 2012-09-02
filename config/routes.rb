@@ -1,5 +1,11 @@
 CcsmCmsbizmass::Application.routes.draw do
 
+  resources :jobs
+
+  resources :employing_units
+
+  resources :resumes
+
   devise_for :users
 
   scope "/manage" do

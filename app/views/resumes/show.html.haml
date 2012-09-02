@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @resume.name
+%p
+  %b Gender:
+  = @resume.gender
+%p
+  %b Birth:
+  = @resume.birth
+%p
+  %b Credential:
+  = @resume.credential
+%p
+  %b Phone:
+  = @resume.phone
+%p
+  %b Email:
+  = @resume.email
+%p
+  %b Evaluation:
+  = @resume.evaluation
+%p
+  %b Body:
+  = @resume.body
+
+= link_to 'Edit', edit_resume_path(@resume)
+\|
+= link_to 'Back', resumes_path

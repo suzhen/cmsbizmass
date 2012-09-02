@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @employing_unit.name
+%p
+  %b Introduction:
+  = @employing_unit.introduction
+%p
+  %b Address:
+  = @employing_unit.address
+%p
+  %b Tel:
+  = @employing_unit.tel
+%p
+  %b Linkman:
+  = @employing_unit.linkman
+%p
+  %b Email:
+  = @employing_unit.email
+
+= link_to 'Edit', edit_employing_unit_path(@employing_unit)
+\|
+= link_to 'Back', employing_units_path
