@@ -58,7 +58,12 @@
               - else
                 %li
                   %a{:href=>"/manage/pic_spaces"} 图库管理        
-
+              - if controller_name=="resumes"||controller_name=="employing_units"
+                %li.active
+                  %a{:href=>"/manage/resumes"} 招聘管理        
+              - else
+                %li
+                  %a{:href=>"/manage/resumes"} 招聘管理        
 
             %ul.nav.pull-right 
               %li.divider-vertical            

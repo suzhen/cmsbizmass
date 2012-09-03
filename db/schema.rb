@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120831074120) do
+ActiveRecord::Schema.define(:version => 20120902165305) do
 
   create_table "ad_spaces", :force => true do |t|
     t.string   "name"
@@ -94,6 +94,17 @@ ActiveRecord::Schema.define(:version => 20120831074120) do
     t.string   "ename"
   end
 
+  create_table "employing_units", :force => true do |t|
+    t.string   "name"
+    t.text     "introduction"
+    t.string   "address"
+    t.string   "tel"
+    t.string   "linkman"
+    t.string   "email"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
   create_table "enterprises", :force => true do |t|
     t.string   "name"
     t.string   "province"
@@ -107,6 +118,16 @@ ActiveRecord::Schema.define(:version => 20120831074120) do
     t.text     "remark"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "jobs", :force => true do |t|
+    t.string   "name"
+    t.integer  "people"
+    t.string   "place"
+    t.text     "description"
+    t.integer  "employing_unit_id"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
   create_table "links", :force => true do |t|
@@ -167,6 +188,19 @@ ActiveRecord::Schema.define(:version => 20120831074120) do
     t.string   "content"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+  end
+
+  create_table "resumes", :force => true do |t|
+    t.string   "name"
+    t.string   "gender"
+    t.date     "birth"
+    t.string   "credential"
+    t.string   "phone"
+    t.string   "email"
+    t.text     "evaluation"
+    t.text     "body"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|

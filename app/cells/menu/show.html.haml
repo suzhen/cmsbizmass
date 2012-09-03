@@ -203,4 +203,14 @@
     -if @controller_name=="pictures"&& @action_name=="edit"
       %li.active
         =link_to "编辑图片","#"
-
+  -# 招聘管理
+  - if @controller_name=="resumes"||@controller_name=="employing_units"
+    %li.nav-header
+      %h4 招聘管理
+    -if @controller_name=="resumes"&& @action_name=="index"
+      %li.active
+        =link_to "简历列表","#"
+    - else
+      %li
+        =link_to "简历列表","/manage/pic_spaces"
+ 

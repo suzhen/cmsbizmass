@@ -5,7 +5,7 @@ class CreateJobs < ActiveRecord::Migration
       t.integer :people
       t.string :place
       t.text :description
-
+      t.references :employing_unit
       t.timestamps
     end
   end
