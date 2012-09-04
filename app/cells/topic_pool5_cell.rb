@@ -1,7 +1,7 @@
 class TopicPool5Cell < CommonCell
 
   def display()
-    @topics=Article.order(:hits).limit(6)
+    @topics=Article.reorder(:hits).limit(6)
     render
   end
 
