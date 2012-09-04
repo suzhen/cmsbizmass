@@ -85,9 +85,8 @@ en:
             category: '分类'
             pic_space: '图片位置'
             picture: '上传图片'
- 
+
     # hints:
     #   defaults:
     #     username: 'User name to sign in.'
     #     password: 'No special characters, please.'
-

@@ -1,5 +1,7 @@
 #coding: utf-8 
 class AdsController < ApplicationController
+  before_filter :authenticate_user!  
+
   # GET /ads
   # GET /ads.json
   def index

@@ -212,5 +212,35 @@
         =link_to "简历列表","#"
     - else
       %li
-        =link_to "简历列表","/manage/pic_spaces"
- 
+        =link_to "简历列表","/manage/resumes"
+    -if @controller_name=="resumes"&& (@action_name=="new"||@action_name=="create")
+      %li.active
+        =link_to "创建简历","#"
+    - else
+      %li
+        =link_to "创建简历",new_resume_path
+    -if @controller_name=="resumes"&& @action_name=="show"
+      %li.active
+        =link_to "查看简历","#"
+    -if @controller_name=="resumes"&& @action_name=="edit"
+      %li.active
+        =link_to "编辑简历","#"
+    -if @controller_name=="employing_units"&& @action_name=="index"
+      %li.active
+        =link_to "聘用单位列表","#"
+    - else
+      %li
+        =link_to "聘用单位列表","/manage/employing_units"
+    -if @controller_name=="employing_units"&& (@action_name=="new"||@action_name=="create")
+      %li.active
+        =link_to "创建聘用单位","#"
+    - else
+      %li
+        =link_to "创建聘用单位",new_employing_unit_path
+    -if @controller_name=="employing_units"&& @action_name=="show"
+      %li.active
+        =link_to "查看聘用单位","#"
+    -if @controller_name=="employing_units"&& @action_name=="edit"
+      %li.active
+        =link_to "编辑聘用单位","#"
+

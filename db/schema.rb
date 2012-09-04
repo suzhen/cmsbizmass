@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(:version => 20120902165305) do
     t.string   "name"
     t.string   "kind"
     t.string   "setting"
-    t.date     "startdate",   :default => '2012-07-23'
+    t.date     "startdate",   :default => '2012-09-04'
     t.date     "enddate"
     t.integer  "hits"
     t.integer  "clicks",      :default => 0

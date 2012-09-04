@@ -1,5 +1,7 @@
 #coding: utf-8
 class MagazinesController < ApplicationController
+  before_filter :authenticate_user!  
+
   # GET /magazines
   # GET /magazines.json
   def index

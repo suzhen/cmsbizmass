@@ -1,4 +1,6 @@
 class EmployingUnitsController < ApplicationController
+  before_filter :authenticate_user!  
+
   # GET /employing_units
   # GET /employing_units.json
   def index

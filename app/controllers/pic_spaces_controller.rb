@@ -1,5 +1,7 @@
 #coding: utf-8 
 class PicSpacesController < ApplicationController
+  before_filter :authenticate_user!  
+
   # GET /pic_spaces
   # GET /pic_spaces.json
   def index

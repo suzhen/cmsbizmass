@@ -1,5 +1,7 @@
 #coding: utf-8 
 class AdSpacesController < ApplicationController
+  before_filter :authenticate_user!  
+
   # GET /ad_spaces
   # GET /ad_spaces.json
   def index

@@ -4,6 +4,6 @@
     .sound
       %strong 声音 
   .sound_content    
-    = raw @sound.formatted_html
+    = raw @sound.formatted_html if @sound.present?
 
 

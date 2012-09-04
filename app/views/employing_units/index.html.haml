@@ -1,29 +1,25 @@
-%h1 Listing employing_units
-
-%table
-  %tr
-    %th Name
-    %th Introduction
-    %th Address
-    %th Tel
-    %th Linkman
-    %th Email
-    %th
-    %th
-    %th
-
-  - @employing_units.each do |employing_unit|
+%table.table.table-striped
+  %thead
     %tr
-      %td= employing_unit.name
-      %td= employing_unit.introduction
-      %td= employing_unit.address
-      %td= employing_unit.tel
-      %td= employing_unit.linkman
-      %td= employing_unit.email
-      %td= link_to 'Show', employing_unit
-      %td= link_to 'Edit', edit_employing_unit_path(employing_unit)
-      %td= link_to 'Destroy', employing_unit, :confirm => 'Are you sure?', :method => :delete
+      %th 企业名称
+      %th 招聘职位个数 
+      %th 地址
+      %th 电话
+      %th 联系人
+      %th 电子邮件
+      %th
+      %th
+      %th
+  %tbody
+    - @employing_units.each do |employing_unit|
+      %tr
+        %td= employing_unit.name
+        %td= employing_unit.jobs
+        %td= employing_unit.address
+        %td= employing_unit.tel
+        %td= employing_unit.linkman
+        %td= employing_unit.email
+        %td= link_to '显示', employing_unit
+        %td= link_to '编辑', edit_employing_unit_path(employing_unit)
+        %td= link_to '删除', employing_unit, :confirm => '确定删除吗？', :method => :delete
 
-%br
-
-= link_to 'New Employing unit', new_employing_unit_path

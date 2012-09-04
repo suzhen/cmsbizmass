@@ -1,5 +1,7 @@
 #coding: utf-8 
 class PicturesController < ApplicationController
+  before_filter :authenticate_user!  
+
   # GET /pictures
   # GET /pictures.json
   def index
