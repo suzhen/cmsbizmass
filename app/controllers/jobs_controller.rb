@@ -1,3 +1,4 @@
+#coding: utf-8 
 class JobsController < ApplicationController
   before_filter :authenticate_user!  
 
@@ -27,16 +28,21 @@ class JobsController < ApplicationController
   # GET /jobs/new.json
   def new
     @job = Job.new
-
+    @employing_unit = EmployingUnit.find(params[:unit_id])
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @job }
+      format.js
     end
   end
 
   # GET /jobs/1/edit
   def edit
     @job = Job.find(params[:id])
+   respond_to do |format|
+      format.html
+      format.js
+    end
+
   end
 
   # POST /jobs
@@ -46,7 +52,9 @@ class JobsController < ApplicationController
     @employing_unit = EmployingUnit.find(params[:employing_unit_id])
     respond_to do |format|
       if @job.save
-        format.html { redirect_to @job, notice: '新工作职位创建成功。' }
+        @employing_unit.jobs << @job
+
+        format.html { redirect_to @employing_unit, notice: '新工作职位创建成功。' }
         format.json { render json: @job, status: :created, location: @job }
       else
         format.html { render action: "new" }
@@ -59,10 +67,10 @@ class JobsController < ApplicationController
   # PUT /jobs/1.json
   def update
     @job = Job.find(params[:id])
-
+    @employing_unit = @job.employing_unit
     respond_to do |format|
       if @job.update_attributes(params[:job])
-        format.html { redirect_to @job, notice: 'Job was successfully updated.' }
+        format.html { redirect_to @employing_unit, notice: '工作职位更新成功。' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -75,10 +83,11 @@ class JobsController < ApplicationController
   # DELETE /jobs/1.json
   def destroy
     @job = Job.find(params[:id])
+    @employing_unit = @job.employing_unit
     @job.destroy
 
     respond_to do |format|
-      format.html { redirect_to jobs_url }
+      format.html { redirect_to @employing_unit }
       format.json { head :no_content }
     end
   end

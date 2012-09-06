@@ -6,6 +6,6 @@
     = f.input :people
     = f.input :place
     = f.input :body,:input_html=>{:rows=>7,:class=>"span10"}
-    = hidden_field_tag(:employing_unit_id, params[:id])
+    = hidden_field_tag(:employing_unit_id,(@employing_unit.id.to_s if @employing_unit.present?) )
   .form-actions
     = f.button :submit

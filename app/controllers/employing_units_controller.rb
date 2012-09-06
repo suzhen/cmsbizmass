@@ -18,7 +18,7 @@ class EmployingUnitsController < ApplicationController
   def show
     @employing_unit = EmployingUnit.find(params[:id])
     @job=Job.new
-
+    @jobs=@employing_unit.jobs
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @employing_unit }

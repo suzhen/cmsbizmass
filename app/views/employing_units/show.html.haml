@@ -22,14 +22,32 @@
 
 = link_to '编辑单位信息', edit_employing_unit_path(@employing_unit)
 &nbsp;&nbsp;
-= link_to '添加职位信息',"#",:id=>"editJobBtn"
+= link_to '添加职位信息',new_job_path+'?unit_id='+@employing_unit.id.to_s,:remote=>true
+%br
+%table.table.table-striped
+  %thead
+    %tr
+      %th 职位名称
+      %th 人数
+      %th 工作地点
+      %th 描述
+      %th
+      %th
+  %tbody
+    - @jobs.each do |job|
+      %tr
+        %td= job.name
+        %td= job.people
+        %td= job.place
+        %td.wikistyle= raw job.formatted_html
+        %td= link_to '编辑', edit_job_path(job),:remote=>true
+        %td= link_to '删除', job, :confirm => '确定删除吗？', :method => :delete
 
 .modal.hide#editJob
   .modal-header
     %button{:type=>"button",:class=>"close","data-dismiss"=>"modal"}×           
     %h3 编辑工作职位 
-  .modal-body
-    = render 'jobs/form'
+  .modal-body#jobBody
   .modal-footer
     %a.btn{:href=>"#","data-dismiss"=>"modal"} 取消
 

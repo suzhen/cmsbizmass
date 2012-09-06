@@ -1,0 +1,11 @@
+$("#jobBody").html('<%= escape_javascript render(:partial=>'form')   %>')
+$("#job_body").before("<div id='wmd-button-bar'></div>")
+$("#job_body").after("<div id='wmd-preview' class='wikistyle'></div>")
+new WMDEditor({
+  input: "job_body",
+  button_bar: "wmd-button-bar",
+  preview: "wmd-preview",
+  helpLink: "http://daringfireball.net/projects/markdown/syntax"
+})
+$('#editJob').modal('show')
+
