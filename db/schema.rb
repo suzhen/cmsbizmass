@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120902165305) do
+ActiveRecord::Schema.define(:version => 20120906092348) do
 
   create_table "ad_spaces", :force => true do |t|
     t.string   "name"
@@ -96,13 +96,14 @@ ActiveRecord::Schema.define(:version => 20120902165305) do
 
   create_table "employing_units", :force => true do |t|
     t.string   "name"
-    t.text     "introduction"
     t.string   "address"
     t.string   "tel"
     t.string   "linkman"
     t.string   "email"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.text     "formatted_html"
+    t.text     "body"
   end
 
   create_table "enterprises", :force => true do |t|
@@ -124,10 +125,11 @@ ActiveRecord::Schema.define(:version => 20120902165305) do
     t.string   "name"
     t.integer  "people"
     t.string   "place"
-    t.text     "description"
     t.integer  "employing_unit_id"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+    t.text     "body"
+    t.text     "formatted_html"
   end
 
   create_table "links", :force => true do |t|
@@ -199,8 +201,9 @@ ActiveRecord::Schema.define(:version => 20120902165305) do
     t.string   "email"
     t.text     "evaluation"
     t.text     "body"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.text     "formatted_html"
   end
 
   create_table "users", :force => true do |t|

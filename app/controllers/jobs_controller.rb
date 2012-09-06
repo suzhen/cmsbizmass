@@ -43,10 +43,10 @@ class JobsController < ApplicationController
   # POST /jobs.json
   def create
     @job = Job.new(params[:job])
-
+    @employing_unit = EmployingUnit.find(params[:employing_unit_id])
     respond_to do |format|
       if @job.save
-        format.html { redirect_to @job, notice: 'Job was successfully created.' }
+        format.html { redirect_to @job, notice: '新工作职位创建成功。' }
         format.json { render json: @job, status: :created, location: @job }
       else
         format.html { render action: "new" }

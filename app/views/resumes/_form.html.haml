@@ -8,8 +8,8 @@
     = f.input :credential
     = f.input :phone
     = f.input :email
-    = f.input :evaluation
-    = f.input :body
+    = f.input :evaluation,:input_html=>{:rows=>7,:class=>"span8"}
+    = f.input :body,:input_html=>{:rows=>14,:class=>"span8"}
 
   .form-actions
     = f.button :submit

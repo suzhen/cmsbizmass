@@ -5,7 +5,7 @@
     = f.input :name
     = f.input :people
     = f.input :place
-    = f.input :description
-
+    = f.input :body,:input_html=>{:rows=>7,:class=>"span10"}
+    = hidden_field_tag(:employing_unit_id, params[:id])
   .form-actions
     = f.button :submit

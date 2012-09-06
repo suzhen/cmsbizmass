@@ -1,22 +1,35 @@
-%p#notice= notice
-
+- unless notice.nil?
+  %p
+    .alert.alert-success#notice= notice
 %p
-  %b Name:
+  %b 单位名称:
   = @employing_unit.name
 %p
-  %b Introduction:
-  = @employing_unit.introduction
-%p
-  %b Address:
+  %b 地址:
   = @employing_unit.address
 %p
-  %b Tel:
+  %b 电话:
   = @employing_unit.tel
 %p
-  %b Linkman:
+  %b 联系人:
   = @employing_unit.linkman
 %p
-  %b Email:
+  %b 电子邮件:
   = @employing_unit.email
+%p
+  %b 简介:
+  .wikistyle= raw @employing_unit.formatted_html
 
-= link_to '编辑', edit_employing_unit_path(@employing_unit)
+= link_to '编辑单位信息', edit_employing_unit_path(@employing_unit)
+&nbsp;&nbsp;
+= link_to '添加职位信息',"#",:id=>"editJobBtn"
+
+.modal.hide#editJob
+  .modal-header
+    %button{:type=>"button",:class=>"close","data-dismiss"=>"modal"}×           
+    %h3 编辑工作职位 
+  .modal-body
+    = render 'jobs/form'
+  .modal-footer
+    %a.btn{:href=>"#","data-dismiss"=>"modal"} 取消
+

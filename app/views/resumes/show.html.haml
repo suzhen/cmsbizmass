@@ -1,28 +1,29 @@
-%p#notice= notice
-
+- unless notice.nil?
+  %p
+    .alert.alert-success#notice= notice
 %p
-  %b Name:
+  %b 姓名:
   = @resume.name
 %p
-  %b Gender:
+  %b 性别:
   = @resume.gender
 %p
-  %b Birth:
+  %b 出生日期:
   = @resume.birth
 %p
-  %b Credential:
+  %b 证件号码:
   = @resume.credential
 %p
-  %b Phone:
+  %b 手机:
   = @resume.phone
 %p
-  %b Email:
+  %b 电子邮件:
   = @resume.email
 %p
-  %b Evaluation:
+  %b 个人评价:
   = @resume.evaluation
 %p
-  %b Body:
-  = @resume.body
+  %b 简历:
+  .wikistyle= raw @resume.formatted_html
 
 = link_to '编辑', edit_resume_path(@resume)

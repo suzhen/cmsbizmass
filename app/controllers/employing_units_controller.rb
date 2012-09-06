@@ -1,3 +1,4 @@
+#coding: utf-8 
 class EmployingUnitsController < ApplicationController
   before_filter :authenticate_user!  
 
@@ -16,6 +17,7 @@ class EmployingUnitsController < ApplicationController
   # GET /employing_units/1.json
   def show
     @employing_unit = EmployingUnit.find(params[:id])
+    @job=Job.new
 
     respond_to do |format|
       format.html # show.html.erb
@@ -43,10 +45,9 @@ class EmployingUnitsController < ApplicationController
   # POST /employing_units.json
   def create
     @employing_unit = EmployingUnit.new(params[:employing_unit])
-
     respond_to do |format|
       if @employing_unit.save
-        format.html { redirect_to @employing_unit, notice: 'Employing unit was successfully created.' }
+        format.html { redirect_to @employing_unit, notice: '招聘单位创建成功。' }
         format.json { render json: @employing_unit, status: :created, location: @employing_unit }
       else
         format.html { render action: "new" }
@@ -62,7 +63,7 @@ class EmployingUnitsController < ApplicationController
 
     respond_to do |format|
       if @employing_unit.update_attributes(params[:employing_unit])
-        format.html { redirect_to @employing_unit, notice: 'Employing unit was successfully updated.' }
+        format.html { redirect_to @employing_unit, notice: '招聘单位更新成功。' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

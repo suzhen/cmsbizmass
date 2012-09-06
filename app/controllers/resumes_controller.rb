@@ -1,3 +1,4 @@
+#coding: utf-8
 class ResumesController < ApplicationController
   # GET /resumes
   # GET /resumes.json
@@ -44,7 +45,7 @@ class ResumesController < ApplicationController
 
     respond_to do |format|
       if @resume.save
-        format.html { redirect_to @resume, notice: 'Resume was successfully created.' }
+        format.html { redirect_to @resume, notice: '简历创建成功。' }
         format.json { render json: @resume, status: :created, location: @resume }
       else
         format.html { render action: "new" }
@@ -60,7 +61,7 @@ class ResumesController < ApplicationController
 
     respond_to do |format|
       if @resume.update_attributes(params[:resume])
-        format.html { redirect_to @resume, notice: 'Resume was successfully updated.' }
+        format.html { redirect_to @resume, notice: '简历更新成功。' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

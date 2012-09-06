@@ -14,7 +14,7 @@
     - @employing_units.each do |employing_unit|
       %tr
         %td= employing_unit.name
-        %td= employing_unit.jobs
+        %td= employing_unit.jobs.count
         %td= employing_unit.address
         %td= employing_unit.tel
         %td= employing_unit.linkman

@@ -93,20 +93,13 @@ en:
            email: '电子邮件'
            evaluation: '个人评价'
            body: '简历'
-           phone: '电话'
        employing_unit:
            name: '单位名称'
-           body: '单位介绍'
+           introduction: '单位介绍'
            address: '地址'
            linkman: '联系人'
            email: '电子邮件'
-           tel: '联系电话'
-       job:
-           name: '职位名称'
-           people: '人数'
-           place: '地点'
-           body: '职位描述'
-            
+           tel: '联系电话' 
     # hints:
     #   defaults:
     #     username: 'User name to sign in.'
