@@ -1,0 +1,8 @@
+%ul.employing_unit_list
+  - @employing_units.each do |unit|
+    %li
+      = link_to image_tag unit.logo.url(:normal),:border => 0, :title=>unit.name
+      %span
+        = link_to unit.name,"/showunit/#{unit.id.to_s}"
+  
+

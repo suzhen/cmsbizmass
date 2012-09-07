@@ -17,6 +17,12 @@
   %b 电子邮件:
   = @employing_unit.email
 %p
+  %b 是否显示主页面:
+  = @employing_unit.showprimary ? "是":"否"
+%p
+  %b 企业LOGO:
+  = image_tag @employing_unit.logo.url(:normal)
+%p
   %b 简介:
   .wikistyle= raw @employing_unit.formatted_html
 

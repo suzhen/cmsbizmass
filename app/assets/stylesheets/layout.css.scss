@@ -333,6 +333,43 @@
   a{color:red}
 }
 
+
+/**招聘单位**/
+
+.employing_unit_list{
+    @include horizontal-list-container;
+    &:first-child, &.first{
+      padding-left:4px;
+    }
+
+    li{
+    @include horizontal-list-item(1px);
+    &:first-child, &.first{
+      padding-left:1px;
+    }
+    &:last-child, &.last{
+      padding-right:1px;
+    }
+
+    background: none repeat scroll 0 0 #F7F7F7;
+    border: 1px solid #D2D2D2;
+    height: 75px;
+    margin: 3px 2px 3px 0;
+    width: 167px;
+    span {
+      display: block;
+      text-align: center;
+      margin-top: 3px;
+    }
+    a{display:block;color:red;}
+   }
+}
+
+
+
+
+
+
 /**QQ,WEIBO,等按钮**/
 .rbtn{
   border:1px solid #ccc; 

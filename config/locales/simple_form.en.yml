@@ -101,6 +101,8 @@ en:
            linkman: '联系人'
            email: '电子邮件'
            tel: '联系电话'
+           logo: '企业LOGO'
+           showprimary: '是否主页面显示'
        job:
            name: '职位名称'
            people: '人数'

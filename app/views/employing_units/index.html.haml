@@ -2,11 +2,13 @@
   %thead
     %tr
       %th 企业名称
+      %th 企业LOGO
       %th 招聘职位个数 
       %th 地址
       %th 电话
       %th 联系人
       %th 电子邮件
+      %th 是否显示在主页面
       %th
       %th
       %th
@@ -14,12 +16,14 @@
     - @employing_units.each do |employing_unit|
       %tr
         %td= employing_unit.name
+        %td= image_tag employing_unit.logo.url(:thumb) if employing_unit.logo.present? 
         %td= employing_unit.jobs.count
         %td= employing_unit.address
         %td= employing_unit.tel
         %td= employing_unit.linkman
         %td= employing_unit.email
+        %td= employing_unit.showprimary ? "是":"否"
         %td= link_to '显示', employing_unit
         %td= link_to '编辑', edit_employing_unit_path(employing_unit)
         %td= link_to '删除', employing_unit, :confirm => '确定删除吗？', :method => :delete
-
+= paginate @employing_units 

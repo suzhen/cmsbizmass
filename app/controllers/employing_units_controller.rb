@@ -5,8 +5,7 @@ class EmployingUnitsController < ApplicationController
   # GET /employing_units
   # GET /employing_units.json
   def index
-    @employing_units = EmployingUnit.all
-
+    @employing_units = EmployingUnit.page params[:page]
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @employing_units }
