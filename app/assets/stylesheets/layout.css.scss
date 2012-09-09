@@ -366,6 +366,19 @@
 }
 
 
+/**简历列表**/
+.resume_list{
+  @include horizontal-list-container;
+  li{
+    @include horizontal-list-item(1px);
+    margin: 3px 2px 3px 0;
+   }
+
+
+
+}
+
+
 
 
 

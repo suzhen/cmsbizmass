@@ -1,0 +1,13 @@
+= simple_form_for(@member) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :tel
+    = f.input :fax
+    = f.input :address
+    = f.input :web
+    = f.input :position
+
+  .form-actions
+    = f.button :submit

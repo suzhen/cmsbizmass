@@ -1,0 +1,5 @@
+%ul.resume_list
+  - @resumes.each do |resume|
+    %li
+      = link_to resume.name+"  "+resume.gender+" "+ (resume.birth.to_s if resume.birth.present?),"#" 
+ 

@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @member.name
+%p
+  %b Tel:
+  = @member.tel
+%p
+  %b Fax:
+  = @member.fax
+%p
+  %b Address:
+  = @member.address
+%p
+  %b Web:
+  = @member.web
+%p
+  %b Position:
+  = @member.position
+
+= link_to 'Edit', edit_member_path(@member)
+\|
+= link_to 'Back', members_path
