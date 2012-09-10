@@ -16,6 +16,7 @@
     = f.input :source
     = f.input :published
     = f.input :top
+    = f.input :theme_picture,:as=>:file
     = f.simple_fields_for :article_body do |body_fields|
       = body_fields.input :body,:as=>:kindeditor,:input_html => { :width => 800, :height => 300 ,:namespace=>"article"} 
 

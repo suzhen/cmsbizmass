@@ -5,8 +5,7 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
-
+    @articles = Article.page params[:page]
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @articles }
@@ -64,7 +63,7 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
       if @article.update_attributes(params[:article])
-        format.html { redirect_to @article, notice: 'Article was successfully updated.' }
+        format.html { redirect_to @article, notice: '新闻更新成功。' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

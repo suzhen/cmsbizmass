@@ -2,7 +2,7 @@ class AddLogoAndShowFlagToEmployingUnits < ActiveRecord::Migration
   def change
     add_column :employing_units, :logo, :string
 
-    add_column :employing_units, :showprimary, :boolean
+    add_column :employing_units, :showprimary, :boolean,:default=>true
 
   end
 end

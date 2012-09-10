@@ -1,6 +1,5 @@
 CcsmCmsbizmass::Application.routes.draw do
 
-  resources :members
 
   devise_for :users
 
@@ -18,6 +17,7 @@ CcsmCmsbizmass::Application.routes.draw do
     resources :jobs
     resources :employing_units
     resources :resumes
+    resources :members
 
 
     get "/contact"=>"records#contact_show"  

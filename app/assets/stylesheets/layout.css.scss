@@ -180,6 +180,61 @@
   }
 }
 
+/**主题新闻列表**/
+ .top_content{
+     overflow: hidden;
+   .top_title{
+     font-weight:bold;
+     font-size:13pt;
+     color:#bb0214;
+     line-height:40px;
+     text-align:center;
+   }
+   .top_introduction{
+     line-heigt:100px;
+     padding:10px;
+   }
+   .top_line{
+     background:white url(line.jpg) no-repeat top left; 
+     height:1px;
+     width:90%;
+     margin-left:10px;
+   }
+   .top_list{
+       padding-right:12px;
+       @include no-bullets; 
+      .tltitle{float:left;}
+      .tldate{float:right;}
+   }
+
+
+ }
+/**新闻内容**/
+.art_content{
+  padding:5px;
+  a{color:red}
+}
+
+
+/*新闻主题图片列表*/
+.art_pic_list{
+  .art_pic{
+    float:left;
+    padding:10px;
+    img{
+      border:2px solid #ccc;
+    }   
+  }
+  .art_list{
+    float:left;
+      .tltitle{float:left;}
+      .tldate{float:right;}
+
+  }
+}
+
+
+
 /*杂志列表*/
 .magazine_list{
  @include horizontal-list-container;
@@ -298,41 +353,6 @@
  }
 }
 
-/**主题新闻列表**/
- .top_content{
-     overflow: hidden;
-   .top_title{
-     font-weight:bold;
-     font-size:13pt;
-     color:#bb0214;
-     line-height:40px;
-     text-align:center;
-   }
-   .top_introduction{
-     line-heigt:100px;
-     padding:10px;
-   }
-   .top_line{
-     background:white url(line.jpg) no-repeat top left; 
-     height:1px;
-     width:90%;
-     margin-left:10px;
-   }
-   .top_list{
-       padding-right:12px;
-       @include no-bullets; 
-      .tltitle{float:left;}
-      .tldate{float:right;}
-   }
-
-
- }
-/**新闻内容**/
-.art_content{
-  padding:5px;
-  a{color:red}
-}
-
 
 /**招聘单位**/
 
@@ -373,9 +393,6 @@
     @include horizontal-list-item(1px);
     margin: 3px 2px 3px 0;
    }
-
-
-
 }
 
 

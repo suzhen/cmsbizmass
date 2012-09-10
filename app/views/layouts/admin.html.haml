@@ -64,6 +64,12 @@
               - else
                 %li
                   %a{:href=>"/manage/resumes"} 招聘管理        
+              - if controller_name=="members"
+                %li.active
+                  %a{:href=>"/manage/members"} 理事单位管理        
+              - else
+                %li
+                  %a{:href=>"/manage/members"} 理事单位管理        
 
             %ul.nav.pull-right 
               %li.divider-vertical            

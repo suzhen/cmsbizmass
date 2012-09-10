@@ -7,7 +7,8 @@ class CreateMembers < ActiveRecord::Migration
       t.string :address
       t.string :web
       t.string :position
-
+      t.string :logo
+      t.boolean :showprimary,:default=>true
       t.timestamps
     end
   end

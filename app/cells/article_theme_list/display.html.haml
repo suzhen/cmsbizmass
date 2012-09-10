@@ -1,0 +1,13 @@
+.art_pic_list
+  .art_pic
+    = link_to image_tag(@topics.first.theme_picture.url(:normal)),"/detail/#{@topics.first.to_page_param}" 
+  .art_list
+    %ul.topic_list
+      - @topics.each do |topic|
+        %li
+          .tltitle
+            =link_to topic.short_title,"/detail/#{topic.to_page_param}" 
+          .tldate
+            =topic.created_at.strftime("%m-%d").to_s
+          .clr 
+

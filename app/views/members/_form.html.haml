@@ -1,4 +1,4 @@
-= simple_form_for(@member) do |f|
+= simple_form_for(@member,:html=>{:class=>'form-horizontal'}) do |f|
   = f.error_notification
 
   .form-inputs
@@ -7,7 +7,7 @@
     = f.input :fax
     = f.input :address
     = f.input :web
-    = f.input :position
-
+    = f.input :position,:as=>:radio_buttons,:collection=>[['理事长',0] ,['常务理事',1],['理事',2]]
+    = f.input :logo,:as=>:file
   .form-actions
     = f.button :submit

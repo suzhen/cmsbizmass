@@ -177,6 +177,7 @@ en:
       resume: '简历'
       job: '工作职位'
       employing_unit: '招聘单位'
+      member: '理事单位'
   activemodel:
     errors:
       template:

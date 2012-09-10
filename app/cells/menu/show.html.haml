@@ -243,4 +243,26 @@
     -if @controller_name=="employing_units"&& @action_name=="edit"
       %li.active
         =link_to "编辑聘用单位","#"
+  -# 理事单位管理
+  - if @controller_name=="members"
+    %li.nav-header
+      %h4 理事单位管理
+    -if @controller_name=="members"&& @action_name=="index"
+      %li.active
+        =link_to "理事单位列表","#"
+    - else
+      %li
+        =link_to "理事单位列表","/manage/members"
+    -if @controller_name=="members"&& (@action_name=="new"||@action_name=="create")
+      %li.active
+        =link_to "创建理事单位","#"
+    - else
+      %li
+        =link_to "创建理事单位",new_member_path
+    -if @controller_name=="members"&& @action_name=="show"
+      %li.active
+        =link_to "查看理事单位","#"
+    -if @controller_name=="members"&& @action_name=="edit"
+      %li.active
+        =link_to "编辑理事单位","#"
 

@@ -1,0 +1,7 @@
+%ul.employing_unit_list
+  - @members.each do |member|
+    %li
+      = link_to image_tag member.logo.url(:normal),:border => 0, :title=>member.name
+      %span
+        = link_to member.name,"#"
+

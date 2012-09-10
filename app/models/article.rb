@@ -5,7 +5,7 @@ class Article < ActiveRecord::Base
   has_one :article_body
   has_many :pictures
   paginates_per 20 
-
+  mount_uploader :theme_picture,ThemePictureUploader
   validates :title,:presence=>true
   validates :category_id,:presence=>true
   scope :published, where(:published => true)

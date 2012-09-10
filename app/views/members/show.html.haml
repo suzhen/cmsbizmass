@@ -1,24 +1,24 @@
-%p#notice= notice
+- unless notice.nil?
+  %p
+    .alert.alert-success#notice= notice
 
 %p
-  %b Name:
+  %b 理事单位名称:
   = @member.name
 %p
-  %b Tel:
+  %b 电话:
   = @member.tel
 %p
-  %b Fax:
+  %b 传真:
   = @member.fax
 %p
-  %b Address:
+  %b 地址:
   = @member.address
 %p
-  %b Web:
+  %b 网站:
   = @member.web
 %p
-  %b Position:
+  %b 等级:
   = @member.position
 
-= link_to 'Edit', edit_member_path(@member)
-\|
-= link_to 'Back', members_path
+= link_to '编辑', edit_member_path(@member)

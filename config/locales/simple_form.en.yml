@@ -60,6 +60,7 @@ en:
            hits: '点击次数'
            status: '新闻状态'
            listorder: '显示顺序'
+           theme_picture: '主题图片'
        article_body:
            body: '详细内容'
        link:
@@ -108,7 +109,14 @@ en:
            people: '人数'
            place: '地点'
            body: '职位描述'
-            
+       member:
+           name: '理事单位名称'
+           tel: '电话'
+           fax: '传真'
+           address: '地址'
+           web: '网站'
+           position: '等级'
+           logo: '企业LOGO'
     # hints:
     #   defaults:
     #     username: 'User name to sign in.'

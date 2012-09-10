@@ -1,23 +1,34 @@
-%p#notice= notice
+- unless notice.nil?
+  %p
+    .alert.alert-success#notice= notice
 
 %p
-  %b Title:
+  %b 新闻标题:
   = @article.title
 %p
-  %b Short title:
+  %b 新闻列表标题:
   = @article.short_title
 %p
-  %b Introduction:
+  %b 新闻概况:
   = @article.introduction
 %p
-  %b Author:
+  %b 作者:
   = @article.author
 %p
-  %b Eidtor name:
+  %b 编辑姓名:
   = @article.eidtor_name
 %p
-  %b Source:
+  %b 来源:
   = @article.source
+%p
+  %b 是否发布:
+  = @article.published ? "是" : "否"
+%p
+  %b 是否置顶:
+  = @article.top ? "是" : "否"
+%p
+  %b 主题图片:
+  = image_tag @article.theme_picture.url(:normal)
 %p
   %b 内容:
   = raw @article.body

@@ -1,3 +1,4 @@
+#coding: utf-8 
 class MembersController < ApplicationController
   # GET /members
   # GET /members.json
@@ -44,7 +45,7 @@ class MembersController < ApplicationController
 
     respond_to do |format|
       if @member.save
-        format.html { redirect_to @member, notice: 'Member was successfully created.' }
+        format.html { redirect_to @member, notice: '理事单位创建成功。' }
         format.json { render json: @member, status: :created, location: @member }
       else
         format.html { render action: "new" }
@@ -60,7 +61,7 @@ class MembersController < ApplicationController
 
     respond_to do |format|
       if @member.update_attributes(params[:member])
-        format.html { redirect_to @member, notice: 'Member was successfully updated.' }
+        format.html { redirect_to @member, notice: '理事单位更新成功。' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
