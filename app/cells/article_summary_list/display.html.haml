@@ -1,13 +1,18 @@
 .top_content
   .top_title 沃尔玛“中国式”的困局      
   .top_introduction
-    = link_to raw "&nbsp;&nbsp;&nbsp;&nbsp;据了解，经过武警部队、北京市排水集团、公安消防总队等多个单位500余人连夜奋战，24日10时许，京港澳高速出京方向17.5公里处(南岗洼铁路桥路段)积水及淤泥已经清理完毕。11时50分，双方实现通车，因为最外侧车道护坡需要加固，目前出京方向最外侧车道暂时封闭，但其余车道已正常通行。 "
+    - unless @topics.first.nil? 
+      - unless @topics.first.introduction.blank?
+        = link_to raw "&nbsp;&nbsp;&nbsp;&nbsp;"+@topics.first.introduction
+      - else
+        = link_to raw "&nbsp;&nbsp;&nbsp;&nbsp;"+strip_tags(@topics.first.body)[0..150]+"...&nbsp;&nbsp;<a href='/detail/#{@topics.first.to_page_param}'><详细></a>" 
   .top_line
   .top_list
     %ul.topic_list
       - @topics.each do |topic|
         %li
           .tltitle
+            &nbsp;
             =link_to topic.short_title,"/detail/#{topic.to_page_param}" 
           .tldate
             =topic.created_at.strftime("%m-%d").to_s

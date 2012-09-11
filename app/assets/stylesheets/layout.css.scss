@@ -173,6 +173,9 @@
 .topic_list{
   li{
     list-style-type : square;
+
+    .tltitle{float:left;}
+    .tldate{float:right;line-height:26px;}
   }
   a{
     @include link-colors(black,#bb0214,black,black,black); 
@@ -201,11 +204,12 @@
      margin-left:10px;
    }
    .top_list{
-       padding-right:12px;
-       @include no-bullets; 
-      .tltitle{float:left;}
-      .tldate{float:right;}
+    ul{margin-left:0;}
+
+    @include no-bullets;
+    @include pretty-bullets("squre.gif", 1px,1px,20px);
    }
+
 
 
  }
@@ -227,8 +231,8 @@
   }
   .art_list{
     float:left;
-      .tltitle{float:left;}
-      .tldate{float:right;}
+    @include no-bullets;
+    @include pretty-bullets("squre.gif", 1px,1px,20px);
 
   }
 }
@@ -390,8 +394,9 @@
 .resume_list{
   @include horizontal-list-container;
   li{
-    @include horizontal-list-item(1px);
+    @include horizontal-list-item(6px);
     margin: 3px 2px 3px 0;
+
    }
 }
 

@@ -1,5 +1,6 @@
 %ul.resume_list
   - @resumes.each do |resume|
     %li
+      = image_tag "squre.gif"
       = link_to resume.name+"  "+resume.gender+" "+ (resume.birth.to_s if resume.birth.present?),"#" 
  

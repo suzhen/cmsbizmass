@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120910081336) do
+ActiveRecord::Schema.define(:version => 20120911085152) do
 
   create_table "ad_spaces", :force => true do |t|
     t.string   "name"
@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(:version => 20120910081336) do
   create_table "articles", :force => true do |t|
     t.string   "title"
     t.string   "short_title"
-    t.string   "introduction"
+    t.text     "introduction"
     t.string   "author"
     t.string   "eidtor_id"
     t.string   "eidtor_name"
