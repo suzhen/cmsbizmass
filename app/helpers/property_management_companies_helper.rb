@@ -1,0 +1,2 @@
+module PropertyManagementCompaniesHelper
+end

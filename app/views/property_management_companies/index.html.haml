@@ -1,0 +1,17 @@
+%table.table.table-striped
+  %thead
+    %tr
+      %th 招商项目名称
+      %th 位置
+      %th
+      %th
+      %th
+  %tbody
+    - @property_management_companies.each do |property_management_company|
+      %tr
+        %td= property_management_company.name
+        %td= property_management_company.local
+        %td= link_to '显示', property_management_company
+        %td= link_to '编辑', edit_property_management_company_path(property_management_company)
+        %td= link_to '删除', property_management_company, :confirm => '确定删除吗？', :method => :delete
+

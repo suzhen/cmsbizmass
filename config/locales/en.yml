@@ -178,6 +178,9 @@ en:
       job: '工作职位'
       employing_unit: '招聘单位'
       member: '理事单位'
+      house: '地产项目'
+      biz_company: '商业品牌'
+      property_management_company: '招商项目'
   activemodel:
     errors:
       template:

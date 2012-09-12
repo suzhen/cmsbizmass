@@ -7,7 +7,7 @@ class Category < ActiveRecord::Base
   validates :name,:presence=>true 
   validates :ctype,:presence=>true
   validates :symbol,:presence=>true
-  validates_uniqueness_of :name
+#  validates_uniqueness_of :name
   validates_uniqueness_of :symbol
 
   scope :family, lambda { |ctype| where("ctype = ?", ctype) }

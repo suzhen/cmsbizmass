@@ -265,4 +265,62 @@
     -if @controller_name=="members"&& @action_name=="edit"
       %li.active
         =link_to "编辑理事单位","#"
+  -# 商业地产管理
+  - if @controller_name=="houses"||@controller_name=="biz_companies"||@controller_name=="property_management_companies"
+    %li.nav-header
+      %h4 商业地产管理
+    - if @controller_name=="houses"&& @action_name=="index"
+      %li.active
+        =link_to "地产项目列表","#"
+    - else
+      %li
+        =link_to "地产项目列表","/manage/houses"
+    -if @controller_name=="houses"&& (@action_name=="new"||@action_name=="create")
+      %li.active
+        =link_to "创建地产项目","#"
+    - else
+      %li
+        =link_to "创建地产项目",new_house_path
+    -if @controller_name=="houses"&& @action_name=="show"
+      %li.active
+        =link_to "查看地产项目","#"
+    -if @controller_name=="houses"&& @action_name=="edit"
+      %li.active
+        =link_to "编辑地产项目","#"
+    -if @controller_name=="biz_companies"&& @action_name=="index"
+      %li.active
+        =link_to "商业品牌列表","#"
+    - else
+      %li
+        =link_to "商业品牌列表","/manage/biz_companies"
+    -if @controller_name=="biz_companies"&& (@action_name=="new"||@action_name=="create")
+      %li.active
+        =link_to "创建商业品牌","#"
+    - else
+      %li
+        =link_to "创建商业品牌",new_biz_company_path
+    -if @controller_name=="biz_companies"&& @action_name=="show"
+      %li.active
+        =link_to "查看商业品牌","#"
+    -if @controller_name=="biz_companies"&& @action_name=="edit"
+      %li.active
+        =link_to "编辑商业品牌","#"
+    -if @controller_name=="property_management_companies"&& @action_name=="index"
+      %li.active
+        =link_to "招商项目列表","#"
+    - else
+      %li
+        =link_to "招商项目列表","/manage/property_management_companies"
+    -if @controller_name=="property_management_companies"&& (@action_name=="new"||@action_name=="create")
+      %li.active
+        =link_to "创建招商项目","#"
+    - else
+      %li
+        =link_to "创建招商项目",new_property_management_company_path
+    -if @controller_name=="property_management_companies"&& @action_name=="show"
+      %li.active
+        =link_to "查看招商项目","#"
+    -if @controller_name=="property_management_companies"&& @action_name=="edit"
+      %li.active
+        =link_to "编辑招商项目","#"
 

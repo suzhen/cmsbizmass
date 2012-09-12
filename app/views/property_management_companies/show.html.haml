@@ -1,0 +1,16 @@
+- unless notice.nil?
+  %p
+    .alert.alert-success#notice= notice
+
+
+%p
+  %b 招商项目名称:
+  = @property_management_company.name
+%p
+  %b 项目位置:
+  = @property_management_company.local
+%p
+  %b 项目详情:
+  =raw @property_management_company.body
+
+= link_to '编辑', edit_property_management_company_path(@property_management_company)

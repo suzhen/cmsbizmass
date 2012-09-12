@@ -117,6 +117,21 @@ en:
            web: '网站'
            position: '等级'
            logo: '企业LOGO'
+       house:
+           name: '地产项目名称'
+           kind: '项目类型'
+           local: '项目位置'
+           price: '价格'
+           logo: '项目展示图'
+           body: '详情'
+       biz_company:
+            name: '商业品牌名称'
+            logo: '品牌LOGO'
+            body: '详情'
+       property_management_company:
+            name: '招商项目名称'
+            local: '项目地点'
+            body: '详情' 
     # hints:
     #   defaults:
     #     username: 'User name to sign in.'

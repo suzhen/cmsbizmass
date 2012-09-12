@@ -1,6 +1,7 @@
 CcsmCmsbizmass::Application.routes.draw do
 
 
+
   devise_for :users
 
   scope "/manage" do
@@ -18,6 +19,9 @@ CcsmCmsbizmass::Application.routes.draw do
     resources :employing_units
     resources :resumes
     resources :members
+    resources :biz_companies
+    resources :property_management_companies
+    resources :houses
 
 
     get "/contact"=>"records#contact_show"  

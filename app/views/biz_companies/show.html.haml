@@ -1,0 +1,16 @@
+- unless notice.nil?
+  %p
+    .alert.alert-success#notice= notice
+
+
+%p
+  %b 商业品牌名称:
+  = @biz_company.name
+%p
+  %b 品牌LOGO:
+  =image_tag @biz_company.logo.url(:normal)
+%p
+  %b 详情:
+  = @biz_company.body
+
+= link_to '编辑', edit_biz_company_path(@biz_company)

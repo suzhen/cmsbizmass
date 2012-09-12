@@ -1,0 +1,24 @@
+- unless notice.nil?
+  %p
+    .alert.alert-success#notice= notice
+
+%p
+  %b 地产名称:
+  = @house.name
+%p
+  %b 位置:
+  = @house.local
+%p
+  %b 价格:
+  = @house.price
+%p
+  %b 类别:
+  = @house.kind
+%p
+  %b 项目展示图:
+  =image_tag @house.logo.url(:normal)
+%p
+  %b 详情:
+  =raw @house.body
+
+= link_to '编辑', edit_house_path(@house)

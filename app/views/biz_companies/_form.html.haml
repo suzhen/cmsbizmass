@@ -1,0 +1,11 @@
+= simple_form_for(@biz_company,:html=>{:class=>'form-horizontal'}) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :logo
+    = f.input :body,:as=>:kindeditor,:input_html => { :width => 800, :height => 300 } 
+
+
+  .form-actions
+    = f.button :submit

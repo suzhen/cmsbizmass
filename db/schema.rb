@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120911085152) do
+ActiveRecord::Schema.define(:version => 20120912072929) do
 
   create_table "ad_spaces", :force => true do |t|
     t.string   "name"
@@ -75,6 +75,14 @@ ActiveRecord::Schema.define(:version => 20120911085152) do
     t.string   "theme_picture"
   end
 
+  create_table "biz_companies", :force => true do |t|
+    t.string   "name"
+    t.string   "logo"
+    t.text     "body"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "categories", :force => true do |t|
     t.string   "name"
     t.string   "symbol"
@@ -120,6 +128,17 @@ ActiveRecord::Schema.define(:version => 20120911085152) do
     t.string   "tel"
     t.string   "kind"
     t.text     "remark"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "houses", :force => true do |t|
+    t.string   "name"
+    t.string   "local"
+    t.string   "price"
+    t.string   "kind"
+    t.string   "logo"
+    t.text     "body"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -197,6 +216,14 @@ ActiveRecord::Schema.define(:version => 20120911085152) do
     t.string   "picture"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+  end
+
+  create_table "property_management_companies", :force => true do |t|
+    t.string   "name"
+    t.string   "local"
+    t.text     "body"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "records", :force => true do |t|

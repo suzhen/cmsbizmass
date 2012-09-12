@@ -70,6 +70,12 @@
               - else
                 %li
                   %a{:href=>"/manage/members"} 理事单位管理        
+              - if controller_name=="houses"||controller_name=="biz_companies"||controller_name=="property_management_companies"
+                %li.active
+                  %a{:href=>"/manage/houses"} 商业地产管理 
+              - else
+                %li
+                  %a{:href=>"/manage/houses"} 商业地产管理        
 
             %ul.nav.pull-right 
               %li.divider-vertical            
