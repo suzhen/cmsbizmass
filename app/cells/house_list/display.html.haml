@@ -1,0 +1,24 @@
+%ul.house_list
+  - @num=0
+  - @houses.each do |house|
+    %li
+      %span.i1
+        = @num;@num+=1;
+      .fl
+        %div
+          %strong
+            = link_to house.name,"#"
+          %br
+          %span
+            %strong 位置：
+            = house.local
+          %br
+          %span
+            %strong 类型：
+            = house.kind
+          %br
+          %span
+            %strong 价格：
+            = house.price   
+        = link_to image_tag house.logo.url(:normal),:border => 0, :title=>house.name
+    .line2 

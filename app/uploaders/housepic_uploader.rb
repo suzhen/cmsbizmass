@@ -41,7 +41,7 @@ class HousepicUploader < CarrierWave::Uploader::Base
   # end
    
   version :normal do  
-    process :resize_to_fill => [123, 110]  
+    process :resize_to_fill => [100, 75]  
   end  
    
   version :original 

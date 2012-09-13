@@ -15,7 +15,6 @@ class TopicPool9Cell < CommonCell
     @ename = params[:ename] if @ename.nil?
     @link = params[:link] if @link.nil?
 
-
     @rendercell=params[:rendercell]
     @display=params[:display]
     @arg=params.delete_if {| key, value | ["link","rendercell","display","name"].include? key  }

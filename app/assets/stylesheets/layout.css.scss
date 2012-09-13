@@ -1,5 +1,20 @@
 @import "compass/utilities/lists";
 @import "compass/typography/links";
+
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+.clr{clear:both;display:inline;}
+.line2{border-top: 1px dotted #CCC; padding-left: 4px; padding-right: 4px;}
+.i1{
+   background:red;
+   color:#FFF;
+   height:14px;
+   line-height:14px;
+   margin:5px 5px 0 0;
+   text-align:center;
+   width:14px;
+#   display:inline;
+}
 /***后台样式***/
             
 #login {
@@ -41,7 +56,6 @@
         }
        }             
 /***网站样式***/
-.clr{clear:both}
 .menu{
   height:35px;
   background-image:url(menu_bg_line.gif); 
@@ -389,6 +403,40 @@
    }
 }
 
+/****热门商业*****/
+.biz_company_list{
+    @include horizontal-list-container;
+    &:first-child, &.first{
+      padding-left:4px;
+    }
+
+    li{
+    @include horizontal-list-item(1px);
+    &:first-child, &.first{
+      padding-left:1px;
+    }
+    &:last-child, &.last{
+      padding-right:1px;
+    }
+
+    background: none repeat scroll 0 0 #F7F7F7;
+    border: 1px solid #D2D2D2;
+    height: 70px;
+    margin: 3px 2px 3px 0;
+    width: 140px;
+    span {
+      display: block;
+      text-align: center;
+      margin-top: 3px;
+    }
+    a{display:block;color:red;}
+   }
+
+
+
+}
+
+
 
 /**简历列表**/
 .resume_list{
@@ -400,8 +448,45 @@
    }
 }
 
+/**房产项目列表**/
+.house_list{
+ @include no-bullets;
+
+ #margin-left: 20px;
+ margin-right: 10px;
+ line-height: 24px;
+ li{
+   height:80px;  
+   line-height: 15px;
+   padding-top: 20px;
+   .i1{float:left;display:block;}
+   .fl{
+    padding-left:7px;
+    width:90%;
+    div{
+      float:right;
+      line-height:20px;
+      overflow:hidden;
+      padding-left:10px;
+      position:relative;
+      top:-3px;
+      white-space:nowrap;
+      width:170px;
+     a{
+         @include link-colors(black,black,black,black,black); 
+      }
 
 
+    }
+
+
+
+
+   }
+ }
+
+
+}
 
 
 

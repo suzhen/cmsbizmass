@@ -41,6 +41,10 @@ class CompanyLogoUploader < CarrierWave::Uploader::Base
   version :normal do  
     process :resize_to_fill => [167, 55]  
   end  
+
+  version :hot do
+   process :resize_to_fill => [140,46]
+  end
    
   version :original 
 
