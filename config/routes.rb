@@ -2,6 +2,8 @@ CcsmCmsbizmass::Application.routes.draw do
 
 
 
+  resources :videos
+
   devise_for :users
 
   scope "/manage" do

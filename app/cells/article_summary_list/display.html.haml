@@ -1,11 +1,14 @@
 .top_content
-  .top_title 沃尔玛“中国式”的困局      
+  .top_title
+    = @topics.first.title      
   .top_introduction
     - unless @topics.first.nil? 
       - unless @topics.first.introduction.blank?
-        = link_to raw "&nbsp;&nbsp;&nbsp;&nbsp;"+@topics.first.introduction
+        %p
+          = raw "&nbsp;&nbsp;&nbsp;&nbsp;"+@topics.first.introduction+"...&nbsp;&nbsp;<a href='/detail/#{@topics.first.to_page_param}'><详细></a>" 
       - else
-        = link_to raw "&nbsp;&nbsp;&nbsp;&nbsp;"+strip_tags(@topics.first.body)[0..150]+"...&nbsp;&nbsp;<a href='/detail/#{@topics.first.to_page_param}'><详细></a>" 
+        %p
+          = raw "&nbsp;&nbsp;&nbsp;&nbsp;"+strip_tags(@topics.first.body)[0..150]+"...&nbsp;&nbsp;<a href='/detail/#{@topics.first.to_page_param}'><详细></a>" 
   .top_line
   .top_list
     %ul.topic_list

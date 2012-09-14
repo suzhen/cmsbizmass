@@ -1,0 +1,13 @@
+= simple_form_for(@video) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :editor
+    = f.input :hits
+    = f.input :body
+    = f.input :thumb
+    = f.input :showprimary
+
+  .form-actions
+    = f.button :submit

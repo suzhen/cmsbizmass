@@ -1,9 +1,11 @@
 @import "compass/utilities/lists";
 @import "compass/typography/links";
 
+/*
 .fl{float:left;display:inline;}
-.fr{float:right;display:inline;}
-.clr{clear:both;display:inline;}
+.fr{float:right;display:inline;}*/
+
+.clr{clear:both;}
 .line2{border-top: 1px dotted #CCC; padding-left: 4px; padding-right: 4px;}
 .i1{
    background:red;
@@ -15,6 +17,7 @@
    width:14px;
 #   display:inline;
 }
+
 /***后台样式***/
             
 #login {
@@ -210,6 +213,7 @@
    .top_introduction{
      line-heigt:100px;
      padding:10px;
+     color: #0088cc;
    }
    .top_line{
      background:white url(line.jpg) no-repeat top left; 
@@ -219,7 +223,6 @@
    }
    .top_list{
     ul{margin-left:0;}
-
     @include no-bullets;
     @include pretty-bullets("squre.gif", 1px,1px,20px);
    }
@@ -431,9 +434,6 @@
     }
     a{display:block;color:red;}
    }
-
-
-
 }
 
 
@@ -444,15 +444,13 @@
   li{
     @include horizontal-list-item(6px);
     margin: 3px 2px 3px 0;
-
    }
 }
 
 /**房产项目列表**/
 .house_list{
  @include no-bullets;
-
- #margin-left: 20px;
+ /*margin-left: 20px;*/
  margin-right: 10px;
  line-height: 24px;
  li{
@@ -475,16 +473,16 @@
      a{
          @include link-colors(black,black,black,black,black); 
       }
-
-
     }
-
-
-
-
    }
  }
+}
 
+
+/*零售地图*/
+.map_guide{
+ padding:10px;
+ text-align:center;
 
 }
 

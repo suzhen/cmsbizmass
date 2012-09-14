@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  editor: MyString
+  hits: 1
+  body: MyText
+  thumb: MyString
+  showprimary: false
+
+two:
+  name: MyString
+  editor: MyString
+  hits: 1
+  body: MyText
+  thumb: MyString
+  showprimary: false
