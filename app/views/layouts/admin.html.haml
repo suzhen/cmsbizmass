@@ -76,6 +76,12 @@
               - else
                 %li
                   %a{:href=>"/manage/houses"} 商业地产管理        
+              - if controller_name=="videos"
+                %li.active
+                  %a{:href=>"/manage/videos"} 视频管理        
+              - else
+                %li
+                  %a{:href=>"/manage/videos"} 视频管理        
 
             %ul.nav.pull-right 
               %li.divider-vertical            

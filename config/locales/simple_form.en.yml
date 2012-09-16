@@ -131,7 +131,12 @@ en:
        property_management_company:
             name: '招商项目名称'
             local: '项目地点'
-            body: '详情' 
+            body: '详情'
+       video:
+           name: '视频名称'
+           body: '详情'
+           thumb: '图片' 
+           showprimary: '是否显示在一级页面'
     # hints:
     #   defaults:
     #     username: 'User name to sign in.'

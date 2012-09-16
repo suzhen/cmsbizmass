@@ -323,4 +323,26 @@
     -if @controller_name=="property_management_companies"&& @action_name=="edit"
       %li.active
         =link_to "编辑招商项目","#"
+  -# 视频管理
+  - if @controller_name=="videos"
+    %li.nav-header
+      %h4 视频列表管理
+    -if @controller_name=="videos"&& @action_name=="index"
+      %li.active
+        =link_to "视频列表","#"
+    - else
+      %li
+        =link_to "视频列表","/manage/videos"
+    -if @controller_name=="videos"&& (@action_name=="new"||@action_name=="create")
+      %li.active
+        =link_to "创建视频","#"
+    - else
+      %li
+        =link_to "创建视频",new_video_path
+    -if @controller_name=="videos"&& @action_name=="show"
+      %li.active
+        =link_to "查看视频","#"
+    -if @controller_name=="videos"&& @action_name=="edit"
+      %li.active
+        =link_to "编辑视频","#"
 

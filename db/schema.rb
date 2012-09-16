@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120912072929) do
+ActiveRecord::Schema.define(:version => 20120914102723) do
 
   create_table "ad_spaces", :force => true do |t|
     t.string   "name"
@@ -280,5 +280,16 @@ ActiveRecord::Schema.define(:version => 20120912072929) do
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+
+  create_table "videos", :force => true do |t|
+    t.string   "name"
+    t.string   "editor"
+    t.integer  "hits"
+    t.text     "body"
+    t.string   "thumb"
+    t.boolean  "showprimary"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
 end

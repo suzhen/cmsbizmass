@@ -181,6 +181,7 @@ en:
       house: '地产项目'
       biz_company: '商业品牌'
       property_management_company: '招商项目'
+      video: '视频'
   activemodel:
     errors:
       template:

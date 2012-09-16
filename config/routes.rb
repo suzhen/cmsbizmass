@@ -2,7 +2,6 @@ CcsmCmsbizmass::Application.routes.draw do
 
 
 
-  resources :videos
 
   devise_for :users
 
@@ -24,6 +23,7 @@ CcsmCmsbizmass::Application.routes.draw do
     resources :biz_companies
     resources :property_management_companies
     resources :houses
+    resources :videos
 
 
     get "/contact"=>"records#contact_show"  

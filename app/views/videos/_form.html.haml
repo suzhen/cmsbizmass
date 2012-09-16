@@ -1,11 +1,9 @@
-= simple_form_for(@video) do |f|
+= simple_form_for(@video,:html=>{:class=>'form-horizontal'}) do |f|
   = f.error_notification
 
   .form-inputs
     = f.input :name
-    = f.input :editor
-    = f.input :hits
-    = f.input :body
+    = f.input :body,:as=>:kindeditor,:input_html => { :width => 800, :height => 300 } 
     = f.input :thumb
     = f.input :showprimary
 
