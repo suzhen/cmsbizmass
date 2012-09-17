@@ -11,7 +11,11 @@ class AdUploader < CarrierWave::Uploader::Base
   end
 
   # Process files as they are uploaded:
-   process :scale => [200, 300]
+  p "+++++++++++++"
+  p @width
+  #p @@height
+
+#   process :scale => [@width,@height]
   
    def scale(width, height)
         resize_to_fill(width,height)
