@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class ThemePictureUploader < CarrierWave::Uploader::Base
+class VideoThumbUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
@@ -34,21 +34,21 @@ class ThemePictureUploader < CarrierWave::Uploader::Base
   # def scale(width, height)
   #   # do something
   # end
-  version :thumb do  
-    process :resize_to_fill => [75, 75]  
-  end  
-   
-  version :normal do  
-    process :resize_to_fill => [150,150]  
-  end  
-   
-  version :original 
-
 
   # Create different versions of your uploaded files:
   # version :thumb do
   #   process :scale => [50, 50]
   # end
+  
+  version :thumb do  
+    process :resize_to_fill => [114, 70]  
+  end  
+   
+  version :normal do  
+    process :resize_to_fill => [227,141]  
+  end  
+   
+  version :original 
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:

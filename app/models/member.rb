@@ -8,6 +8,7 @@ class Member < ActiveRecord::Base
   validates :address,:presence=>true
   validates_uniqueness_of :name
   scope :show_in_primary,where("showprimary is true") 
+  scope :order_created,order("created_at desc")
 
 
   def level

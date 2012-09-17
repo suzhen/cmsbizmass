@@ -4,6 +4,7 @@ class EmployingUnit < ActiveRecord::Base
   include Markdownable
   has_many :jobs
   scope :show_in_primary,where("showprimary is true") 
+  scope :order_created,order("created_at desc")
 
   mount_uploader :logo,CompanyLogoUploader
 end

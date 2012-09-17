@@ -1,24 +1,23 @@
-%p#notice= notice
-
+- unless notice.nil?
+  %p
+    .alert.alert-success#notice= notice
 %p
-  %b Name:
+  %b 视频名称:
   = @video.name
 %p
-  %b Editor:
+  %b 编辑姓名:
   = @video.editor
 %p
-  %b Hits:
+  %b 点击数:
   = @video.hits
 %p
-  %b Body:
-  = @video.body
+  %b 详情:
+  =raw @video.body
 %p
-  %b Thumb:
-  = @video.thumb
+  %b 介绍图片:
+  = image_tag @video.thumb.url(:normal)
 %p
-  %b Showprimary:
-  = @video.showprimary
+  %b 是否显示在一级页面:
+  = @video.showprimary ? "是" : "否"
 
-= link_to 'Edit', edit_video_path(@video)
-\|
-= link_to 'Back', videos_path
+= link_to '编辑', edit_video_path(@video)

@@ -1,4 +1,5 @@
-class MapGuideCell < Cell::Rails
+class MapGuideCell < CommonCell
+
 
   def display(params)
     render

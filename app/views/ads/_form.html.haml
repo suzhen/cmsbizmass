@@ -3,12 +3,8 @@
 
   .form-inputs
     = f.input :name
-    = f.input :kind
-    = f.input :setting
     = f.input :startdate
     = f.input :enddate
-    = f.input :hits
-    = f.input :clicks
     = f.input :listorder
     = f.input :disabled
     = f.association :ad_space,:collection => AdSpace.all,:prompt => "选择广告位" 

@@ -15,7 +15,7 @@
         %td= video.name
         %td= video.editor
         %td= video.hits
-        %td= video.thumb
+        %td= image_tag video.thumb.url(:thumb)
         %td= video.showprimary ? "是" : "否"
         %td= link_to '显示', video
         %td= link_to '编辑', edit_video_path(video)
