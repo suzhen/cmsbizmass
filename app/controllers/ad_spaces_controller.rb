@@ -47,7 +47,7 @@ class AdSpacesController < ApplicationController
 
     respond_to do |format|
       if @ad_space.save
-        format.html { redirect_to @ad_space, notice: 'Ad space was successfully created.' }
+        format.html { redirect_to @ad_space, notice: '广告位创建成功。' }
         format.json { render json: @ad_space, status: :created, location: @ad_space }
       else
         format.html { render action: "new" }
@@ -63,7 +63,7 @@ class AdSpacesController < ApplicationController
 
     respond_to do |format|
       if @ad_space.update_attributes(params[:ad_space])
-        format.html { redirect_to @ad_space, notice: 'Ad space was successfully updated.' }
+        format.html { redirect_to @ad_space, notice: '广告位更新成功。' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

@@ -487,6 +487,30 @@
 }
 
 
+/*广告*/
+.ad_list{
+ @include horizontal-list-container;
+ &:first-child, &.first{
+     padding-left:0;
+ }
+  li{
+    @include horizontal-list-item(6px);
+   }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
 
 /**QQ,WEIBO,等按钮**/
 .rbtn{

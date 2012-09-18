@@ -10,25 +10,8 @@ class AdUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  # Process files as they are uploaded:
-  #p @@height
-
- # @width=50
- # @height=50
-  process :scale #=> [@width,@height]
-  
-#   def scale(width, height)
- #     p "+++++++++++++"
- #     p width
-
-        #resize_to_fill(width,height)
-#   end
-
-  # Create different versions of your uploaded files:
-  # version :thumb do
-  #   process :scale => [50, 50]
-  # end
-
+   process :scale if :scale.present?  
+ 
    def extension_white_list
      %w(jpg jpeg gif png)
    end

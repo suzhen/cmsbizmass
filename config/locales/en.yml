@@ -167,6 +167,8 @@ en:
         taken: "已经被使用"
         record_invalid: "校验失败: %{errors}"
     models:
+      ad_space: '广告位'
+      ad: '广告'
       enterprise : "企业"
       magazine: "杂志"
       category: "分类"

@@ -1,34 +1,28 @@
-%p#notice= notice
+- unless notice.nil?
+  %p
+    .alert.alert-success#notice= notice
+
 
 %p
-  %b Name:
+  %b 广告位名称:
   = @ad_space.name
 %p
-  %b Kind:
-  = @ad_space.kind
-%p
-  %b Symbol:
+  %b 广告位标识:
   = @ad_space.symbol
 %p
-  %b Path:
-  = @ad_space.path
-%p
-  %b Width:
+  %b 宽度:
   = @ad_space.width
 %p
-  %b Height:
+  %b 长度:
   = @ad_space.height
 %p
-  %b Setting:
-  = @ad_space.setting
-%p
-  %b Description:
+  %b 描述:
   = @ad_space.description
 %p
-  %b Items:
+  %b 显示个数:
   = @ad_space.items
 %p
-  %b Disabled:
+  %b 是否启用:
   = @ad_space.disabled
 
 = link_to '编辑', edit_ad_space_path(@ad_space)

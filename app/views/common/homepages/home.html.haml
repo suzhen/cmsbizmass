@@ -3,7 +3,7 @@
   -#顶栏广告
   .row 
     .span12
-      =image_tag @ad.poster.url  if @ad.present?
+      = render_cell :ad_list,:display,:symbol=>"ad:homepages:A1"
   .blank5
   -#第一屏新闻
   .row
@@ -28,7 +28,7 @@
   -#中间栏广告
   .row 
     .span12
-      =image_tag @ad.poster.url if @ad.present?
+      = render_cell :ad_list,:display,:symbol=>"ad:homepages:A2"
   .blank5
   -#第二屏新闻
   .row
@@ -55,7 +55,7 @@
   -#广告
   .row
     .span12
-      =image_tag @ad.poster.url if @ad.present?
+      = render_cell :ad_list,:display,:symbol=>"ad:homepages:A3"
   .blank5 
   -#第四屏新闻
   .row
@@ -78,7 +78,7 @@
   -#广告
   .row
     .span12
-      =image_tag @ad.poster.url if @ad.present?
+      = render_cell :ad_list,:display,:symbol=>"ad:homepages:A4"
   .blank5 
   -#友情链接
   .row

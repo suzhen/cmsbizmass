@@ -46,7 +46,7 @@ class AdsController < ApplicationController
    
     respond_to do |format|
       if @ad.save
-        format.html { redirect_to @ad, notice: 'Ad was successfully created.' }
+        format.html { redirect_to @ad, notice: '广告创建成功。' }
         format.json { render json: @ad, status: :created, location: @ad }
       else
         format.html { render action: "new" }
@@ -62,7 +62,7 @@ class AdsController < ApplicationController
 
     respond_to do |format|
       if @ad.update_attributes(params[:ad])
-        format.html { redirect_to @ad, notice: 'Ad was successfully updated.' }
+        format.html { redirect_to @ad, notice: '广告更新成功。' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

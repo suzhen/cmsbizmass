@@ -1,26 +1,28 @@
+#coding: utf-8
 class Ad < ActiveRecord::Base
-  @@width=nil
-  belongs_to :ad_space
-  #before_save :set_ad_size
-  after_initialize :set_ad_size
-  mount_uploader :poster, AdUploader do
-    p @@width
-    p "#####################"
-    AdUploader.class_eval do
-       #@width = 100 
-       #@height = 100
-       def scale
-          #resize_to_fill(100,100)
-       end
-    end
+  validates :name,:presence=>true 
+  validates :ad_space,:presence=>true 
+  validates :poster,:presence=>true
+  validates :listorder,:presence=>true
 
-  end
+  validates_numericality_of :listorder, :only_integer => true
+
+
+  belongs_to :ad_space
+  before_save :set_ad_size
+  after_find :set_ad_size
 
   protected
 
   def set_ad_size
-    @@width = self.ad_space.width
-    @height = self.ad_space.height
+    width = self.ad_space.width
+    height = self.ad_space.height
+    self.class.mount_uploader :poster, AdUploader do
+      AdUploader.class_eval do
+        define_method :scale do
+           resize_to_fill(width,height)
+        end
+      end
+    end
   end
-
 end

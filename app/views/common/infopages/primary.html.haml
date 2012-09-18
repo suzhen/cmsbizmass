@@ -3,7 +3,7 @@
   -#顶栏广告
   .row 
     .span12
-      =image_tag @ad.poster.url  if @ad.present?
+      = render_cell :ad_list,:display,:symbol=>"ad:infopages:A1"
   .blank5
   -#热点
   .row

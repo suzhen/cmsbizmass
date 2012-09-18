@@ -1,31 +1,25 @@
-%p#notice= notice
+- unless notice.nil?
+  %p
+    .alert.alert-success#notice= notice
 
 %p
-  %b Name:
+  %b 广告名称:
   = @ad.name
 %p
-  %b Kind:
-  = @ad.kind
-%p
-  %b Setting:
-  = @ad.setting
-%p
-  %b Startdate:
+  %b 开始时间:
   = @ad.startdate
 %p
-  %b Enddate:
+  %b 结束时间:
   = @ad.enddate
 %p
-  %b Hits:
+  %b 点击数:
   = @ad.hits
 %p
-  %b Clicks:
-  = @ad.clicks
-%p
-  %b Listorder:
+  %b 显示顺序:
   = @ad.listorder
 %p
-  %b Disabled:
-  = @ad.disabled
+  %b 是否启用:
+  = @ad.disabled ? "是" : "否"
+
 
 = link_to '编辑', edit_ad_path(@ad)
