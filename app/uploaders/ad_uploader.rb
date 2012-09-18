@@ -11,15 +11,18 @@ class AdUploader < CarrierWave::Uploader::Base
   end
 
   # Process files as they are uploaded:
-  p "+++++++++++++"
-  p @width
   #p @@height
 
-#   process :scale => [@width,@height]
+ # @width=50
+ # @height=50
+  process :scale #=> [@width,@height]
   
-   def scale(width, height)
-        resize_to_fill(width,height)
-   end
+#   def scale(width, height)
+ #     p "+++++++++++++"
+ #     p width
+
+        #resize_to_fill(width,height)
+#   end
 
   # Create different versions of your uploaded files:
   # version :thumb do
