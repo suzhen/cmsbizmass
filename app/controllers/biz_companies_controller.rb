@@ -45,7 +45,7 @@ class BizCompaniesController < ApplicationController
 
     respond_to do |format|
       if @biz_company.save
-        format.html { redirect_to @biz_company, notice: 'Biz company was successfully created.' }
+        format.html { redirect_to @biz_company, notice: '商业品牌创建成功。' }
         format.json { render json: @biz_company, status: :created, location: @biz_company }
       else
         format.html { render action: "new" }
@@ -61,7 +61,7 @@ class BizCompaniesController < ApplicationController
 
     respond_to do |format|
       if @biz_company.update_attributes(params[:biz_company])
-        format.html { redirect_to @biz_company, notice: 'Biz company was successfully updated.' }
+        format.html { redirect_to @biz_company, notice: '商业品牌更新成功。' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

@@ -47,7 +47,7 @@ class LinksController < ApplicationController
 
     respond_to do |format|
       if @link.save
-        format.html { redirect_to @link, notice: 'Link was successfully created.' }
+        format.html { redirect_to @link, notice: '友情链接创建成功。' }
         format.json { render json: @link, status: :created, location: @link }
       else
         format.html { render action: "new" }
@@ -63,7 +63,7 @@ class LinksController < ApplicationController
 
     respond_to do |format|
       if @link.update_attributes(params[:link])
-        format.html { redirect_to @link, notice: 'Link was successfully updated.' }
+        format.html { redirect_to @link, notice: '友情链接更新成功。' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

@@ -10,7 +10,7 @@ class TopicPool1Cell < CommonCell
      unless category_symbol.nil?
       category=Category.find_by_symbol(category_symbol)
       @name=page_symbol["name"].nil? ? category.name : page_symbol["name"]
-      @link=params[:link]
+      @link="/article_list/#{category.id.to_s}"
       @ename=page_symbol["ename"].nil? ? category.ename : page_symbol["name"] 
       end
      end

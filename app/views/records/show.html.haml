@@ -1,4 +1,6 @@
-%p#notice= notice
+- unless notice.nil?
+  %p
+    .alert.alert-success#notice= notice
 
 %p
   %b Body:

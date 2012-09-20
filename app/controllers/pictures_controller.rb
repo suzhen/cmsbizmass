@@ -63,7 +63,7 @@ class PicturesController < ApplicationController
 
     respond_to do |format|
       if @picture.update_attributes(params[:picture])
-        format.html { redirect_to @picture, notice: 'Picture was successfully updated.' }
+        format.html { redirect_to @picture, notice: '图片更新成功。' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

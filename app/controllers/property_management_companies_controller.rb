@@ -45,7 +45,7 @@ class PropertyManagementCompaniesController < ApplicationController
 
     respond_to do |format|
       if @property_management_company.save
-        format.html { redirect_to @property_management_company, notice: 'Property management company was successfully created.' }
+        format.html { redirect_to @property_management_company, notice: '招商项目创建成功。' }
         format.json { render json: @property_management_company, status: :created, location: @property_management_company }
       else
         format.html { render action: "new" }
@@ -61,7 +61,7 @@ class PropertyManagementCompaniesController < ApplicationController
 
     respond_to do |format|
       if @property_management_company.update_attributes(params[:property_management_company])
-        format.html { redirect_to @property_management_company, notice: 'Property management company was successfully updated.' }
+        format.html { redirect_to @property_management_company, notice: '招商项目更新成功。' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

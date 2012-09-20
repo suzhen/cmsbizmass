@@ -1,25 +1,25 @@
-%p#notice= notice
+- unless notice.nil?
+  %p
+    .alert.alert-success#notice= notice
+
 
 %p
-  %b Name:
+  %b 链接名称:
   = @link.name
 %p
-  %b Url:
+  %b 链接地址:
   = @link.url
 %p
-  %b Logo:
+  %b 链接LOGO:
   = image_tag @link.logo.url(:normal),:alt=>@link.name
 %p
-  %b Description:
+  %b 描述:
   = @link.description
 %p
-  %b User name:
-  = @link.user_name
-%p
-  %b Listorder:
+  %b 显示顺序:
   = @link.listorder
 %p
-  %b Disabled:
-  = @link.disabled
+  %b 是否启用:
+  = @link.disabled ? "是" : "否"
 
 = link_to '编辑', edit_link_path(@link)

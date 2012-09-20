@@ -27,9 +27,9 @@ class Article < ActiveRecord::Base
     arr_cat=category.arrparentid.split(",")
     arr_cat<<category.id.to_s
     arr_cat.each do |id|
-       categories+="<a href='/news?category_id=#{id}'>#{Category.find(id).name}</a>"+" — >" unless id=="0" 
+       categories+="<a href='/article_list/#{id}'>#{Category.find(id).name}</a>&nbsp;"+"—>" unless id=="0" 
     end 
-    categories[0..-4]
+    categories[0..-4]+"—>"+"&nbsp;正文" 
   end
 
 end

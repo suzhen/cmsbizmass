@@ -1,0 +1,13 @@
+.top_content
+  .top_list
+    %ul.topic_list
+      - @articles.each do |article|
+        %li
+          .tltitle
+            &nbsp;
+            = link_to article.short_title,"/detail/#{article.to_page_param}" 
+          .tldate
+            = "[ "+article.created_at.strftime("%m-%d").to_s+" ]"
+          .clr 
+
+ 

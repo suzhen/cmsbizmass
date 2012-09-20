@@ -1,22 +1,11 @@
--#新闻详细内容容器
 .news_container
   .bord01
   -#标题
   .news_title
     .arrow_brow
     .detail_title
-      您所在的位置：
-      = raw @article.category_chain
+      = raw @position
   -#内容
   .detail_content
-    .artibodyTitle
-      = @article.title
-    .artiInfo
-      = link_to "www.ccsm.com.cn","http://www.ccsm.com.cn"
-      = "来源：#{@article.source}" if @article.source.present?
-      = "作者：#{@article.author}" if @article.author.present?
-      = @article.created_at.to_s(:db) 
-    .artibody  
-    %br
-    = raw @article.body
-%br 
+    = render_cell @rendercell,@display,@arg
+

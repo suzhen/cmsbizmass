@@ -1,16 +1,14 @@
-%p#notice= notice
-
+- unless notice.nil?
+  %p
+    .alert.alert-success#notice= notice
 %p
-  %b Title:
+  %b 杂志名称:
   = @magazine.title
 %p
-  %b Public date:
+  %b 发刊时间:
   = @magazine.public_date
 %p
-  %b User name:
-  = @magazine.user_name
-%p
-  %b Download:
+  %b 下载次数:
   = @magazine.download
 
 = link_to '编辑上传杂志', edit_magazine_path(@magazine)

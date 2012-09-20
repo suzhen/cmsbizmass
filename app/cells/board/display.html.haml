@@ -1,0 +1,11 @@
+.artibodyTitle
+  = @article.title
+.artiInfo
+  = link_to "www.ccsm.com.cn","http://www.ccsm.com.cn"
+  = "来源：#{@article.source}" if @article.source.present?
+  = "作者：#{@article.author}" if @article.author.present?
+  = @article.created_at.to_s(:db) 
+.artibody  
+  %br
+  = raw @article.body
+%br 

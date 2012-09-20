@@ -48,8 +48,8 @@ CcsmCmsbizmass::Application.routes.draw do
    get "/members"=>"common/memberpages#primary"
    get "/contact"=>"common/contact#show"
 
-   get "/detail/:year/:month/:day/:id"=>"common/homepages#detail"  
-
+   get "/detail/:year/:month/:day/:id"=>"common/infopages#detail"  
+   get "/article_list/:id"=>"common/infopages#list"
   #map下的ajax
   get "/enterprises_by_city"=>"common/maps#get_ents_by_city_ajax"
   get "/enter_groups_by_city"=>"common/maps#get_ent_groups_by_city_ajax"

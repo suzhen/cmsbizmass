@@ -4,5 +4,11 @@ class Common::InfopagesController < CommonController
 
 
   end
+  
+  def detail
+    respond_to do |format|
+      format.html 
+    end
+  end
 
 end

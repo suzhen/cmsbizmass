@@ -12,4 +12,15 @@ class Category < ActiveRecord::Base
 
   scope :family, lambda { |ctype| where("ctype = ?", ctype) }
   scope :roots,where('parent_id=0')
+ 
+  def chain
+    categories=""
+    arr_cat = self.arrparentid.split(",")
+    arr_cat<<id.to_s
+    arr_cat.each do |id|
+       categories+="<a href='/article_list/#{id}'>#{Category.find(id).name}</a>&nbsp;"+"—>" unless id=="0" 
+    end 
+    categories[0..-4]
+
+  end
 end

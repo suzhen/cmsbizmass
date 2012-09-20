@@ -46,7 +46,7 @@ class PicSpacesController < ApplicationController
     @pic_space = PicSpace.new(params[:pic_space])
     respond_to do |format|
       if @pic_space.save
-        format.html { redirect_to @pic_space, notice: 'Pic space was successfully created.' }
+        format.html { redirect_to @pic_space, notice: '图片位置创建成功。' }
         format.json { render json: @pic_space, status: :created, location: @pic_space }
       else
         format.html { render action: "new" }
@@ -62,7 +62,7 @@ class PicSpacesController < ApplicationController
 
     respond_to do |format|
       if @pic_space.update_attributes(params[:pic_space])
-        format.html { redirect_to @pic_space, notice: 'Pic space was successfully updated.' }
+        format.html { redirect_to @pic_space, notice: '图片位置更新成功。' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

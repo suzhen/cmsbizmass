@@ -1,13 +1,16 @@
-%p#notice= notice
+- unless notice.nil?
+  %p
+    .alert.alert-success#notice= notice
+
 
 %p
-  %b Name:
+  %b 图片位置名称:
   = @pic_space.name
 %p
-  %b Symbol:
+  %b 唯一标识:
   = @pic_space.symbol
 %p
-  %b Maxnum:
+  %b 最多显示数目:
   = @pic_space.maxnum
 
 = link_to '编辑', edit_pic_space_path(@pic_space)
