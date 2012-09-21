@@ -9,4 +9,14 @@
   .row
     .span9
       = render_cell :topic_pool8,:display,:rendercell=>"repertory",:display=>"display",:cid=>params[:id]
-    .span3 
+    .span3
+      = render_cell :topic_pool3,:display,:rendercell=>"article_top",:display=>"display",:symbol=>"homepages:R1C",:link=>"",:name=>"热点新闻"
+      .blank5
+      = render_cell :topic_pool3,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"homepages:R2B",:link=>"#"
+      .blank5
+      = render_cell :topic_pool2,:display,:name=>"在线阅读",:link=>"/magazines",:rendercell=>"magazines",:display=>"display",:shownum=>1 
+      .blank5
+      = render_cell :topic_pool3,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"homepages:R2B",:link=>"#"
+      .blank5
+      = render_cell :ad_list,:display,:symbol=>"ad:homepages:A1"
+

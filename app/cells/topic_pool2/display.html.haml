@@ -8,7 +8,8 @@
     %span.brow_text_gray
       = @ename 
     %span.linkspan
-      %a{href: @link} >>more
+      - if @link!=""
+        = link_to ">>more",@link
   -#内容
   .news_content
     = render_cell @rendercell,@display,@arg

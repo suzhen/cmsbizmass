@@ -7,7 +7,8 @@
       %span.brow_text_gray
         = @ename 
       %span.linkspan
-        %a{href: @link} >>more
+        - if @link!=""
+          = link_to ">>more",@link
     .over
   .notice_content
     = render_cell @rendercell,@display,:symbol=>@symbol
