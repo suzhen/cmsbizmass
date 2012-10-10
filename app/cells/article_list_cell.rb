@@ -7,7 +7,7 @@ class ArticleListCell < CommonCell
     category_symbol = page_symbol["symbol"]
     show_limit = page_symbol["limit"]
     category=Category.find_by_symbol(category_symbol)
-    @topics=category.articles.order("listorder").limit(show_limit)
+    @topics=category.articles.order("listorder,created_at DESC").limit(show_limit)
     render
   end
 

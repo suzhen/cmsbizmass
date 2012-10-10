@@ -7,7 +7,7 @@ class ArticleCell < CommonCell
     category_symbol = page_symbol["symbol"]
     @character  = page_symbol["character"]
     category = Category.find_by_symbol(category_symbol)
-    @article=category.articles.order("listorder").first
+    @article=category.articles.order("listorder,created_at DESC").first
     render
   end
 
