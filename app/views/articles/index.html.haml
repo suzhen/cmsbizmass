@@ -5,9 +5,8 @@
     %tr
       %th 新闻分类
       %th 列表标题
-      %th 作者
       %th 来源
-      %th 编辑
+      %th 编者
       %th 是否置顶
       %th 点击次数
       %th 创建时间
@@ -19,10 +18,9 @@
       %tr
         %td= article.category.name if article.category.present?
         %td= article.short_title
-        %td= article.author
         %td= article.source
         %td= article.eidtor_name
-        %td= article.top ? "置顶" : ""
+        %td= article.top ? "置顶" : "否"
         %td= article.hits.to_s
         %td= article.created_at.to_s(:db)
         %td= link_to '显示', article

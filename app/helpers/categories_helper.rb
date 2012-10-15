@@ -2,6 +2,7 @@
 module CategoriesHelper
 
 def parent_category_selects(category_id=nil,ul_id='categoryUL0',ctype='news')
+    category_id = nil if category_id==""
     @category=nil            
     selects_str="<ul id='#{ul_id}' class='treeUL'>"
     top_categories=Category.family(ctype).roots.collect{|category|[category.id,category.name] }
@@ -20,6 +21,7 @@ def parent_category_selects(category_id=nil,ul_id='categoryUL0',ctype='news')
 end
 
 def category_selects(category_id=nil,ul_id='categoryUL0',ctype='news')
+    category_id = nil if category_id==""
     @category=nil            
     selects_str="<ul id='#{ul_id}' class='treeUL'>"
     top_categories=Category.family(ctype).roots.collect{|category|[category.id,category.name] }

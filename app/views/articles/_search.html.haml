@@ -1,4 +1,22 @@
-= form_tag("/search_article") do |f|
-  = raw category_selects(nil,'categoryUL0')
-  = hidden_field_tag :category_parent_id,:name=>"category_id"
+= form_tag("/search_article",:method=>"get") do |f|
+  %table
+    %tr
+      %td{:style=>"width:80px"}
+        = "新闻分类：" 
+      %td
+        = raw category_selects(params[:category_id],'categoryUL0')
+
+        = hidden_field_tag :category_parent_id,params[:category_id],:name=>"category_id"
+      %td
+        = "新闻标题：" 
+      %td
+        = text_field_tag :title,params[:title] 
+    %tr
+      %td{:style=>"width:80px"}
+        = "创建时间："
+      %td{:colspan=>4}
+        = select_date Date.today,:prompt => { :day => '选择日期', :month => '选择月份', :year => '选择年份' }
+    %tr
+      %td
+        = submit_tag "查询",:class=>"btn" 
 

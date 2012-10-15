@@ -5,8 +5,35 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.page params[:page]
-    respond_to do |format|
+   @articles=Article
+   if params[:date].present?
+     #"只有年" 
+     if params[:date][:year].present? && !params[:date][:month].present?
+       @articles=@articles.where(["DATE_FORMAT(created_at,'%Y') = ?",params[:date][:year]])  
+     end
+     #"只有年和月"
+     if params[:date][:year].present? && params[:date][:month].present? && !params[:date][:day].present?
+        created_date =  Date.civil(params[:date][:year].to_i, params[:date][:month].to_i,1)
+       @articles=@articles.where(["DATE_FORMAT(created_at,'%Y-%m') = ?",created_date.strftime('%Y-%m')])  
+     end
+     #"年月日都有"
+     if params[:date][:year].present? && params[:date][:month].present? && params[:date][:day].present?
+        created_date =  Date.civil(params[:date][:year].to_i, params[:date][:month].to_i, params[:date][:day].to_i)
+        @articles=@articles.where(["DATE_FORMAT(created_at,'%Y-%m-%d') = ?",created_date])  
+     end
+   end
+   
+   cat = params[:category_id]
+   til = params[:title]
+   if til.present?
+     @articles=@articles.where("title like '%#{til}%'")
+   end  
+   if cat.present?&&cat!=""&&cat!="0"
+     @articles=@articles.where(["category_id=?",cat])
+   end
+   @articles=@articles.order("created_at DESC").page(params[:page])
+
+   respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @articles }
     end
@@ -100,5 +127,6 @@ class ArticlesController < ApplicationController
       format.js
     end
   end
+
 
 end
