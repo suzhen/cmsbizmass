@@ -37,6 +37,8 @@ CcsmCmsbizmass::Application.routes.draw do
 
    get "/queryarticles"=>"articles#query" 
    get "/search_article"=>"articles#index"
+
+   get "/zhaopin/:id"=>"common/hrpages#zhaopin"
   
    get "/index"=>"common/homepages#home"
    get "/news"=>"common/infopages#primary"

@@ -4,4 +4,12 @@ class Common::HrpagesController < CommonController
 
 
   end
+
+  def zhaopin
+
+  end
+
+
+
+
 end

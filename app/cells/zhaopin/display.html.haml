@@ -1,0 +1,32 @@
+招聘单位：
+= @employing_unit.name
+%br
+公司地址：
+= @employing_unit.address
+%br
+公司电话：
+= @employing_unit.tel
+%br
+公司联系人：
+= @employing_unit.linkman
+%br
+公司EMAIL：
+= @employing_unit.email
+%br
+公司简介：
+= raw @employing_unit.formatted_html
+%br
+%hr
+- @employing_unit.jobs.each do |job|
+  招聘职位：
+  = job.name
+  %br
+  招聘人数：
+  = job.people
+  %br
+  工作地点：
+  = job.place
+  %br
+  职位要求：
+  =  raw job.formatted_html
+  %hr
