@@ -7,7 +7,7 @@
       .fl
         %div
           %strong
-            = link_to house.name,"#"
+            = link_to house.name,"/house_#{house.to_pinyin_param}/#{house.id.to_s}"
           %br
           %span
             %strong 位置：
@@ -20,5 +20,5 @@
           %span
             %strong 价格：
             = house.price   
-        = link_to image_tag house.logo.url(:normal),:border => 0, :title=>house.name
+        = link_to image_tag(house.logo.url(:normal),:border => 0, :title=>house.name),"/house_#{house.to_pinyin_param}/#{house.id.to_s}"
     .line2 

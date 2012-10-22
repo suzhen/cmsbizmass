@@ -52,6 +52,9 @@ CcsmCmsbizmass::Application.routes.draw do
 
    get "/detail/:year/:month/:day/:id"=>"common/infopages#detail"  
    get "/article_list/:id"=>"common/infopages#list"
+   get "/house_:name/:id"=>"common/landpages#detail"
+   get "/investment_:name/:id"=>"common/landpages#investment_project_detail"
+
   #map下的ajax
   get "/enterprises_by_city"=>"common/maps#get_ents_by_city_ajax"
   get "/enter_groups_by_city"=>"common/maps#get_ent_groups_by_city_ajax"

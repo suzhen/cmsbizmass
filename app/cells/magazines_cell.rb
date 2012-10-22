@@ -7,8 +7,8 @@ class MagazinesCell < CommonCell
   end
 
   def guidance(params)
-    shownum= params[:shownum].to_i
-    @magazines=Magazine.order("public_date").limit(shownum)
+    shownum= params["limit"].to_i
+    @magazines=Magazine.order("public_date DESC").limit(shownum)
     render
   end
 

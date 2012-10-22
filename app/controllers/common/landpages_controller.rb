@@ -4,4 +4,15 @@ class Common::LandpagesController < CommonController
 
 
   end
+
+  def detail
+
+
+  end
+
+  def investment_project_detail
+
+
+  end
+
 end

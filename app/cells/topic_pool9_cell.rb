@@ -14,7 +14,11 @@ class TopicPool9Cell < CommonCell
      #更多
      link_symbol = page_symbol["link"]
 
-      category=Category.find_by_symbol(category_symbol) unless category_symbol.blank?
+     category=Category.find_by_symbol(category_symbol) unless category_symbol.blank?
+
+#    p "?????????"
+#   p page_symbol
+#    p name_symbol
      
      unless name_symbol.blank?
         @name = name_symbol     else
@@ -31,14 +35,7 @@ class TopicPool9Cell < CommonCell
     @link = "" if @link.nil?
     @rendercell=params[:rendercell]
     @display=params[:display]
-    p "+++++++++"
-   p @rendercell
-   p @display
-   p @name
-   p @link
-   @arg=page_symbol.delete_if {| key, value | ["link","rendercell","display","name"].include? key  }
-    #@arg=params
-   p @arg
+    @arg=page_symbol.delete_if {| key, value | ["link","rendercell","display"].include? key  }
     render
   end
 

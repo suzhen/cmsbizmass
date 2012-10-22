@@ -11,6 +11,14 @@ class TopicPool8Cell < CommonCell
      article=Article.find params[:aid]  
      @position=article.category_chain
     end
+    if params[:hid].present?
+      @position="商业地产 —> 地产项目"
+    end
+    if params[:iid].present?
+      @position="商业地产 —> 招商项目"
+    end
+
+
     @rendercell=params[:rendercell]
     @display=params[:display]
     @arg=params.delete_if {| key, value | ["rendercell","display"].include? key  }

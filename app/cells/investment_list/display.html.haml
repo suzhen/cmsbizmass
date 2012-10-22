@@ -6,6 +6,5 @@
   %tbody
     - @investments.each do |investment|
       %tr
-        %td= investment.name
+        %td= link_to investment.name,"/investment_#{investment.to_pinyin_param}/#{investment.id.to_s}"
         %td= investment.local
-
