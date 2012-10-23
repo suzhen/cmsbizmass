@@ -3,7 +3,8 @@
   %thead
     %tr
       %th 广告名称
-      %th 广告位 
+      %th 广告位
+      %th 链接地址 
       %th 开始投放时间
       %th 结束投放时间
       %th 显示次数
@@ -18,6 +19,7 @@
       %tr
         %td= ad.name
         %td= ad.ad_space.name
+        %td= ad.url
         %td= ad.startdate
         %td= ad.enddate
         %td= ad.hits

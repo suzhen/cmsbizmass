@@ -152,7 +152,8 @@ en:
            listorder: '显示顺序'
            disabled: '是否启用'
            ad_space: '广告位'
-           poster: '广告文件' 
+           poster: '广告文件'
+           url: '链接地址' 
     # hints:
     #   defaults:
     #     username: 'User name to sign in.'

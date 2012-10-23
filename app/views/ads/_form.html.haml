@@ -7,6 +7,7 @@
     = f.input :enddate
     = f.input :listorder
     = f.input :disabled
+    = f.input :url
     = f.association :ad_space,:collection => AdSpace.all,:prompt => "选择广告位" 
     = f.input :poster,:as=>"file"
   .form-actions

@@ -20,6 +20,8 @@
 %p
   %b 是否启用:
   = @ad.disabled ? "是" : "否"
-
+%p
+  %b 链接地址
+  = @ad.url
 
 = link_to '编辑', edit_ad_path(@ad)
