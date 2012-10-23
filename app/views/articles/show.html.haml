@@ -28,7 +28,7 @@
   = @article.top ? "是" : "否"
 %p
   %b 主题图片:
-  = image_tag @article.theme_picture.url(:normal)
+  = image_tag @article.theme_picture.url(:normal) if @article.theme_picture.present?
 %p
   %b 内容:
   = raw @article.body
