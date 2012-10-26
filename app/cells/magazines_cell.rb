@@ -1,7 +1,7 @@
 class MagazinesCell < CommonCell
 
   def display(params)
-    shownum = params[:shownum].to_i
+    shownum = params["limit"].to_i
     @magazines=Magazine.order("public_date").limit(shownum)
     render
   end

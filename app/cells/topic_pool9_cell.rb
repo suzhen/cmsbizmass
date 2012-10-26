@@ -6,7 +6,7 @@ class TopicPool9Cell < CommonCell
       arr_symbol=@symbol.split(":")
       page_symbol = $configroot[arr_symbol[0]][arr_symbol[1]]
      #分类
-     category_symbol = page_symbol["symbol"]
+     category_symbol = page_symbol["category"]
      #标题
      name_symbol = page_symbol["name"]
      #个数
@@ -31,7 +31,9 @@ class TopicPool9Cell < CommonCell
     @link = "" if @link.nil?
     @rendercell=params[:rendercell]
     @display=params[:display]
-    @arg=page_symbol.delete_if {| key, value | ["link","rendercell","display"].include? key  }
+    @arg=page_symbol.delete_if {| key, value | ["rendercell","display"].include? key  }
+    @arg[:symbol]=@symbol
+
     render
   end
 

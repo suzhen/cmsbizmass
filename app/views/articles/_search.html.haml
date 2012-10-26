@@ -11,11 +11,11 @@
         = "新闻标题：" 
       %td
         = text_field_tag :title,params[:title] 
-    %tr
-      %td{:style=>"width:80px"}
-        = "创建时间："
-      %td{:colspan=>4}
-        = select_date Date.today,:prompt => { :day => '选择日期', :month => '选择月份', :year => '选择年份' }
+    -# %tr
+      -# %td{:style=>"width:80px"}
+        -# = "创建时间："
+      -# %td{:colspan=>4}
+        -# =# select_date Date.today,:prompt => { :day => '选择日期', :month => '选择月份', :year => '选择年份' }
     %tr
       %td
         = submit_tag "查询",:class=>"btn" 

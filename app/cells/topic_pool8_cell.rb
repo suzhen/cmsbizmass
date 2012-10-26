@@ -17,7 +17,9 @@ class TopicPool8Cell < CommonCell
     if params[:iid].present?
       @position="商业地产 —> 招商项目"
     end
-
+    if params[:eid].present?
+     @position="人才招聘"
+    end
 
     @rendercell=params[:rendercell]
     @display=params[:display]

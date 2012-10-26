@@ -14,7 +14,7 @@ class Article < ActiveRecord::Base
   delegate :body, :formatted_html, :to => :article_body
  
   def to_page_param
-    "#{created_at.year}/#{created_at.month.to_s.rjust(2, '0')}/#{created_at.day.to_s.rjust(2, '0')}/#{id}-#{Pinyin.t(title, '')}"
+    "#{created_at.year}/#{created_at.month.to_s.rjust(2, '0')}/#{created_at.day.to_s.rjust(2, '0')}/#{id}-#{Pinyin.t(title.gsub(/[\ |\~|\`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\-|\_|\+|\=|\||\\|\[|\]|\{|\}|\;|\:|\ |\"|\'|\,|\<|\.|\>|\/|\?]/,""), '')}"
   end
   
   def to_page_simple_param
