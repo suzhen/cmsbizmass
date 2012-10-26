@@ -5,7 +5,7 @@ class ArticleListCell < CommonCell
     show_limit = params["limit"]
     category=Category.find_by_symbol(category_symbol)
     @topics=nil
-    @topics=category.articles.order("listorder,created_at DESC").limit(show_limit) if category.present?
+    @topics=category.articles.order("listorder,updated_at DESC").limit(show_limit) if category.present?
     render
   end
 
