@@ -43,7 +43,7 @@ class ThemePictureUploader < CarrierWave::Uploader::Base
   end  
 
   version :theme do  
-    process :resize_to_fill => [180,115]  
+    process :resize_to_fill => [210,128]  
   end  
 
    
