@@ -1,0 +1,9 @@
+%ul.gallery_list
+  - @topics.each do |topic|
+    %li
+      %div.galleryimgtxt
+        %a{href:"/detail/#{topic.to_page_param}"} 
+          %span.img
+            = image_tag topic.theme_picture.url(:theme),:border => 0
+          %span.txt
+            = topic.short_title

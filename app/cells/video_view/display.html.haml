@@ -1,4 +1,4 @@
 .map_guide
-  = link_to image_tag(@video.thumb.url(:normal)),@link
+  %embed{:src=>"#{@video.source}",:type=>"application/x-shockwave-flash",:width=>"247",:height=>"151",:autostart=>"false",:loop=>"true"}
   %span
-    = link_to @video.name,@link
+    = @video.name

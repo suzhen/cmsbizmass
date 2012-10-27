@@ -63,7 +63,7 @@ class MagazinesController < ApplicationController
 
     respond_to do |format|
       if @magazine.update_attributes(params[:magazine])
-        format.html { redirect_to @magazine, notice: 'Magazine was successfully updated.' }
+        format.html { redirect_to @magazine, notice: '杂志更新成功。' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

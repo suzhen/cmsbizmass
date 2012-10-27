@@ -3,8 +3,9 @@
     %tr
       %th 视频名称
       %th 编辑姓名
-      %th 点击数
-      %th 图片
+      %th 来源
+      -# %th 点击数
+      -# %th 图片
       %th 是否显示在一级页面
       %th
       %th
@@ -14,8 +15,9 @@
       %tr
         %td= video.name
         %td= video.editor
-        %td= video.hits
-        %td= image_tag video.thumb.url(:thumb)
+        %td= video.source
+        -# %td= video.hits
+        -#  %td= image_tag video.thumb.url(:thumb)
         %td= video.showprimary ? "是" : "否"
         %td= link_to '显示', video
         %td= link_to '编辑', edit_video_path(video)

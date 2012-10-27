@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121023090223) do
+ActiveRecord::Schema.define(:version => 20121027125927) do
 
   create_table "ad_spaces", :force => true do |t|
     t.string   "name"
@@ -82,6 +82,7 @@ ActiveRecord::Schema.define(:version => 20121023090223) do
     t.text     "body"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "url"
   end
 
   create_table "categories", :force => true do |t|
@@ -176,10 +177,11 @@ ActiveRecord::Schema.define(:version => 20121023090223) do
     t.string   "elecpdf"
     t.string   "cover"
     t.integer  "comment_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
     t.string   "body_title"
     t.text     "body"
+    t.integer  "listorder",   :default => 0
   end
 
   create_table "members", :force => true do |t|
@@ -275,6 +277,7 @@ ActiveRecord::Schema.define(:version => 20121023090223) do
     t.boolean  "showprimary"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "source"
   end
 
 end

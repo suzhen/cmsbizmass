@@ -11,23 +11,25 @@
       = render_cell :topic_pool3,:display,:rendercell=>"investment_list",:display=>"display",:symbol=>"landpages:R1A"
       .blank5
       = render_cell :topic_pool3,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"landpages:R1B"
+      .blank5
+      = render_cell :topic_pool2,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"landpages:R2A"
+
     .span5
-      = render_cell :topic_pool10,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"landpages:R1C"
+      = render_cell :topic_pool10,:display,:rendercell=>"article_summary_list",:display=>"display",:symbol=>"landpages:R1C"
       .blank5
       = render_cell :topic_pool9,:display,:rendercell=>"house_list",:symbol=>"landpages:R1G",:display=>"display"
     .span3
-      = render_cell :topic_pool3,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"landpages:R1D"
-      .blank5
       = render_cell :topic_pool3,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"landpages:R1E"
       .blank5
       = render_cell :topic_pool3,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"landpages:R1F"
+      .blank5
+      = render_cell :topic_pool3,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"landpages:R1D"
+      .blank5
   .blank5
-  -#中介服务
+  -#热门品牌
   .row
-    .span6
-      = render_cell :topic_pool2,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"landpages:R2A",:link=>"#"
-    .span6
-      = render_cell :topic_pool10,:display,:rendercell=>"biz_list",:display=>"display",:symbol=>"landpages:R2B",:link=>"#"
+    .span12
+      = render_cell :topic_pool2,:display,:rendercell=>"biz_list",:display=>"display",:symbol=>"landpages:R2B"
 
 
 

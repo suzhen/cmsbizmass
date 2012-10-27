@@ -274,7 +274,7 @@
 .mgimgtxt{
   margin:10px 0;
   overflow:hidden;
-  height:172px;
+  height:179px;
   text-align:center;
   .mgimg{
     display:block;
@@ -443,6 +443,10 @@
   @include horizontal-list-container;
   li{
     @include horizontal-list-item(6px);
+    &:first-child, &.first{
+      padding-left:8px;
+    }
+
     margin: 3px 2px 3px 0;
    }
 }
@@ -508,11 +512,24 @@
 }
 
 
+/*图片显示*/
+.show_picture{
+   padding-top:5px;
+   padding-bottom:5px;
 
-
-
-
-
+  .pic_list{
+   @include horizontal-list-container;
+   &:first-child, &.first{
+      padding-left:3px;
+   }
+  &:last-child, &.last{
+     padding-right:2px;
+   }
+  li{
+   @include horizontal-list-item(10px);
+   }
+  }
+}
 
 
 

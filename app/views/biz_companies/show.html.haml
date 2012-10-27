@@ -10,7 +10,7 @@
   %b 品牌LOGO:
   =image_tag @biz_company.logo.url(:normal)
 %p
-  %b 详情:
-  = @biz_company.body
+  %b 链接地址:
+  = @biz_company.url
 
 = link_to '编辑', edit_biz_company_path(@biz_company)

@@ -5,10 +5,10 @@
     - unless @topics.first.nil? 
       - unless @topics.first.introduction.blank?
         %p
-          = raw "&nbsp;&nbsp;&nbsp;&nbsp;"+@topics.first.introduction+"...&nbsp;&nbsp;<a href='/detail/#{@topics.first.to_page_param}'><详细></a>" 
+          = raw "&nbsp;&nbsp;&nbsp;&nbsp;"+@topics.first.introduction+"...&nbsp;&nbsp;<a href='/detail/#{@topics.first.to_page_param}'><全文></a>" 
       - else
         %p
-          = raw "&nbsp;&nbsp;&nbsp;&nbsp;"+strip_tags(@topics.first.body)[0..150]+"...&nbsp;&nbsp;<a href='/detail/#{@topics.first.to_page_param}'><详细></a>" 
+          = raw "&nbsp;&nbsp;&nbsp;&nbsp;"+strip_tags(@topics.first.body)[0..150]+"...&nbsp;&nbsp;<a href='/detail/#{@topics.first.to_page_param}'><全文></a>" 
   .top_line
   .top_list
     %ul.topic_list
@@ -18,6 +18,6 @@
             &nbsp;
             =link_to topic.short_title,"/detail/#{topic.to_page_param}" 
           .tldate
-            =topic.created_at.strftime("%m-%d").to_s
+            =topic.updated_at.strftime("%m-%d").to_s
           .clr 
 

@@ -3,8 +3,9 @@
 
   .form-inputs
     = f.input :name
-    = f.input :body,:as=>:kindeditor,:input_html => { :width => 800, :height => 300 } 
-    = f.input :thumb,:as=>:file
+    = f.input :source
+    =# f.input :body,:as=>:kindeditor,:input_html => { :width => 800, :height => 300 } 
+    =# f.input :thumb,:as=>:file
     = f.input :showprimary
 
   .form-actions

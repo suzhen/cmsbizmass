@@ -17,7 +17,7 @@
         position:absolute;
         float:right;
         top:5px;
-        right:35px;
+        right:10px;
         a{
            @include link-colors(red,#bb0214,#bb0214,#bb0214,#bb0214); 
         }
@@ -135,9 +135,9 @@
         color:red;
         display: block;
         position:relative;
-        float:left;
+        float:right;
         top:3px;
-        left:25px;
+        right:38px;
         a{
          @include link-colors(red,#bb0214,#bb0214,#bb0214,#bb0214); 
         }
@@ -257,7 +257,7 @@
 /*sound容器*/
 .sound_container{
   background:white url(jianbian.jpg) repeat-x top left;
-  height:100px;
+  height:110px;
   .sound_title{
     height:30px;
     .sound{
@@ -331,7 +331,7 @@
    .content_block{
     border:1px solid white;   
     overflow: hidden;
-    background-color:#faf5df;
+    /*background-color:#faf5df;*/
     padding:5px;
    }
   }

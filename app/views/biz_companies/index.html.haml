@@ -3,6 +3,7 @@
     %tr
       %th 商业品牌名称
       %th 品牌LOGO
+      %th 链接地址
       %th
       %th
       %th
@@ -11,7 +12,7 @@
       %tr
         %td= biz_company.name
         %td= image_tag biz_company.logo.url(:normal)
-        %td= biz_company.body
+        %td= biz_company.url
         %td= link_to '显示', biz_company
         %td= link_to '编辑', edit_biz_company_path(biz_company)
         %td= link_to '删除', biz_company, :confirm => '确定删除吗？', :method => :delete

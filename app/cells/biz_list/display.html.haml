@@ -1,7 +1,7 @@
 %ul.biz_company_list
   - @hotbizs.each do |hotbiz|
     %li
-      = link_to image_tag hotbiz.logo.url(:hot),:border => 0, :title=>hotbiz.name
+      = link_to image_tag(hotbiz.logo.url(:hot),:border => 0, :title=>hotbiz.name),hotbiz.url,:target=>"_blank"
       %span
-        = link_to hotbiz.name,"/showunit/#{hotbiz.id.to_s}"
+        = link_to hotbiz.name,hotbiz.url,:target=>"_blank"
  

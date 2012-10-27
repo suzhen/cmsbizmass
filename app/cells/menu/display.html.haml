@@ -15,11 +15,11 @@
     - if @controller_name=="actionpages"
       %li= link_to "主题活动","/actions",:class=>"active" 
     - else
-      %li= link_to "主题活动","/actions" 
-    - if @controller_name=="landpages"
-      %li= link_to "商业地产","/business",:class=>"active" 
+      %li= link_to "主题活动","/actions"
+    - if @controller_name=="consultancypages"
+      %li= link_to "商务咨询","/consultancy",:class=>"active"
     - else
-      %li= link_to "商业地产","/business" 
+      %li= link_to "商务咨询","/consultancy"
     - if @controller_name=="hrpages"
       %li= link_to "人才服务","/service",:class=>"active" 
     - else
@@ -28,11 +28,15 @@
       %li= link_to "零售地图","/maps",:class=>"active" 
     - else
       %li= link_to "零售地图","/maps" 
+    - if @controller_name=="landpages"
+      %li= link_to "商业地产","/business",:class=>"active" 
+    - else
+      %li= link_to "商业地产","/business" 
     - if @controller_name=="memberpages"
       %li= link_to "理事单位","/members",:class=>"active" 
     - else
       %li= link_to "理事单位","/members" 
-    - if @controller_name=="contact"
+    -# if @controller_name=="contact"
       %li.last= link_to "联系我们","/contact",:class=>"active"
-    - else
+    -# else
       %li.last= link_to "联系我们","/contact"

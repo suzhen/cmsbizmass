@@ -15,14 +15,17 @@
   -#往期杂志
   .row
     .span3
-      = render_cell :topic_pool3,:display,:rendercell=>"article",:display=>"display",:symbol=>"magazinepages:R2A"
-      .blank5
-      = render_cell :topic_pool2,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"magazinepages:R2B",:link=>"#"
-    .span6
-      = render_cell :topic_pool9,:display,:rendercell=>"magazines",:display=>"guidance",:symbol=>"magazinepages:R2D"
-    .span3
       = render_cell :retailbutton,:display
-      .blank5
-      = render_cell :topic_pool3,:display,:rendercell=>"article",:display=>"display",:symbol=>"magazinepages:R2C"
+    .span6
+      = render_cell :topic_pool9,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"magazinepages:R2A"
+    .span3
+      = render_cell :topic_pool3,:display,:rendercell=>"article",:display=>"display",:symbol=>"magazinepages:R2B"
+  -#团队剪影
+  .blank5
+  .row
+    .span9
+      = render_cell :topic_pool1,:display,:rendercell=>"picshow",:display=>"display",:symbol=>"magazinepages:R3A"
+    .span3
+      = render_cell :topic_pool3,:display,:rendercell=>"article_list",:display=>"display",:symbol=>"magazinepages:R3B"
 
 

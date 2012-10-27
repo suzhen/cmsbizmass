@@ -1,0 +1,6 @@
+%ul.topic_list
+  - unless @videos.nil?
+    - @videos.each do |video|
+      %li
+        =link_to video.name,video.source 
+

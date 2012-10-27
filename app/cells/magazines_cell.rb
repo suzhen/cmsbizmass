@@ -2,13 +2,13 @@ class MagazinesCell < CommonCell
 
   def display(params)
     shownum = params["limit"].to_i
-    @magazines=Magazine.order("public_date").limit(shownum)
+    @magazines=Magazine.order("listorder").limit(shownum)
     render
   end
 
   def guidance(params)
     shownum= params["limit"].to_i
-    @magazines=Magazine.order("public_date DESC").limit(shownum)
+    @magazines=Magazine.order("listorder").limit(shownum)
     render
   end
 

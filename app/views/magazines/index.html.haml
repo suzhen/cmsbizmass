@@ -4,6 +4,7 @@
       %th 杂志封面
       %th 杂志标题
       %th 发刊日期
+      %th 显示顺序
       %th 上传人
       %th 下载次数
       %th
@@ -15,6 +16,7 @@
         %td= image_tag magazine.cover.url(:thumb)
         %td= magazine.title
         %td= magazine.public_date
+        %th= magazine.listorder
         %td= magazine.user_name
         %td= magazine.download
         %td= link_to '显示', magazine

@@ -8,16 +8,6 @@
   %b 编辑姓名:
   = @video.editor
 %p
-  %b 点击数:
-  = @video.hits
-%p
-  %b 详情:
-  =raw @video.body
-%p
-  %b 介绍图片:
-  = image_tag @video.thumb.url(:normal)
-%p
-  %b 是否显示在一级页面:
-  = @video.showprimary ? "是" : "否"
+  %embed{:src=>"#{@video.source}",:type=>"application/x-shockwave-flash",:width=>"550",:height=>"400",:autostart=>"false",:loop=>"true"}
 
 = link_to '编辑', edit_video_path(@video)

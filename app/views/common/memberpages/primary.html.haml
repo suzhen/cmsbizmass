@@ -9,13 +9,13 @@
   .row
     .span3
       = render_cell :topic_pool3,:display,:rendercell=>"article",:display=>"display",:symbol=>"memberpages:R1A"
+      .blank5
+        = link_to image_tag("joinus.jpg",:alt=>"申请加入"),"/detail/2012/10/27/268"
     .span9
       = render_cell :topic_pool2,:display,:rendercell=>"article_theme_list",:display=>"display",:symbol=>"memberpages:R1B"
   .blank5
-  -#章程
+  -#合作会员
   .row
-    .span3
-      = render_cell :topic_pool3,:display,:rendercell=>"article",:display=>"display",:symbol=>"memberpages:R2A"
-    .span9
-      = render_cell :topic_pool2,:display,:rendercell=>"member_list",:display=>"display",:symbol=>"memberpages:R2B"
+    .span12
+      = render_cell :topic_pool2,:display,:rendercell=>"member_list",:display=>"display",:symbol=>"memberpages:R2A"
 

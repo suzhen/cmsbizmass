@@ -6,4 +6,10 @@ class VideoViewCell < CommonCell
     render
   end
 
+  def videolist(params)
+    show_limit = params["limit"]
+    @videos=Video.show_in_primary.order_created.limit(show_limit)
+    render
+  end
+
 end

@@ -1,6 +1,6 @@
 class LinksCell < CommonCell
 
-  def display
+  def display(params)
     @links=Link.all
 
     render

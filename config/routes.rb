@@ -49,6 +49,7 @@ CcsmCmsbizmass::Application.routes.draw do
    get "/service"=>"common/hrpages#primary"
    get "/members"=>"common/memberpages#primary"
    get "/contact"=>"common/contact#show"
+   get "/consultancy"=>"common/consultancypages#primary"
 
    get "/detail/:year/:month/:day/:id"=>"common/infopages#detail"  
    get "/article_list/:id"=>"common/infopages#list"
