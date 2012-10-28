@@ -331,7 +331,24 @@
   }
 }
 
+/*图片滚动*/
+#slide_pic{
+   overflow:hidden;
+   width:900px;
+   margin:0 auto;
 
+ img{border: none;}
+  ul{
+     @include horizontal-list-container;
+     li{
+         @include horizontal-list-item(6px);
+
+      }
+  }
+  .slideul1{width:3999px;}
+
+
+}
 
 
 

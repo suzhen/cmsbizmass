@@ -81,3 +81,32 @@ $ ->
   $('#QueryArticle').modal('hide')
   false
 
+
+#图片滚动
+$ ->
+ _speed=30;
+ _slide = $("#slide_pic")
+ _slideli1 = $(".slideli1")
+ _slideli2 = $(".slideli2")
+ _slideli2.html(_slideli1.html())
+ 
+ Marquee=()->
+    #alert _slide.scrollLeft()
+    if _slide.scrollLeft() >= _slideli1.width()
+     _slide.scrollLeft(0)
+    else
+     _slide.scrollLeft(_slide.scrollLeft()+1)
+
+ sliding=setInterval(Marquee,_speed)
+
+
+ _slide.hover(
+   ->
+	#鼠标移动DIV上停止
+      clearInterval(sliding)
+   ->
+	#离开继续调用
+      sliding=setInterval(Marquee,_speed)
+ )
+
+	

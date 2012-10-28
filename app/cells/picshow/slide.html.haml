@@ -1,0 +1,9 @@
+%div#slide_pic
+  - unless @pictures.nil?
+    %ul.slideul1
+      %li.slideli1
+        %ul.slideul2
+          - @pictures.each do |pic|
+            %li 
+              = link_to image_tag(pic.picture.url(@picVersion.to_sym)),pic.url
+      %li.slideli2   
