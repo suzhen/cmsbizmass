@@ -1,7 +1,7 @@
 .art_pic_list
   .art_pic
     - if @topics.first.present? &&  @topics.first.theme_picture.present?
-      = link_to image_tag(@topics.first.theme_picture.url(:theme)),"/detail/#{@topics.first.to_page_param}" 
+      = link_to image_tag(@topics.first.theme_picture.url(:themebig)),"/detail/#{@topics.first.to_page_param}" 
   .art_list
     %ul.topic_list
       - @topics.each do |topic|

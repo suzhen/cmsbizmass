@@ -46,6 +46,10 @@ class ThemePictureUploader < CarrierWave::Uploader::Base
     process :resize_to_fill => [210,128]  
   end  
 
+  version :themebig do
+     process :resize_to_fill => [285,177]  
+  end
+
    
   version :original 
 
