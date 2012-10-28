@@ -16,7 +16,7 @@
     - @pictures.each do |picture|
       %tr
         %td= picture.title
-        %td= image_tag picture.picture.url(:thumb)
+        %td= image_tag picture.picture.url(:thumb) if picture.picture.present?
         %td= picture.pic_space.name
         %td= picture.description
         %td= picture.listorder
