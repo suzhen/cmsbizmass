@@ -109,4 +109,13 @@ $ ->
       sliding=setInterval(Marquee,_speed)
  )
 
+
+#加入QQ群
+@joinqq=()->
+  document.getElementById("joinqqgroup_btn").click()
+  false
+
+
+
+
 	
